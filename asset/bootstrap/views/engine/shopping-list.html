@@ -43,7 +43,7 @@
             <div class="row thumbnail" data-ng-repeat="item in groupItem.fitems">
               <div class="col-md-8 col-xs-8">
                 <div class="pull-left" style="padding-right: 5px;">
-                  <img style="width: 60px" data-ng-src="{{item.SmallImageUrl || getContentUrl('/images/no_image.jpg')}}" />
+                  <img style="width: 60px" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
                 </div>
                 <span data-ng-if="item.IsCoupon">
                   <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.ItemTypeId == 13"/>

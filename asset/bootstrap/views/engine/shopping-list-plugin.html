@@ -20,7 +20,7 @@
   </div>
   <div class="row" data-ng-repeat="item in topitems | pagingFilter:5:0" style="border-top: 1px solid #ccc; margin: 0; padding-top: 5px">
     <div class="col-xs-3">
-      <img data-ng-src="{{item.SmallImageUrl || getContentUrl('/images/no_image.jpg')}}" style="width: 100%" />
+      <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="width: 100%" />
       <span class="price">{{item.PriceString}}</span>
     </div>
     <div class="col-xs-9">
