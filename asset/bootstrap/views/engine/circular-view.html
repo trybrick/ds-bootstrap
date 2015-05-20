@@ -8,7 +8,7 @@
       <div data-gsn-ad-unit="6" 
         data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" 
         data-gsn-sticky=".adUnit6" 
-        data-bottom="200" data-offset-top="60"></div>
+        data-bottom="200" data-top="60"></div>
       </div>
       <div class="col-md-9">
         <div data-ng-show="vm.noCircular">
@@ -22,7 +22,7 @@
             <div data-ng-include="getThemeUrl('/views/engine/circular-view-flyer.html')"></div>
         </div>
         <div data-ng-show="isListView">
-          <div data-ng-include="getThemeUrl('/views/engine/circular-view-flyer.html')"></div>
+          <div data-ng-include="getThemeUrl('/views/engine/circular-view-list.html')"></div>
         </div>
       </div>
     </div>
