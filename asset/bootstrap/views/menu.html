@@ -29,7 +29,7 @@
         <li data-ng-repeat="menu in siteMenu" class="dropdown" dropdown itemprop="name">
           <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{menu.Name}}</a>
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name">
-            {{menu.Name}}<i class="fa fa-caret-down pull-right"></i>
+            {{menu.Name}}<i class="fa fa-caret-down"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'" >
             <li data-ng-repeat="sm in menu.SubMenu" itemprop="name">
