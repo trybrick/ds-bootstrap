@@ -1,16 +1,11 @@
 <div class="modal-content advancedSearch">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4 class="modal-title" id="myModalLabel"></h4>
+    <h3>Advanced Recipe Search</h3>
   </div>
   <div class="modal-body">
-    <div class="row advanced">
-      <h3>Advanced Recipe Search</h3>
-      <div id="CtrlDivSubTitle">
-        <p>You can combine more than one attribute.</p>
-      </div>
-
-      <div id="CtrlDivCourseSelection" class="course">
+      <h4>You can combine more than one attribute.</h4>
+      <div class="course">
         <select name="recipeCourse" data-ng-model="recipeSearch.attrib.course">
           <option value="">-- Select Course, Food or Event Type --</option>
           <option value="Appetizers">Appetizers</option>
@@ -54,7 +49,7 @@
         </select>
       </div>
 
-      <div id="CtrlDivPreparationTimeSelection" class="prepTime">
+      <div class="prepTime">
         <select name="recipePrepTime" data-ng-model="recipeSearch.preptime">
           <option value="">-- Select a Total Preparation Time --</option>
           <option value="20">20 minute meals</option>
@@ -64,7 +59,7 @@
         </select>
       </div>
 
-      <div id="CtrlDivSkillLevelSelection" class="skill">
+      <div class="skill">
         <select name="recipeSkillLevel" data-ng-model="recipeSearch.skilllevel">
           <option value="">-- Select a Skill Level --</option>
           <option value="1">Child</option>
@@ -76,7 +71,7 @@
       </div>
 
       <form name="recipeSearchForm">
-        <input class="searchField btn" type="text" placeholder="recipe search" data-ng-model="recipeSearch.term" name="recipesearch" data-ui-keyup="{'enter':'doRecipeSearch()'}" /><a class="go btn btn-default btnSilver" href="javascript:void(0)" data-ng-click="doRecipeSearch()">go</a>
+        <input type="text" placeholder="recipe search" data-ng-model="recipeSearch.term" name="recipesearch" data-ui-keyup="{'enter':'doRecipeSearch()'}" /><a class="go btn btn-default" href="javascript:void(0)" data-ng-click="doRecipeSearch()">go</a>
       </form>
       <div data-gsn-popover="" data-selector=".searchTipPopOver" class="recipeSearchTips" data-title="Search Tips">
         Search Tips
