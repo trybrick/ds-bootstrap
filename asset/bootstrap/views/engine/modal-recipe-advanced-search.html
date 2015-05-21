@@ -5,7 +5,7 @@
   </div>
   <div class="modal-body">
       <h4>You can combine more than one attribute.</h4>
-      <div class="course">
+      <div class="course" onclick="return false;">
         <select name="recipeCourse" data-ng-model="recipeSearch.attrib.course">
           <option value="">-- Select Course, Food or Event Type --</option>
           <option value="Appetizers">Appetizers</option>
@@ -49,7 +49,7 @@
         </select>
       </div>
 
-      <div class="prepTime">
+      <div class="prepTime" onclick="return false;">
         <select name="recipePrepTime" data-ng-model="recipeSearch.preptime">
           <option value="">-- Select a Total Preparation Time --</option>
           <option value="20">20 minute meals</option>
@@ -59,7 +59,7 @@
         </select>
       </div>
 
-      <div class="skill">
+      <div class="skill" onclick="return false;">
         <select name="recipeSkillLevel" data-ng-model="recipeSearch.skilllevel">
           <option value="">-- Select a Skill Level --</option>
           <option value="1">Child</option>
