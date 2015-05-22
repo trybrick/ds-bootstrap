@@ -30,7 +30,7 @@
           <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
         </div>
         <div class="col-md-1 col-xs-3">
-          <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+          <button class="btn btn-primary btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
         </div>
     </div>
     <div class="row" data-ng-repeat-end=""></div>
