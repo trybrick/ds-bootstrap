@@ -31,8 +31,8 @@
           </div>
           <div class="row">
             <div class="controls">
-              <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
-              <button class="btn btn-default btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
+              <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
+              <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
               <p class="coupon-message coupon-message-{{item.ProductCode}}"></p>
             </div>
           </div>

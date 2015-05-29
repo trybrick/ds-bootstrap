@@ -9,7 +9,7 @@
   <div>
     <div class="col-md-6 col-sm-6">
       <span>Total Savings - ${{selectedCoupons.totalSavings}}</span>
-      <button class="btn btn-default" data-ng-click="selectedCoupons.cardCouponOnly = !selectedCoupons.cardCouponOnly">
+      <button class="btn btn-primary" data-ng-click="selectedCoupons.cardCouponOnly = !selectedCoupons.cardCouponOnly">
         <i class="fa fa-square-o" data-ng-hide="selectedCoupons.cardCouponOnly"></i><i class="fa fa-check-square-o" data-ng-show="selectedCoupons.cardCouponOnly"></i>
         View Coupons On Card
       </button>
@@ -18,7 +18,7 @@
       <div class="pull-left">
         <span>Sort By:</span>
         <div class="btn-group dropdown" dropdown>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             {{sortByName}} <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu">

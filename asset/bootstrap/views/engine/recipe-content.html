@@ -22,12 +22,12 @@
     </div>
     <div data-ng-hide="currentPath.indexOf('print') > 0">
       <div class="ingredientOptions hidden-print">
-        <button class="btn btn-default btn-xs" data-ng-click="addSelectedIngredients()">Add checked to List</button>
-        <button class="btn btn-default btn-xs" data-ng-click="selectAllIngredients();addSelectedIngredients()">Add all ingredients to List</button>
+        <button class="btn btn-primary btn-xs" data-ng-click="addSelectedIngredients()">Add checked to List</button>
+        <button class="btn btn-primary btn-xs" data-ng-click="selectAllIngredients();addSelectedIngredients()">Add all ingredients to List</button>
       </div>
       <div class="recipeOptions hidden-print">
-        <button class="btn btn-default btn-xs" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-comment.html')" data-item="vm.savedRecipe" data-ng-click="doIfLoggedIn(showModal)">Save to My Recipe Box</button>
-        <button class="btn btn-default btn-xs" href="javascript:void(0)" onclick="javascript:window.print();">Print</button>
+        <button class="btn btn-primary btn-xs" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-comment.html')" data-item="vm.savedRecipe" data-ng-click="doIfLoggedIn(showModal)">Save to My Recipe Box</button>
+        <button class="btn btn-primary btn-xs" href="javascript:void(0)" onclick="javascript:window.print();">Print</button>
       </div>
     </div>
     <div data-ng-if="vm.recipe.RecipeTitle">
@@ -47,7 +47,7 @@
   </ul>
   <br />
 </div>
-<button class="btn btn-default hidden-print" data-ng-click="goBack()">Back</button>
+<button class="btn btn-primary hidden-print" data-ng-click="goBack()">Back</button>
 <style>
 
 /*----- Recipe Detail -----*/
