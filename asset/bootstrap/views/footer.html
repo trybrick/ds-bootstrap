@@ -1,20 +1,20 @@
 <div class="container hidden-printer">
   <div class="col-md-4">
       <div class="your-store">
-          <a href="javascript:void(0)" data-ng-click="goUrl('/storelocator'">Locate your Store</a>
+          <a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>
       </div>
-      <div class="yourStore">
-        {{gvm.store.PrimaryAddress}} <br />
-        {{gvm.store.City}}, {{gvm.store.StateName}} {{gvm.store.PostalCode}} <br />
-        {{gvm.store.Phone}} <br />
-        {{gvm.store.OpenHoursDisplay}}
+      <div class="yourStore"  data-ng-if="gvm.currentStore.StoreId">
+        {{gvm.currentStore.PrimaryAddress}} <br />
+        {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
+        {{gvm.currentStore.Phone}} <br />
+        {{gvm.currentStore.OpenHoursDisplay}}
       </div>
   </div>
   <div class="col-md-4 company-info">
       <ul>
     <li data-ng-class="{'underlined': currentPath == '/aboutus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/aboutus')">About Us</a></li>
     <li data-ng-class="{'underlined': currentPath == '/careers'}"><a href="javascript:void(0)" data-ng-click="goUrl('/careers')">Careers</a></li>
-    <li data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl'(/contactus')">Contact Us</a></li>
+    <li data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></li>
     <li data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></li>
   </ul>
   </div>
