@@ -4,43 +4,26 @@
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | {{video ? 'cooking video' : video.Title"></div>
   <div class="hidden-meta" data-gsn-og-type="video"></div>
   <div class="hidden-meta" data-gsn-og-image="{{video.Thumbnail}}"></div>
-
-
-  <div class="col-lg-1" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg,'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
-  <div class="col-md-8 text-center">
-    <h1>Cooking Videos</h1>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Videos</h3>
-        <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
-          <div class="list-group list-groupPns">
-            <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
-              <a href="javascript:void(0)" class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)">{{video.Title}}</a>
-            </div>
+  <h1>Cooking Videos</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Videos</h3>
+      <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
+        <div class="list-group list-groupPns">
+          <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
+            <a href="javascript:void(0)" class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)">{{video.Title}}</a>
           </div>
         </div>
       </div>
-      <div class="col-md-8 noPadLeft">
-        <h1>5 Minute Cooking Classes</h1>
-        <div class="videoColumn" id="VideoPlayer">
-          <h3>{{videoTitle}}</h3>
-          <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
-        </div>
-      </div>        
     </div>
+    <div class="col-md-8 noPadLeft">
+      <h1>5 Minute Cooking Classes</h1>
+      <div class="videoColumn" id="VideoPlayer">
+        <h3>{{videoTitle}}</h3>
+        <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
+      </div>
+    </div>        
   </div>
-  <div class="col-md-4">
-    <div data-gsn-sticky="" data-top="60">
-      <div class="circplus"></div>
-      <div data-ng-include="getThemeUrl('/views/engine/available-varieties.html')"></div>
-      <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
-      <div data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
-    </div>
-  </div>
-</div>
-<br />
-<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }">
-  <div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
 </div>
 <script>
   flowplayer("RecipeVideoPlayer", "http://cdn.gsngrocers.com/script/lib/flowplayer-3.2.18.swf", {

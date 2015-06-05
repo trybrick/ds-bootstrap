@@ -1,35 +1,19 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
-<div class="row" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
-  <div class="col-lg-1" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg,'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
-  <div class="col-md-8">
-    <h1>Weekly Ads</h1>
-    <div style="padding-top: 5px">
-      <div data-ng-show="vm.noCircular">
-        <h3>No circular for this store.</h3>
-      </div>
-      <div class="productImagePopOver hidden" data-ng-non-bindable="">
-        <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
-      </div>
-      <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="vm.digitalCirc == null || vm.noCircular"></div>
-      <div data-ng-if="!isListView">
-        <div data-ng-include="getThemeUrl('/views/engine/circular-view-flyer.html')"></div>
-      </div>
-      <div data-ng-if="isListView">
-        <div data-ng-include="getThemeUrl('/views/engine/circular-view-list.html')"></div>
-      </div>
-    </div>
+<div data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
+  <h1>Weekly Ads</h1>
+  <div data-ng-show="vm.noCircular">
+    <h3>No circular for this store.</h3>
   </div>
-  <div class="col-md-4">
-    <div data-gsn-sticky="" data-top="60">
-      <div class="circplus"></div>
-      <div data-ng-include="getThemeUrl('/views/engine/available-varieties.html')"></div>
-      <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
-      <div data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
-    </div>
-   </div>
-</div>
-<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }">
-  <div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
+  <div class="productImagePopOver hidden" data-ng-non-bindable="">
+    <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+  </div>
+  <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="vm.digitalCirc == null || vm.noCircular"></div>
+  <div data-ng-if="!isListView">
+    <div data-ng-include="getThemeUrl('/views/engine/circular-view-flyer.html')"></div>
+  </div>
+  <div data-ng-if="isListView">
+    <div data-ng-include="getThemeUrl('/views/engine/circular-view-list.html')"></div>
+  </div>
 </div>
 <style>
   .availableVarieties 
