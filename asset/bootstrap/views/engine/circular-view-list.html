@@ -23,7 +23,7 @@
   </div>
   <div class="sponsor" data-gsn-ad-unit="9" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
 </div>
-<div>
+<div class="col-md-12">
   <div data-infinite-scroll="loadMore()">
     <div data-ng-repeat-start="item in allItems" data-ng-class="{ '': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }">
       <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
