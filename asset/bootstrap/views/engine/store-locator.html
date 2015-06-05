@@ -4,11 +4,12 @@
   <!-- search form-->
   <div class="col-md-3 col-sm-3">
     <form name="myStoreLocatorForm">
-      Zip, City or State: 
+      Zip, City or State: <br />
       <input class="search" type="text" name="search" data-ng-model="search.storeLocator"><br />
-      Find stores within
+      Find stores within: <br />
       <input class="radius" type="text" name="searchRadius" data-ng-model="searchRadius">
       miles
+      <br />
       <div class="form-group">
         <button class="btn btn-xs" data-ng-click="doSearch()">Search</button>
         <button class="btn btn-xs" data-ng-click="doClear()">Reset</button>
@@ -60,6 +61,9 @@
   }
   .singleStoreInfo {
     height: 300px;
+  }
+  .radius {
+    width: 50px;
   }
   
 </style>
