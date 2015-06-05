@@ -1,11 +1,9 @@
 <div data-ctrl-store-locator="">
-  <div data-ng-repeat="marker in myMarkers">
-    <h1>{{marker.location.StoreName}}</h1>
-    <div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{marker.location.StoreName}}"></div>
-    <div class="staticContent" data-ng-if="marker.location.Misc1" data-ng-bind-html="marker.location.Misc1 | removeAspx | trustedHtml"></div>
-    <div class="staticContent" data-ng-if="!marker.location.Misc1">
-      <img src="http://placehold.it/1080x300?text=Store+Front+Image+Goes+Here" />
-    </div>
+  <h1>{{currentMarker.location.StoreName}}</h1>
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{currentMarker.location.StoreName}}"></div>
+  <div class="staticContent" data-ng-if="currentMarker.location.Misc1" data-ng-bind-html="currentMarker.location.Misc1 | removeAspx | trustedHtml"></div>
+  <div class="staticContent" data-ng-if="!currentMarker.location.Misc1">
+    <img src="http://placehold.it/1080x300?text=Store+Front+Image+Goes+Here" />
   </div>
   <div class="row" style="padding-top: 10px">
     <div class="col-md-6 col-sm-6 staticBlock">
