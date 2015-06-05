@@ -37,7 +37,7 @@
               <div class="product-brand">{{item.BrandName}}</div>
             </div>
           </div>
-          <div class="row constrols">
+          <div class="text-center">
             <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
             <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)" data-ng-if="!gsnApi.browser.isMobile">Print Now</button>
             <p class="coupon-message coupon-message-{{item.ProductCode}}"></p>

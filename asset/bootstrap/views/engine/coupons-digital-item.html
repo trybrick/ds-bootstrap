@@ -10,7 +10,7 @@
       <div class="product-brand">{{item.BrandName}}</div>
     </div>
   </div>
-  <div class="controls">
+  <div class="text-center">
     <button class="btn btn-primary btn-xs" data-ng-click="addCouponToCard($event, item)" data-ng-show="youtech.isAvailable(item.ProductCode) && isLoggedIn">Add</button>
     <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-show="youtech.isOnCard(item.ProductCode) && !isOnList(item)">Add to List</button>
     <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-show="isOnList(item)">Remove from List</button>
