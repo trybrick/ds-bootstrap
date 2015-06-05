@@ -15,7 +15,7 @@
    </div>
  </div>
 </div>
-<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collappsed': gvm.adsCollapsed }">
+<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }">
 	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
 </div>
 <style>
@@ -76,24 +76,5 @@
 	font-size: 10px;
 	padding: 0 8px;
 	width: 90%;
-}
-
-.stuck.stuck-collappsed {
-  margin-bottom: -80px;
-}
-.stuck-collapser {
-  display: none;
-}
-.stuck .stuck-collapser {
-  cursor: pointer; 
-  right: -20px; 
-  border-radius: 30px; 
-  position: absolute; 
-  top: -20px; 
-  background-color: #ccc; 
-  width: 30px; 
-  text-align: center; 
-  line-height: 30px;
-  display: block;
 }
 </style>
