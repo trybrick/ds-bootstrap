@@ -4,7 +4,8 @@
   <div class="hidden-meta" data-gsn-og-type="article"></div>
   <div class="hidden-meta" data-gsn-og-image="{{article.ImageUrl}}"></div>
   
-  <div class="col-md-9">
+  <div class="col-lg-1" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg,'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+  <div class="col-md-8">
     <div style="width: 100%">
       <h1 itemprop="name">{{article.Title}}</h1>
       <h4 itemprop="about">{{article.Teaser}}</h2>
@@ -25,7 +26,12 @@
       <br />
     </div>
   </div>
-  <div class="col-md-3" style="text-align: left">
-    <div data-gsn-ad-unit="6" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+  <div class="col-md-4">
+    <div data-gsn-sticky="" data-top="60">
+      <div class="circplus"></div>
+      <div data-ng-include="getThemeUrl('/views/engine/available-varieties.html')"></div>
+      <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+      <div data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
+    </div>
   </div>
 </div>

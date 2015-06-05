@@ -1,30 +1,45 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
 <ul class="nav nav-tabs" data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></ul>
-<div data-ng-include="getThemeUrl('/views/engine/coupons-digital.html')" data-ng-if="currentPath.indexOf('/coupons/digital') == 0"></div>
-<div data-ng-include="getThemeUrl('/views/engine/coupons-printable.html')" data-ng-if="currentPath.indexOf('/coupons/printable') == 0"></div>
-<div data-ng-include="getThemeUrl('/views/engine/coupons-store.html')" data-ng-if="currentPath.indexOf('/coupons/store') == 0"></div>
+
+<div class="row" data-ctrl-coupon-classic="" data-ng-init="sortByName = 'About to Expire';">
+  <div class="col-lg-1" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg,'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
+	<div class="col-md-8" data-ng-include="getThemeUrl('/views/engine/coupons-digital.html')" data-ng-if="currentPath.indexOf('/coupons/digital') == 0"></div>
+	<div class="col-md-8" data-ng-include="getThemeUrl('/views/engine/coupons-printable.html')" data-ng-if="currentPath.indexOf('/coupons/printable') == 0"></div>
+	<div class="col-md-8" data-ng-include="getThemeUrl('/views/engine/coupons-store.html')" data-ng-if="currentPath.indexOf('/coupons/store') == 0"></div>
+
+	<div class="col-md-4">
+   <div data-gsn-sticky="" data-top="60">
+     <div class="circplus"></div>    
+     <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
+     <div data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
+   </div>
+ </div>
+</div>
+<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collappsed': gvm.adsCollapsed }">
+	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa" data-ng-class="{ 'fa-chevron-up': gvm.adsCollapsed, 'fa-chevron-down': !gvm.adsCollapsed }"></i></div><div class="gsnunit" data-sizes="leaderboard" data-targeting='{"tile": "1"}'></div>
+</div>
 <style>
-/*------ Coupons (printable for now) ------*/
-.savings-sort
-{
-	margin: 10px 0;
-}
+  /*------ Coupons (printable for now) ------*/
+  .savings-sort
+  {
+   margin: 10px 0;
+ }
 
-.coupons
-{
-	padding-left: 5px;
-	padding-right: 5px;
-}
+ .coupons
+ {
+   padding-left: 5px;
+   padding-right: 5px;
+ }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-	.coupons {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+ @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+   .coupons {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-	.sortBy button {
-		margin-bottom: 5px;
-	}
+  .sortBy button {
+    margin-bottom: 5px;
+  }
 }
 
 .coupon-container
@@ -47,7 +62,7 @@
 .coupon-container img
 {
 	max-height: 87px;
-    max-width: 70px;
+  max-width: 70px;
 }
 
 .product-description h4
@@ -61,5 +76,24 @@
 	font-size: 10px;
 	padding: 0 8px;
 	width: 90%;
+}
+
+.stuck.stuck-collappsed {
+  margin-bottom: -80px;
+}
+.stuck-collapser {
+  display: none;
+}
+.stuck .stuck-collapser {
+  cursor: pointer; 
+  right: -20px; 
+  border-radius: 30px; 
+  position: absolute; 
+  top: -20px; 
+  background-color: #ccc; 
+  width: 30px; 
+  text-align: center; 
+  line-height: 30px;
+  display: block;
 }
 </style>
