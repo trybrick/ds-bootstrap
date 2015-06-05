@@ -12,14 +12,14 @@
         <div id="map_canvas" data-ui-map="myMap" class="map-container gMap" data-ui-options="mapOptions" style="height: 280px;"></div>
         <!-- the map popup view definition -->
         <div class="infoMarker" data-ui-map-info-window="myInfoWindow">
-          <div data-ng-show="marker.location">
-            <strong>{{marker.location.StoreName}}</strong><br />
+          <div data-ng-show="currentMarker.location">
+            <strong>{{currentMarker.location.StoreName}}</strong><br />
             <address>
-              {{marker.location.PrimaryAddress}}<br />
-              {{marker.location.City}}, {{marker.location.StateName}} {{marker.location.PostalCode}}  
+              {{currentMarker.location.PrimaryAddress}}<br />
+              {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}  
             </address>
             <div>
-              <a href="javascript:void(0)" class="btn btn-primary btn-xs" data-ng-click="selectStore(marker)">Select Store</a>
+              <a href="javascript:void(0)" class="btn btn-primary btn-xs" data-ng-click="selectStore(currentMarker)">Select Store</a>
             </div>
           </div>
         </div>
