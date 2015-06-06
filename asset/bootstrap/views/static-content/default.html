@@ -1,5 +1,5 @@
 <div class="hidden-meta" data-ng-if="partialContents[0]" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline)}}"></div>
-<div><!-- default is two columns -->
+<div class="col-md-12"><!-- default is two columns -->
     <div class="staticContent" data-ng-if="partialContents[0].Description">
         <h1 data-ng-bind-html="partialContents[0].Headline" data-ng-if="partialContents[0].Headline"></h1>
         <div data-ng-bind-html="partialContents[0].Description | removeAspx | trustedHtml"></div>  
