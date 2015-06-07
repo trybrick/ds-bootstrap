@@ -29,23 +29,26 @@
     <option value="{{item.key}}" data-bindonce="" data-ng-repeat="item in vm.brands">
   </datalist>
   <div class="col-md-12">
-    <div class="input-group pull-right" style="width: 300px">
+    <form name="circularSearch" class="input-group pull-right" style="width: 300px; padding-top: 5px" data-ng-submit="gvm.searchActive = false">
       <input type="text" class="form-control" placeholder="Search for..." data-ng-model="vm.filterBy">
       <div class="input-group-btn" data-ng-class="{ 'open': gvm.searchActive }">
-        <button class="btn btn-default" type="button" data-ng-click="gvm.searchActive = !gvm.searchActive">
+        <button class="btn btn-default" type="submit">
           <i class="glyphicon glyphicon-search"></i>
+        </button>
+        <button class="btn btn-default" type="button" data-ng-click="gvm.searchActive = !gvm.searchActive">
+          More
           <span class="caret"></span>
           <span class="sr-only">Toggle Dropdown</span>
         </button>
-        <button class="btn btn-default" type="button" title="reset" data-ng-click="vm.filterBy = ''; vm.filter = {};vm.searchActive = false">
-          <i class="fa fa-undo"></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" style="padding: 10px">
-          <li class="pull-right">Department: <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" /></li>
-          <li class="pull-right">Brand: <input type="text" list="brands" data-ng-model="vm.filter.BrandName" /></li>
-        </ul>
+        <div class="dropdown-menu dropdown-menu-right" style="padding: 10px">
+          <span class="pull-right">Department: <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" /></span>
+          <span class="pull-right">Brand: <input type="text" list="brands" data-ng-model="vm.filter.BrandName" /></span>
+          <span class="pull-right">
+            <button type="reset">Reset</button>
+          </span>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 <div class="col-md-12">
