@@ -37,5 +37,10 @@
       <h5>Store Details</h5>
     </a>
   </div>
+  <div data-ng-hide="marker.location.Redirect">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/store/' + marker.location.StoreNumber)">
+      <h5>Store Details</h5>
+    </a>
+  </div>
   <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Direction</a>
 </div>
