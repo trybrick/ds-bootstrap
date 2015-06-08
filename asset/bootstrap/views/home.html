@@ -24,48 +24,10 @@
 {
   left: -100%;
 }
-
-.featuredBlock {
-  position: relative;
-  height: 140px;
-}
-
-#DynamicBlock_IconDiv {
-  float: right;
-  vertical-align: middle;
-}
-
-#DynamicBlock_IconDiv img {
-  width: 80px;
-}
-
-#DynamicBlock_TextDiv {
-  float: left;
-}
-
-#DynamicBlock_TextDiv h3 {
-  font-size: medium;
-  font-weight: 500;
-}
-
-.btn-info {
-  background-color: #f8f8f8;
-  border-color: #fff;
-}
-
-.btn-info a {
-  color: #000;
-}
-
-.btn-info:hover {
-  background-color: #ccc;
-  border-color: #fff;
-}
-
 </style>
 <div class="row">
   <div>
-    <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
+    <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow" data-ng-hide="getContentList().length > 0"> 
       <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="getContentList()">
         <!-- Indicators -->
         <ol class="carousel-indicators">
