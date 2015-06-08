@@ -1,0 +1,29 @@
+.featuredBlock {
+  position: relative;
+  height: 140px;
+}
+#DynamicBlock_IconDiv {
+  float: right;
+  vertical-align: middle;
+}
+#DynamicBlock_IconDiv img {
+  width: 80px;
+}
+#DynamicBlock_TextDiv {
+  float: left;
+}
+#DynamicBlock_TextDiv h3 {
+  font-size: medium;
+  font-weight: 500;
+}
+.btn-info {
+  background-color: #f8f8f8;
+  border-color: #fff;
+}
+.btn-info a {
+  color: #000;
+}
+.btn-info:hover {
+  background-color: #ccc;
+  border-color: #fff;
+}
