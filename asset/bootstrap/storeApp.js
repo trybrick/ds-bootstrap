@@ -4,7 +4,6 @@ var storeApp = angular
       // disable theme
       gsn.config.SiteTheme = 'bootstrap';
       gsn.config.defaultMobileListView = false;
-      gsn.applyConfig(gsn.config, true);
 
       var le = [gsn.getThemeUrl('/views/layout.html')];
       for(var i = 1; i < 5; i++){
