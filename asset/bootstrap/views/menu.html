@@ -25,7 +25,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="main-nav-bar"  style="width: 100%">
-      <ul class="nav navbar-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+      <ul class="nav navbar-nav nav-hover" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <li data-ng-repeat="menu in siteMenu" class="dropdown" dropdown itemprop="name">
           <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{menu.Name}}</a>
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name">
