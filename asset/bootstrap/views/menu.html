@@ -27,13 +27,13 @@
     <div class="collapse navbar-collapse" id="main-nav-bar"  style="width: 100%">
       <ul class="nav navbar-nav nav-hover" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <li data-ng-repeat="menu in siteMenu" class="dropdown" dropdown itemprop="name">
-          <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">{{menu.Name}}</a>
+          <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
           <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name">
-            {{menu.Name}} <i class="fa fa-caret-down"></i>
+            <span data-ng-bind-html="menu.Name | trustedHtml"></span> <i class="fa fa-caret-down"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'" >
             <li data-ng-repeat="sm in menu.SubMenu" itemprop="name">
-              <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}">{{sm.Name}}</a>
+              <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="sm.Name | trustedHtml"></span></a>
             </li>  
           </ul>
         </li>
