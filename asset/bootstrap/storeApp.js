@@ -11,7 +11,7 @@ var storeApp = angular
         le.push(gsn.getThemeUrl('/views/layout-gsn' + i + '.html'));
       }
       var urls = [
-        {   login: 0, store: 0, path: '/', tpl: gsn.getContentUrl('/views/home.html') }
+        {   login: 0, store: 0, path: '/', tpl: gsn.getThemeUrl('/views/home.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article/:id', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 1, layout: le[4], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
@@ -38,7 +38,6 @@ var storeApp = angular
         , { login: 0, store: 0, layout: le[1], path: '/store/:id', tpl: gsn.getThemeUrl('/views/engine/store-info.html') }
         , { login: 0, store: 0, layout: le[2], path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
         , { login: 0, store: 0, layout: le[3], path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
-        , { login: 0, store: 0, layout: le[2], path: '/blog', tpl: gsn.getContentUrl('/views/blog.html') }
       ];
 
 
