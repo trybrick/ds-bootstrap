@@ -34,12 +34,14 @@
   <div class="layout-container container">
     <!-- Header -->
     <header>
-      <div class="hidden-print pull-right" style="padding-top: 5px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
       <div data-gsn-ft-config="logo">
         <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
-        <a href="javascript:void(0)" data-ng-if="!item.Description" data-ng-click="goUrl('/')">
-          <img data-ng-src="http://placehold.it/350x150/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
-        </a>
+        <div data-ng-if="!item.Description">
+          <div class="hidden-print pull-right" style="padding: 5px 15px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+          <a href="javascript:void(0)" data-ng-click="goUrl('/')">
+            <img data-ng-src="http://placehold.it/350x140/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
+          </a>
+        </div>
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
