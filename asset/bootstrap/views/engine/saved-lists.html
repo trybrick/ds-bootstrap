@@ -8,9 +8,9 @@
   </div>
   <div class="col-md-8" data-gsn-shopping-list="savedlists">
     <h4>{{title}}</h4>
-    <button class="btn btn-primary" data-ng-click="doDeleteList()" data-ng-disabled="!canDeleteList()">Delete List</button>
-    <button class="btn btn-primary" data-ng-click="doSelectAll()">Select All</button>
-    <button class="btn btn-primary" data-ng-click="doAddSelected()">Add Selected</button>
+    <button class="btn btn-default" data-ng-click="doDeleteList()" data-ng-disabled="!canDeleteList()">Delete List</button>
+    <button class="btn btn-default" data-ng-click="doSelectAll()">Select All</button>
+    <button class="btn btn-default" data-ng-click="doAddSelected()">Add Selected</button>
     <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="!mylist.hasLoaded()"></div>
     <div data-ng-repeat="groupItem in allItems" data-ng-hide="groupItem.fitems.length <= 0">
       <div class="line">{{groupItem.key}}</div>

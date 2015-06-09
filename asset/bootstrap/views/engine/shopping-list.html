@@ -7,18 +7,18 @@
       <div class="input-group addItemManage">
         <input type="text" class="form-control" data-ng-model="addString" placeholder="add own item" ui-keypress="{13:'doAddOwnItem()'}">
         <span class="input-group-btn">
-          <button class="btn btn-primary" data-ng-click="doAddOwnItem()" type="button">Add</button>
+          <button class="btn btn-default" data-ng-click="doAddOwnItem()" type="button">Add</button>
         </span>
       </div>
     </div>
     <div class="col-md-8">
       <div class="btn-group" data-ng-show="mylist.hasLoaded()">
-        <button type="button" class="btn btn-primary" data-ng-click="goUrl('/mylist/print', '_blank')"><i class="fa fa-print"></i><br />Print</button>
-        <button type="button" class="btn btn-primary" data-ng-click="goUrl('/mylist/email')"><i class="fa fa-envelope"></i><br />Email</button>
-        <button type="button" class="btn btn-primary" data-ng-click="goUrl('/savedlists')"><i class="fa fa-folder-open"></i><br />Previous</a></button>
-        <button type="button" class="btn btn-primary" data-gsn-modal="getThemeUrl('/views/engine/modal-shopping-list-title.html')" data-ng-click="doIfLoggedIn(showModal)"><i class="fa fa-file"></i><br />Save</button>
-        <button type="button" class="btn btn-primary" data-ng-click="deleteCurrentList()"><i class="fa fa-minus-circle"></i><br />Delete</button>
-        <button type="button" class="btn btn-primary" data-ng-click="startNewList()"><i class="fa fa-plus-circle"></i><br />New</button>
+        <button type="button" class="btn btn-default" data-ng-click="goUrl('/mylist/print', '_blank')"><i class="fa fa-print"></i><br />Print</button>
+        <button type="button" class="btn btn-default" data-ng-click="goUrl('/mylist/email')"><i class="fa fa-envelope"></i><br />Email</button>
+        <button type="button" class="btn btn-default" data-ng-click="goUrl('/savedlists')"><i class="fa fa-folder-open"></i><br />Previous</a></button>
+        <button type="button" class="btn btn-default" data-gsn-modal="getThemeUrl('/views/engine/modal-shopping-list-title.html')" data-ng-click="doIfLoggedIn(showModal)"><i class="fa fa-file"></i><br />Save</button>
+        <button type="button" class="btn btn-default" data-ng-click="deleteCurrentList()"><i class="fa fa-minus-circle"></i><br />Delete</button>
+        <button type="button" class="btn btn-default" data-ng-click="startNewList()"><i class="fa fa-plus-circle"></i><br />New</button>
       </div>
     </div>
   </div>
@@ -48,8 +48,8 @@
       </div>
       <div class="col-md-4 col-xs-4">
         <input class="btn btn-xs quantity" style="width: 35px" data-ng-show="!item.IsCoupon" name="quantity" data-ng-model="item.NewQuantity" />
-        <button class="btn btn-primary btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
-        <button class="btn btn-primary btn-xs" data-ng-click="doItemRemove(item)">Remove</button>
+        <button class="btn btn-default btn-xs" data-ng-click="doUpdateQuantity(item)" data-ng-hide="item.IsCoupon">Update</button>
+        <button class="btn btn-default btn-xs" data-ng-click="doItemRemove(item)">Remove</button>
       </div>
     </div>
   </div>

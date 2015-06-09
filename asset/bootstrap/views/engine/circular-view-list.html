@@ -5,7 +5,7 @@
   <div class="col-md-8 col-xs-12 text-right">
     <span>Sort by: </span>
     <div class="btn-group dropdown">
-      <button style="" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">{{sortByName}} <span class="caret"></span></button>
+      <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{sortByName}} <span class="caret"></span></button>
       <ul class="dropdown-menu" role="menu">
         <li>
           <a href="javascript:void(0)" data-ng-click="toggleSort('PageNumber');sortByName='page'">page</a>
@@ -74,7 +74,7 @@
           <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
         </div>
         <div class="col-md-1 col-xs-3">
-          <button class="btn btn-primary btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+          <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
         </div>
     </div>
     <div class="row" data-ng-repeat-end=""></div>

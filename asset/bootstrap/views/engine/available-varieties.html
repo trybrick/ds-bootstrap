@@ -9,7 +9,7 @@
     <img class="availableVarietiesImage" data-ng-src="{{vm.selectedItem.SmallImageUrl  || getThemeUrl('/images/no_image.jpg')}}" />
   </div>
   <div>                                                                                                                  
-    <button class="btn btn-primary btn-xs pull-right" 
+    <button class="btn btn-default btn-xs pull-right" 
     data-ng-click="doToggleCircularItem($event, vm.selectedItem)">{{ isOnList(vm.selectedItem) && "Remove" || "Add"}}</button>
     <h4><span>{{vm.selectedItem.PriceString}}</span></h4>
   </div>
@@ -18,7 +18,7 @@
   <div class="availableVarietiesList" data-ng-if="vm.selectedItem.Varieties.length > 0">
     <ul>
       <li class="row" data-ng-repeat="item in vm.selectedItem.Varieties">
-        <button type="button" class="btn btn-primary btn-xs btnMarianos col-md-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+        <button type="button" class="btn btn-default btn-xs btnMarianos col-md-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
         <p class="col-md-9 pull-right">{{item.Description}}</p>
       </li>
     </ul>

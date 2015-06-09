@@ -5,7 +5,7 @@
     <span class="sortBy">
       <span>Sort By:</span>
       <div class="btn-group dropdown" dropdown>
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
           {{sortByName}} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu dropdown-menu-touch" role="menu">
@@ -38,8 +38,8 @@
           <p >{{item.BottomTagLine}}</p> 
         </div>
         <div class="text-center">
-          <button class="btn btn-primary btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
-          <button class="btn btn-primary btn-xs" data-ng-click="printManufacturerCoupon($event, item)">Print Now</button>
+          <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
+          <button class="btn btn-default btn-xs" data-ng-click="printManufacturerCoupon($event, item)">Print Now</button>
           <p class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></p>
         </div>
       </div>
