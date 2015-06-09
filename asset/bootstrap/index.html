@@ -31,29 +31,27 @@
 <body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
   
-  <div class="layout-container">
+  <div class="layout-container container">
     <!-- Header -->
     <header>
-      <div class="container">
-        <div class="hidden-print pull-right" style="padding-top: 5px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
-        <div data-gsn-ft-config="logo">
-          <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
-          <a href="javascript:void(0)" data-ng-if="!item.Description" data-ng-click="goUrl('/')">
-            <img data-ng-src="http://placehold.it/350x150/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
-          </a>
-        </div>
+      <div class="hidden-print pull-right" style="padding-top: 5px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+      <div data-gsn-ft-config="logo">
+        <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
+        <a href="javascript:void(0)" data-ng-if="!item.Description" data-ng-click="goUrl('/')">
+          <img data-ng-src="http://placehold.it/350x150/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
+        </a>
+      </div>
 
-        <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-        <div data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0">
-        </div>
+      <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
+      <div class="hidden-print" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0">
       </div>
     </header>
 
     <!-- Main Content container-->
-    <div class="mainContent container" data-ng-include="currentLayout"></div>
+    <div class="mainContent" data-ng-include="currentLayout"></div>
 
     <!-- Footer -->
-    <footer data-ng-include="getThemeUrl('/views/footer.html')"></footer>
+    <footer class="hidden-print" data-ng-include="getThemeUrl('/views/footer.html')"></footer>
   </div>    
 
   <!-- above the fold scripts -->
