@@ -33,27 +33,24 @@
   
   <div class="layout-container container">
     <!-- Header -->
-    <header>
-      <div data-gsn-ft-config="logo">
-        <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
-        <div data-ng-if="!item.Description">
-          <div class="hidden-print pull-right" style="padding: 5px 15px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
-          <a href="javascript:void(0)" data-ng-click="goUrl('/')">
-            <img data-ng-src="http://placehold.it/350x140/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
-          </a>
-        </div>
+    <header data-gsn-ft-config="logo">
+      <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
+      <div data-ng-if="!item.Description">
+        <div class="hidden-print pull-right" style="padding: 5px 15px" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+        <a href="javascript:void(0)" data-ng-click="goUrl('/')">
+          <img data-ng-src="http://placehold.it/350x140/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
+        </a>
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0">
-      </div>
+      <div class="hidden-print" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0"></div>
     </header>
 
     <!-- Main Content container-->
     <div class="mainContent" data-ng-include="currentLayout"></div>
 
     <!-- Footer -->
-    <footer class="hidden-print" data-ng-include="getThemeUrl('/views/footer.html')"></footer>
+    <footer class="hidden-print" data-ng-include="getThemeUrl('/views/footer.html')" data-gsn-ft-config="footer"></footer>
   </div>    
 
   <!-- above the fold scripts -->
