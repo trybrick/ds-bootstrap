@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="pull-right" data-ng-class="{ 'open': gvm.shoppingListActive }" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) > 0">
-        <a class="btn btn-primary navbar-btn" href="javascript:void(0)"data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
+        <a class="btn btn-default list" href="javascript:void(0)"data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
           My List
           <span class="badge badgeCount">{{getShoppingListCount()}}</span>
           <span class="glyphicon glyphicon-chevron-down"></span>
@@ -40,7 +40,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
         <li data-ng-class="{ 'open': gvm.shoppingListActive }">
-          <a class="btn btn-primary list" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
+          <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
             My List
             <span class="badge badgeCount">{{getShoppingListCount()}}</span>
             <span class="glyphicon glyphicon-chevron-down"></span>
