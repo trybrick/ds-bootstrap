@@ -3,7 +3,7 @@ var storeApp = angular
     .config(['$routeProvider', function ($routeProvider) {
       // disable theme
       gsn.config.SiteTheme = 'bootstrap';
-      gsn.config.defaultMobileListView = false;
+      gsn.config.defaultMobileListView = true;
 
       var le = [gsn.getThemeUrl('/views/layout.html')];
       for(var i = 1; i < 5; i++){
@@ -179,51 +179,3 @@ storeApp
       ];
     }
 }]);
-
-(function (angular, undefined) {
-  'use strict';
-  var myModule = angular.module('gsn.core');
-
-  myModule.directive('gsnDigiCirc', ['$timeout', '$rootScope', '$analytics', 'gsnApi', function ($timeout, $rootScope, $analytics, gsnApi) {
-    // Usage: create classic hovering digital circular
-    //
-    // Creates: 2013-12-12 TomN
-    //
-    var directive = {
-      restrict: 'EA',
-      scope: false,
-      link: link
-    };
-    return directive;
-
-    function link(scope, element, attrs) {
-      scope.$watch(attrs.gsnDigiCirc, function (newValue) {
-        if (newValue) {
-          if (newValue.Circulars.length > 0) {
-            var el = element.find('div');
-            el.digitalCirc({
-              data: newValue,
-              browser: gsnApi.browser,
-              templateCircularSingle: '<div id="gallery">' +
-'{{#Circular.Pages}}<a href="{{ImageUrl}}" style="padding-left: 5px">' +
-'<img src="{{SmallImageUrl}}" alt="{{../Circular.CircularTypeName}}-{{PageIndex}} of {{../Circular.Pages.length}}"/>' +
-'</a>{{/Circular.Pages}}' +
-'</div>',
-              templatePagerTop: '',
-              templatePagerBottom: '',
-              onItemSelect: function (plug, evt, item) {},
-              onCircularDisplayed: function (plug, circIdx, pageIdx) {
-                $timeout(function() {
-                  angular.element('#gallery a').photoSwipe({
-                    enableMouseWheel: false,
-                    enableKeyboard: false
-                  });
-                }, 50);
-              }
-            });
-          }
-        }
-      });
-    }
-  }]);
-})(angular);
