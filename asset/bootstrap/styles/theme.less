@@ -12,6 +12,17 @@
 @dropDown       : false;
 */
 
+.ddm() when (@dropDown) {
+  > .dropdown-menu {
+    background: @bgDefault;
+    > li > a {
+      color: @colDefault;
+      &:hover,  &:focus {
+        color: @colHighlight;
+        background: @bgHighlight; }}
+    .divider {
+      background: @bgHighlight;}}}
+
 .limDefault {
   body {
     background: @bgBody;
@@ -65,17 +76,6 @@
       }}
   }
 }
-
-.ddm() when (@dropDown) {
-  > .dropdown-menu {
-    background-color: @bgDefault;
-    > li > a {
-      color: @colDefault;
-      &:hover,  &:focus {
-        color: @colHighlight;
-        background: @bgHighlight; }}
-    .divider {
-      background: @bgHighlight;}}}
 
 /* default styling override */
 .limDefault();
