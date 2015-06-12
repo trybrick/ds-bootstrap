@@ -31,7 +31,7 @@
 </div>
 <div style="margin-top: 15px">
   <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="1" data-gsn-ft-recipe="">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/{{item.RecipeId}}')" class="featuredhome-default">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)" class="featuredhome-default">
       <img class="pull-left" data-ng-src="{{item.ImageUrl}}" />
       <h4>Featured Recipe</h4>
       {{item.RecipeTitle}}
@@ -39,14 +39,14 @@
     </a>
   </div>
    <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="1" data-gsn-ft-article="">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/article/{{item.ArticleId}}')" class="featuredhome-default">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + item.ArticleId)" class="featuredhome-default">
         <img class="pull-left" data-ng-src="{{item.ImageUrl}}" />
         <h4>Featured Article</h4>
         {{item.Title}}
     </a>
   </div>
    <div class="col-md-4 col-sm-4 col-xs-12 featuredhome" data-content-position="1" data-gsn-ft-video="">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/recipevideo/{{item.VideoId}}')" class="featuredhome-default">
+    <a href="javascript:void(0)" data-ng-click="goUrl('/recipevideo/' + item.VideoId)" class="featuredhome-default">
         <img class="pull-left" data-ng-src="{{item.Thumbnail}}" />
         <h4>Featured Video</h4>
         {{item.Title}}

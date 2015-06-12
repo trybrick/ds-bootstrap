@@ -1,4 +1,4 @@
-<div class="dropdown pull-right menu-login" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
+<div class="dropdown pull-right menu-login" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }" style="color: #000; background-color: #fff;">
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
     {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
   </a>
@@ -7,7 +7,7 @@
     <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
   </div>
 </div>
-<div class="dropdown pull-right menu-login" data-ng-cloak="" data-ng-if="!isLoggedIn" data-gsn-login="" data-ng-class="{ 'open': gvm.loginMenuActive }" >
+<div class="dropdown pull-right menu-login" data-ng-cloak="" data-ng-if="!isLoggedIn" data-gsn-login="" data-ng-class="{ 'open': gvm.loginMenuActive }" style="color: #000; background-color: #fff;">
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
     Sign in <i class="fa fa-caret-down"></i>
   </a>
