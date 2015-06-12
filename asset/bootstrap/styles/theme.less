@@ -5,9 +5,19 @@
 @bgBody         : #ccc;
 @colBody        : #000;
 
+body {
+  background-color: @bgBody;
+  color: @colBody;
+}
+
 .btn-default, footer, header {
   background-color: @bgDefault;
   color: @colDefault;
+}
+
+footer {
+  width: 120px;  /* default content */
+  vertical-align: middle;
 }
 
 .navbar-default, .pagination {
