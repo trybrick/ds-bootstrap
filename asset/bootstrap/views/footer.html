@@ -13,19 +13,17 @@
 <div class="col-md-4 text-center footer-center" data-gsn-ft-config="footer-center">
   <div data-ng-if="!item.Description" data-ng-bind-html="item.Description"></div>
     <div data-ng-if="!item.Description">
-      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/aboutus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/aboutus')">About Us</a></div>
-      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/careers'}"><a href="javascript:void(0)" data-ng-click="goUrl('/careers')">Careers</a></div>
-      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></li>
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/privacy'}"><a href="javascript:void(0)" data-ng-click="goUrl('/privacy')">Privacy Policy</a></div>
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></div>
       <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></div>
     </div>
   </div>
 </div>
-<div class="col-md-4 text-center footer-right" data-gsn-ft-config="footer-right">
-  <div data-ng-if="!item.Description" data-ng-bind-html="item.Description"></div>
-  <div data-ng-if="!item.Description" class="text-center">
-    <h4 style="margin-top: 0;">Stay Connected</h4>
-    <div class="col-xs-4"><a href="https://www.facebook.com/groceryshoppingnetwork"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></div>
-    <div class="col-xs-4"><a href="https://twitter.com/grocerynetwork"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></div>
-    <div class="col-xs-4"><a href="#"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></div> 
-  </div>
+<div class="col-md-4 text-center footer-right">
+    <h4 style="margin-top: 0;">Stay Connected</h4><br />
+    <div class="text-center">
+      <div style="float: left" data-gsn-ft-config="facebook"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></div>
+      <div style="float: left" data-gsn-ft-config="twitter"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></div>
+      <div style="float: left" data-gsn-ft-config="pinterest"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></div>
+    </div>
 </div>
