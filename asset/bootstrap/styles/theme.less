@@ -29,17 +29,24 @@ body {
 header {
   background: @bgHeader;
   color: @colHeader;
+  a {
+    color: @colHeader;
+    &:hover, &:focus {
+      color: @colHeader; }}
 }
 
 footer {
   background: @bgFooter;
   color: @colFooter;
+  a {
+    color: @colFooter;
+    &:hover, &:focus {
+      color: @colFooter; }}
 }
-
 
 .pagination {
   background: @colDefault;
-  color: @colHighlight;
+  color: @colDefault;
   > li {
     > a {
       color: @colDefault;
@@ -70,16 +77,24 @@ footer {
   header {
     background: @bgHeader;
     color: @colHeader;
+    a {
+      color: @colHeader;
+      &:hover, &:focus {
+        color: @colHeader; }}
   }
 
   footer {
     background: @bgFooter;
     color: @colFooter;
+    a {
+      color: @colFooter;
+      &:hover, &:focus {
+        color: @colFooter; }}
   }
 
   .pagination {
     background: @colDefault;
-    color: @colHighlight;
+    color: @colDefault;
     > li {
       > a {
         color: @colDefault;
