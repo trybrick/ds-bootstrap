@@ -10,28 +10,28 @@
     </div>
   </div>
 </div>
-<div class="col-md-4 footer-center" data-gsn-ft-config="footer-center">
+<div class="col-md-4 text-center footer-center" data-gsn-ft-config="footer-center">
   <div data-ng-if="!item.Description" data-ng-bind-html="item.Description"></div>
-    <ul data-ng-if="!item.Description">
-      <li data-ng-class="{'underlined': currentPath == '/aboutus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/aboutus')">About Us</a></li>
-      <li data-ng-class="{'underlined': currentPath == '/careers'}"><a href="javascript:void(0)" data-ng-click="goUrl('/careers')">Careers</a></li>
-      <li data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></li>
-      <li data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></li>
-    </ul>
+    <div data-ng-if="!item.Description">
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/aboutus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/aboutus')">About Us</a></div>
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/careers'}"><a href="javascript:void(0)" data-ng-click="goUrl('/careers')">Careers</a></div>
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></li>
+      <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></div>
+    </div>
   </div>
 </div>
-<div class="col-md-4 footer-right" data-gsn-ft-config="footer-right">
+<div class="col-md-4 text-center footer-right" data-gsn-ft-config="footer-right">
   <div data-ng-if="!item.Description" data-ng-bind-html="item.Description"></div>
   <div data-ng-if="!item.Description" class="text-center">
     <h4 style="margin-top: 0;">Stay Connected</h4>
-    <div class="col-md-4"><a href="https://www.facebook.com/groceryshoppingnetwork"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></div>
-    <div class="col-md-4"><a href="https://twitter.com/grocerynetwork"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></div>
-    <div class="col-md-4"><a href="#"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></div> 
+    <div class="col-xs-4"><a href="https://www.facebook.com/groceryshoppingnetwork"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></div>
+    <div class="col-xs-4"><a href="https://twitter.com/grocerynetwork"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></div>
+    <div class="col-xs-4"><a href="#"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></div> 
   </div>
 </div>
 <div style="clear: both">
     <div class="col-md-12 text-center default-color">
-        <span>&copy; {{ currentYear }} Grocery Shopping Network</span> <span class="hidden-xs">|</span> <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
+        <span>&copy; {{ currentYear }} Grocery Shopping Network</span> | <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
         Patent No US 7,734,514 B2.</a>
     </div>
 </ul>
