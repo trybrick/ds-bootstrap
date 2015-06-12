@@ -23,7 +23,19 @@ footer {
   vertical-align: middle;
 }
 
-.navbar-default, .pagination {
+.pagination {
+  > li {
+    > a {
+      color: @colDefault;
+      &:hover,  &:focus {
+        color: @colHighlight; }}}
+  > .active {
+    > a, > a:hover, > a:focus {
+      color: @colHighlight;
+      background-color: @bgHighlight; }}
+}
+
+.navbar-default {
   background-color: @bgDefault;
   border-color: @bgHighlight;
   .navbar-brand {
