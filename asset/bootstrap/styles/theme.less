@@ -9,63 +9,10 @@
 @colHeader      : @colDefault;
 @bgFooter       : @bgDefault;
 @colFooter      : @colDefault;
+@dropDown       : false;
 */
 
-/* defualt styling override */
-body {
-  background: @bgBody;
-  color: @colBody;
-}
-
-.btn-default, .default-color {
-  background: @bgDefault;
-  color: @colDefault;
-  a {
-    color: @colDefault;
-    &:hover, &:focus {
-      color: @colHighlight; }}
-}
-
-header {
-  background: @bgHeader;
-  color: @colHeader;
-  a {
-    color: @colHeader;
-    &:hover, &:focus {
-      color: @colHeader; }}
-}
-
-footer {
-  background: @bgFooter;
-  color: @colFooter;
-  a {
-    color: @colFooter;
-    &:hover, &:focus {
-      color: @colFooter; }}
-}
-
-.pagination {
-  background: @bgDefault;
-  color: @colDefault;
-  > li {
-    > a {
-      background: @bgDefault;
-      color: @colDefault;
-      &:hover,  &:focus {
-        color: @colHighlight; 
-        background: @bgHighlight;
-      }}}
-  > .active {
-    background: @bgHighlight;
-    color: @colHighlight;
-    > a, > a:hover, > a:focus {
-      color: @colDefault; 
-      background: @bgDefault;
-    }}
-}
-
-/* duplicate style in media query to support older browser */
-@media (min-width: 1) {
+.limDefault {
   body {
     background: @bgBody;
     color: @colBody;
@@ -98,7 +45,6 @@ footer {
         color: @colFooter; }}
   }
 
-  
   .pagination {
     background: @bgDefault;
     color: @colDefault;
@@ -114,11 +60,29 @@ footer {
       background: @bgHighlight;
       color: @colHighlight;
       > a, > a:hover, > a:focus {
-        color: @colDefault; 
-        background: @bgDefault;
+        background: @bgHighlight;
+        color: @colHighlight;
       }}
   }
+}
 
+.ddm() when (@dropDown) {
+  > .dropdown-menu {
+    background-color: @bgDefault;
+    > li > a {
+      color: @colDefault;
+      &:hover,  &:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight; }}
+    .divider {
+      background-color: @bgHighlight;}}}
+
+/* default styling override */
+.limDefault();
+
+/* duplicate style in media query to support older browser */
+@media (min-width: 1) {
+  .limDefault();
 }
 
 /* navigation */
@@ -140,7 +104,8 @@ footer {
       > a {
         color: @colDefault;
         &:hover,  &:focus {
-          color: @colHighlight; }}}
+          color: @colHighlight; }}
+        .ddm }
     > .active {
       > a, > a:hover, > a:focus {
         color: @colHighlight;
