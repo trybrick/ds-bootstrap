@@ -45,17 +45,17 @@ footer {
 }
 
 .pagination {
-  background: @colDefault;
-  color: @colDefault;
   > li {
     > a {
+      background: @bgDefault;
       color: @colDefault;
       &:hover,  &:focus {
         color: @colHighlight; }}}
   > .active {
+    background: @bgHighlight;
+    color: @colHighlight;
     > a, > a:hover, > a:focus {
-      color: @colHighlight;
-      background: @bgHighlight; }}
+      color: @colDefault; }}
 }
 
 /* duplicate style in media query to support older browser */
@@ -93,17 +93,17 @@ footer {
   }
 
   .pagination {
-    background: @colDefault;
-    color: @colDefault;
     > li {
       > a {
+        background: @bgDefault;
         color: @colDefault;
         &:hover,  &:focus {
           color: @colHighlight; }}}
     > .active {
+      background: @bgHighlight;
+      color: @colHighlight;
       > a, > a:hover, > a:focus {
-        color: @colHighlight;
-        background: @bgHighlight; }}
+        color: @colDefault; }}
   }
 }
 
