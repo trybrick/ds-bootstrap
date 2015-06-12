@@ -18,6 +18,10 @@ body {
 .btn-default, footer, header {
   background-color: @bgDefault;
   color: @colDefault;
+  a {
+    color: @colDefault;
+    &:hover, &:focus {
+      color: @colHighlight; }}
 }
 
 footer {
@@ -46,6 +50,10 @@ footer {
       color: @colHighlight; }}
   .navbar-text {
     color: @colDefault; }
+  a {
+    color: @colDefault;
+    &:hover, &:focus {
+      color: @colHighlight; }}
   .navbar-nav {
     > li {
       > a {
@@ -74,6 +82,10 @@ footer {
     &:hover {
       color: @colHighlight; }}}
 @media (max-width: 767px) {
+  a {
+    color: @colDefault;
+    &:hover, &:focus {
+      color: @colHighlight; }}
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: @colDefault;
