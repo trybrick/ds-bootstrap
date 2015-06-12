@@ -1,5 +1,5 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | contact us"></div>
-<div data-ng-hide="contactSuccess">
+<div class="col-md-12" data-ng-hide="contactSuccess">
   <h1>Send Us an Email</h1>
   <form role="form" name="myContactUsForm" data-ng-submit="doSubmit()">
     <h2>Contact Information</h2>
@@ -105,9 +105,9 @@
     </div>
     <div class="col-md-8">          
       <div class="form-group">
-        <button type="submit" class="btn btn-default">Submit</button>           
         <button type="button" class="btn btn-default" data-ng-click="doReset()">Reset</button>      
         <button type="button" class="btn btn-default" data-ng-click="goBack()">Cancel</button>
+        <button type="submit" class="btn btn-default">Submit</button>           
       </div>
     </div>
   </form>
