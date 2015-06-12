@@ -37,15 +37,17 @@ footer {
 }
 
 .pagination {
+  background-color: @colDefault;
+  color: @colHighlight;
   > li {
     > a {
-      color: @colHighlight;
+      color: @colDefault;
       &:hover,  &:focus {
-        color: @bgHighlight; }}}
+        color: @colHighlight; }}}
   > .active {
     > a, > a:hover, > a:focus {
-      color: @colDefault;
-      background-color: @colHighlight; }}
+      color: @colHighlight;
+      background-color: @bgHighlight; }}
 }
 
 .navbar-default {
