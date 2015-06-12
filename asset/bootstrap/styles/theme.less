@@ -18,7 +18,7 @@ body {
 }
 
 .btn-default, footer, header, .default-color {
-  background-color: @bgDefault;
+  background: @bgDefault;
   color: @colDefault;
   a {
     color: @colDefault;
@@ -27,12 +27,12 @@ body {
 }
 
 header {
-  background-color: @bgHeader;
+  background: @bgHeader;
   color: @colHeader;
 }
 
 footer {
-  background-color: @bgFooter;
+  background: @bgFooter;
   color: @colFooter;
 }
 
@@ -48,7 +48,7 @@ footer {
   > .active {
     > a, > a:hover, > a:focus {
       color: @colHighlight;
-      background-color: @bgHighlight; }}
+      background: @bgHighlight; }}
 }
 
 /* duplicate style in media query to support older browser */
@@ -59,7 +59,7 @@ footer {
   }
 
   .btn-default, footer, header, .default-color {
-    background-color: @bgDefault;
+    background: @bgDefault;
     color: @colDefault;
     a {
       color: @colDefault;
@@ -68,17 +68,17 @@ footer {
   }
 
   header {
-    background-color: @bgHeader;
+    background: @bgHeader;
     color: @colHeader;
   }
 
   footer {
-    background-color: @bgFooter;
+    background: @bgFooter;
     color: @colFooter;
   }
 
   .pagination {
-    background-color: @colDefault;
+    background: @colDefault;
     color: @colHighlight;
     > li {
       > a {
@@ -88,13 +88,13 @@ footer {
     > .active {
       > a, > a:hover, > a:focus {
         color: @colHighlight;
-        background-color: @bgHighlight; }}
+        background: @bgHighlight; }}
   }
 }
 
 /* navigation */
 .navbar-default {
-  background-color: @bgDefault;
+  background: @bgDefault;
   border-color: @bgHighlight;
   .navbar-brand {
     color: @colDefault;
@@ -115,17 +115,17 @@ footer {
     > .active {
       > a, > a:hover, > a:focus {
         color: @colHighlight;
-        background-color: @bgHighlight; }}
+        background: @bgHighlight; }}
     > .open {
       > a, > a:hover, > a:focus {
         color: @colHighlight;
-        background-color: @bgHighlight; }}}
+        background: @bgHighlight; }}}
   .navbar-toggle {
     border-color: @bgHighlight;
     &:hover, &:focus {
-      background-color: @bgHighlight; }
+      background: @bgHighlight; }
     .icon-bar {
-      background-color: @colDefault; }}
+      background: @colDefault; }}
   .navbar-collapse,
   .navbar-form {
     border-color: @colDefault; }
@@ -146,5 +146,5 @@ footer {
     > .active {
       > a, > a:hover, > a:focus {
         color: @colHighlight;
-        background-color: @bgHighlight; }}}
+        background: @bgHighlight; }}}
 }
