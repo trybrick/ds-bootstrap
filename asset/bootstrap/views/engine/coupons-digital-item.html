@@ -2,7 +2,7 @@
   <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="{{item.Description1}}" />
   <div class="product-description" itemprop="description">
     <h4 data-ng-bind-html="item.Description1" itemprop="name"></h4>
-    <p data-ng-bind-html="item.Description2"></p>
+    <p title="{{item.Description2}}">{{item.Description2 | truncate:false:40:' ...'}}</p>
     <h5>expires: {{item.EndDate | date: 'M / dd / yyyy'}}</h5>
     <div class="hidden meta">
       <div class="product-code">{{item.ProductCode}}</div>

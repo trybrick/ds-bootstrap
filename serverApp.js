@@ -12,6 +12,7 @@ var apps = {};
 
 function startServer(chainId) {
   var app = express();
+  var port = 3000 + parseInt(chainId);
   apps[chainId] = app;
   app.engine('html', require('ejs').renderFile);
   app.use('/proxy', function (req, res) {
@@ -39,13 +40,12 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      k = k.replace(/\[chainname\]/gi, 'bootstrap local').replace(/\[chainid\]/gi, chainId);
+      k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
       response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
     }
   });
 
   // Start server
-  var port = 3000 + parseInt(chainId);
   app.listen(port, function() {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
