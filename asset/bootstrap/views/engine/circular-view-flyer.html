@@ -2,10 +2,56 @@
 	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
 </div>
 <br/>
-<div data-gsn-digital-circ="vm.digitalCirc">
-  <div data-ng-non-bindable=""></div>
+<div class="dcircular-list">
+	<div class="dcircular-list-content">
+		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
+     <a class="thumbnail dcircular-thumbnail" href="javascript:void(0)">
+       <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"> 
+       <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeId}}</h3></div>
+     </a>
+   </div>
+ </div>
+</div>
+<div class="dcircular-content map">
+  <div class="map">
+    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 520 1163" style="enable-background:new 0 0 520 1163;" xml:space="preserve">
+      <image width="520" height="1163" xlink:href="{{vm.digitalCirc.Circulars[0].Pages[0].ImageUrl}}" ng-cloak=""></image>
+      <g ng:attr:id="item_{{item.ItemId}}" data-ng-repeat="item in vm.digitalCirc.Circulars[0].Pages[0].Items" ng-cloak="">
+          <rect ng:attr:x="{{item.rect[0]}}" ng:attr:y="{{item.rect[1]}}" ng:attr:width="{{item.rect[4]}}" ng:attr:height="{{item.rect[5]}}" />
+          <a href="javascript:void" data-ng-click="doToggleCartItem($event, item)">
+            <rect class="circbtn" ng:attr:x="{{item.rect[2] - 50}}" ng:attr:y="{{item.rect[3] - 25}}" width="50" height="20" rx="5" ry="5" />
+            <text class="circbtn-text" ng:attr:x="{{item.rect[2] - 50}}" ng:attr:y="{{item.rect[3] - 10}}">More ...</text>
+          </a>
+      </g>
+    </svg>
+  </div>
 </div>
 <div class="dcircular-popup">
   <div class="popup-title"></div>
   <div class="popup-content"></div>
 </div>
+<style>
+.map g {
+  fill: rgba(255,255,255,0);
+}
+.map g:hover {
+  fill: rgba(255, 255, 255, 0.3);
+  cursor: crosshair;
+}
+
+.map g:hover .circbtn, .map g:hover .circbtn-text {
+  display:block;
+}
+
+.circbtn {
+  fill: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  display: none;
+}
+.circbtn-text {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke: #000;
+  cursor: pointer;
+  display: none;
+}
+</style>
