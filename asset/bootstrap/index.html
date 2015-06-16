@@ -38,10 +38,16 @@
     <!-- Header -->
     <header>
       <div style="position: relative" data-content-position="10">
-        <div class="hidden-print pull-right login-menu" style="position: absolute; top: 5px; right: 15px; z-index: 1" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+        <div class="hidden-print login-menu" style="position: absolute; top: 5px; right: 15px; z-index: 1" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
         <a href="javascript:void(0)" data-ng-click="goUrl('/')" data-gsn-ft-config="logo">
-          <img data-ng-src="{{item.Description || 'http://placehold.it/1170x150/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" />
+          <img data-ng-src="{{item.Description || 'http://placehold.it/1170x150/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" style="padding-left: 20px; padding-right: 90px" />
         </a>
+        <div class="hidden-print hidden-xs login-menu"  style="position: absolute; bottom: 0; right: 15px; z-index: 1" >
+          <span style="padding-left: 5px" data-gsn-ft-config="facebook" data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></span>
+          <span style="padding-left: 5px"  data-gsn-ft-config="twitter" data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></span>
+          <span style="padding-left: 5px"  data-gsn-ft-config="pinterest"  data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></span>
+          <span style="padding-left: 5px" data-gsn-ft-config="youtube" data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #cb2027" class="fa fa-youtube fa-2x"></i></a></span>
+        </div>
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
@@ -52,15 +58,7 @@
     <div class="mainContent" data-ng-include="currentLayout"></div>
 
     <!-- Footer -->
-    <footer class="hidden-print" data-ng-include="getThemeUrl('/views/footer.html')" data-gsn-ft-config="footer"></footer>
-
-    <!-- bottom bar that you canot remove -->
-    <div style="clear: both;">
-        <div class="col-md-12 text-center default-color">
-            <span>&copy; {{ currentYear }} Grocery Shopping Network</span> | <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
-            Patent No US 7,734,514 B2.</a>
-        </div>
-    </div>
+    <footer class="hidden-print text-center" data-ng-include="getThemeUrl('/views/footer.html')"></footer>
   </div>    
 
   <!-- above the fold scripts -->

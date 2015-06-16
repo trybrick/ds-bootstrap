@@ -10,7 +10,7 @@
     </div>
   </div>
 </div>
-<div class="col-md-4 text-center footer-center" data-gsn-ft-config="footer-center">
+<div class="col-md-4 footer-center" data-gsn-ft-config="footer-center">
   <div data-ng-if="!item.Description" data-ng-bind-html="item.Description"></div>
     <div data-ng-if="!item.Description">
       <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/privacy'}"><a href="javascript:void(0)" data-ng-click="goUrl('/privacy')">Privacy Policy</a></div>
@@ -19,13 +19,13 @@
     </div>
   </div>
 </div>
-<div class="col-md-4 text-center footer-right">
-    <h4 style="margin-top: 0;">Stay Connected</h4><br />
-    <div class="text-center">
-      <span style="padding-left: 5px" data-gsn-ft-config="facebook" data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #3B5998" class="fa fa-facebook-square fa-2x"></i></a></span>
-      <span style="padding-left: 5px"  data-gsn-ft-config="twitter"  data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #4099FF" class="fa fa-twitter-square fa-2x"></i></a></span>
-      <span style="padding-left: 5px"  data-gsn-ft-config="pinterest"  data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #cb2027" class="fa fa-pinterest fa-2x"></i></a></span>
+<div class="col-md-4 footer-right" data-gsn-ft-config="footer-right">
+  <br />
+  <img src="//cdn.gsngrocers.com/script/virtualstore/images/icons/bbb.png" />
+</div>
 
-      <span style="padding-left: 5px" data-gsn-ft-config="youtube" data-ng-if="item.Description"><a data-ng-href="{{item.Description}}" target="_blank"><i style="color: #cb2027" class="fa fa-youtube fa-2x"></i></a></span>
-    </div>
+<!-- bottom bar that you canot remove -->
+<div class="col-md-12">
+    <span>&copy; {{ currentYear }} Grocery Shopping Network</span> | <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
+    Patent No US 7,734,514 B2.</a>
 </div>
