@@ -27,7 +27,7 @@
 </div>
 <div class="col-md-12">    
   <br />                                                          
-  <div class="col-md-12" data-ng-show="selectedCoupons.items.length <= 0 && filterBy">No results returned.</div>
+  <div class="col-md-12" data-ng-show="selectedCoupons.items.length <= 0 && vm.filterBy">No results returned.</div>
   <div class="row" data-infinite-scroll="loadMore()">
     <div class="col-md-4 col-sm-4 col-xs-12" data-ng-repeat="item in selectedCoupons.items">
       <div class="text-center">
