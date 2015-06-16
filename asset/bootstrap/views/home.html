@@ -1,28 +1,22 @@
 <div class="row">
   <div class="col-md-12 featuredContent" data-gsn-partial-content="Home Slideshow"> 
-    <div data-gsn-carousel="" class="carousel slide" data-interval="5000" data-slides="partialContents">
+    <div class="carousel slide" id="myCarousel" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-ng-repeat="item in slides" data-ng-class="{ 'active': $index == currentIndex() }" data-ng-click="selectIndex($index)"></li>
+        <li data-ng-repeat="item in getContentList()" data-ng-class="{ 'active': $index == 0 }" data-target="#myCarousel" data-slide-to="{{$index}}"></li>
       </ol>
 
       <!-- Wrapper for slides -->
-      <div class="slide-container" data-ng-swipe-left="next()" data-ng-swipe-right="prev()" data-ui-event="{'mouseover': 'stop()', 'mouseout': 'play()'}">
-          <div data-ng-repeat="item in slides | pagingFilter:1:currentIndex()" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="slide"></div>
+      <div class="carousel-inner" role="listbox">
+          <div data-ng-repeat="item in getContentList()" data-ng-bind-html="item.Description | removeAspx | trustedHtml" class="item"  data-ng-class="{ 'active': $index == 0 }"></div>
       </div>
-
-
-      <div class="hidden">
-          <div data-ng-repeat="item in slides" data-ng-bind-html="item.Description"></div>
-      </div>
-
 
       <!-- Left and right controls -->
-      <a class="left carousel-control" data-ng-click="prev()">
+      <a class="left carousel-control" data-slide="prev" role="button" href="javascript:void(0)" data-target="#myCarousel">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="right carousel-control" data-ng-click="next()">
+      <a class="right carousel-control" data-slide="next" role="button" href="javascript:void(0)" data-target="#myCarousel">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -53,3 +47,10 @@
     </a>
   </div>
 </div>
+<script>
+setTimeout(function() {
+  jQuery('.carousel').carousel({
+    interval: 5000
+  });
+}, 1000);
+</script>
