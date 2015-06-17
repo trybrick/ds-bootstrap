@@ -104,3 +104,28 @@ var storeApp = angular
     }
   }]);
 })(angular);
+
+(function (angular, undefined) {
+  'use strict';
+  var myModule = angular.module('gsn.core');
+
+  myModule.directive("gsnHoverSync", ['$window', '$timeout', 'debounce', function ($window, $timeout, debounce) {
+
+    var directive = {
+      link: link,
+      restrict: 'A',
+    };
+    return directive;
+
+    function link(scope, element, attrs) {
+      var doDisplay = debounce(function(e) {
+        var ppos = element.parent().offset();
+        var pos = element.offset();
+        var rect = element[0].getBoundingClientRect();
+        angular.element(attrs.gsnHoverSync).css({top: pos.top - ppos.top, left: pos.left - ppos.left, width: rect.width, height: rect.height}).show();
+      }, 200);
+
+      element.mouseover(doDisplay);
+    }
+  }]);
+})(angular);
