@@ -98,20 +98,15 @@ var storeApp = angular
             svg[0].setAttributeNS("", "viewBox", "0 0 " + width + " " + height + ""); 
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
+            var isIE = /Trident.*rv:11\.0/.test(navigator.userAgent) || /msie/.get(navigator.userAgent);
 
-            if (attrs.syncHeight){
-
+            if (isIE && attrs.syncHeight){
               var resizer = debounce(function(){
-                var screenWidth = angular.element('layout-container').width() - 20; 
                 var actualWidth = element.parent().width();
-                if (screenWidth < actualWidth){
-                  actualWidth = screenWidth;
-                }
-
                 var ratio = actualWidth / (width || actualWidth || 1);
                 var newHeight = ratio * height;
 
-                if (newHeight != height){
+                if (newHeight > height){
                   angular.element(attrs.syncHeight).height(newHeight);
                 }
               }, 200);
@@ -120,7 +115,13 @@ var storeApp = angular
               angular.element($window).on('resize', resizer);
             }
 
-            angular.element('rect').click();
+            // re-adjust
+            var reAdjust = debounce(function() {
+              angular.element('rect').click();
+            }, 200);
+            reAdjust();
+
+            angular.element($window).on('resize', reAdjust);
           }
         });
       });
