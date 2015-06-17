@@ -30,7 +30,7 @@
       <a class="hvr-grow-shadow btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
         <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
       </a>
-      <a class="hvr-grow-shadow btn btn-default btn-xs myInfo" style="position: absolute; right: 5px; top: 5px;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = 0; showModal()" data-show-if="vm['item' + $index]">
+      <a class="hvr-grow-shadow btn btn-default btn-xs myInfo" style="position: absolute; right: 5px; top: 5px;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]">
         <i class="fa fa-info-circle"></i>
       </a>
       </div>
