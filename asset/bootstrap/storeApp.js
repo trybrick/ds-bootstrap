@@ -101,6 +101,19 @@ var storeApp = angular
           }
         });
       });
+
+      if (attrs.syncHeight){
+        var resizer = debounce(function(){
+          var actualWidth = element.width();
+          var ratio = width / (actualWidth || width || 1);
+          var newHeight = ratio * height;
+
+          if (newHeight > height){
+            myElement.height(newHeight);
+          }
+        }, 200);
+        $window.on('resize', resize)
+      }
     }
   }]);
 })(angular);
