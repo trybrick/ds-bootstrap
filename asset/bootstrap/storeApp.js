@@ -95,7 +95,7 @@ var storeApp = angular
             img = angular.element(attrs.gsnSvgImage);
             svg = img.parent('svg');
             // append Image
-            svg[0].setAttribute("viewBox", "0 0 " + width + " " + height + ""); 
+            svg[0].setAttributeNS("", "viewBox", "0 0 " + width + " " + height + ""); 
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
           }
