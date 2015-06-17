@@ -98,6 +98,8 @@ var storeApp = angular
             svg[0].setAttributeNS("", "viewBox", "0 0 " + width + " " + height + ""); 
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
+
+            angular.element('rect').click();
           }
         });
       });
@@ -139,6 +141,7 @@ var storeApp = angular
       }, 200);
 
       element.mouseover(doDisplay);
+      element.click(doDisplay);
     }
   }]);
 })(angular);
