@@ -23,7 +23,7 @@
       </svg>
       <div data-ng-repeat="item in vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].Items" 
         class="myContent" 
-        data-ui-event="{'mouseenter': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null' }"
+        data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null' }"
         data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
         data-ng-click="vm.activeItem = item"
         id="item_{{item.ItemId}}">
