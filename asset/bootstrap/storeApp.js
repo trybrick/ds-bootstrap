@@ -82,6 +82,15 @@ var storeApp = angular
           };
 
       };
+      var resizer = debounce(function(){
+        var actualWidth = element.width();
+        var ratio = width / (actualWidth || width || 1);
+        var newHeight = ratio * height;
+
+        if (newHeight > height){
+          myElement.height(newHeight);
+        }
+      }, 200);
 
       scope.$watch('vm.pageIdx', function() {
         loadImage(attrs.src, function(err, img) {
@@ -99,23 +108,16 @@ var storeApp = angular
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
 
+            if (attrs.syncHeight){
+              resizer();
+              $window.on('resize', resizer)
+            }
             angular.element('rect').click();
+
           }
         });
       });
 
-      if (attrs.syncHeight){
-        var resizer = debounce(function(){
-          var actualWidth = element.width();
-          var ratio = width / (actualWidth || width || 1);
-          var newHeight = ratio * height;
-
-          if (newHeight > height){
-            myElement.height(newHeight);
-          }
-        }, 200);
-        $window.on('resize', resize)
-      }
     }
   }]);
 })(angular);
