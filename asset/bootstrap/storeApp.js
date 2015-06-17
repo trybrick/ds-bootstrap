@@ -52,3 +52,55 @@ var storeApp = angular
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
 
+(function (angular, undefined) {
+  'use strict';
+  var myModule = angular.module('gsn.core');
+
+  myModule.directive("gsnSvgImage", ['$window', '$timeout', 'debounce', function ($window, $timeout, debounce) {
+
+    var directive = {
+      link: link,
+      restrict: 'A',
+    };
+    return directive;
+
+
+
+    function link(scope, element, attrs) {
+      var src = attrs.src, svg;
+      var width = 0, height = 0;
+
+      var loadImage = function(src, cb) {
+          var img = new Image();    
+          img.src = src;
+          var error = null;
+          img.onload = function() {
+              cb(null, img);
+          };
+          img.onerror = function() {
+              cb('ERROR LOADING IMAGE ' + src, null);
+          };
+
+      };
+
+      scope.$watch('vm.pageIdx', function() {
+        loadImage(attrs.src, function(err, img) {
+          if (!err) {
+            element.html('');
+            element.append(img);
+            width = img.width || img.offsetWidth;
+            height = img.height || img.offsetHeight; 
+
+            // set viewBox
+            img = angular.element(attrs.gsnSvgImage);
+            svg = img.parent('svg');
+            // append Image
+            svg[0].setAttribute("viewBox", "0 0 " + width + " " + height + ""); 
+            img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
+            img.show();
+          }
+        });
+      });
+    }
+  }]);
+})(angular);

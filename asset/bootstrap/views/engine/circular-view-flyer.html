@@ -30,14 +30,20 @@
     </li>
   </ul>
   <div class="map">
-    <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 520 1163" style="enable-background:new 0 0 520 1163;" xml:space="preserve">
-      <image width="520" height="1163" xlink:href="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}" ng-cloak=""></image>
-      <g ng:attr:id="item_{{item.ItemId}}" data-ng-repeat="item in vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].Items | orderBy:['-ItemId']" ng-cloak="" style="position: relative">
-        <foreignObject ng:attr:x="{{item.rect[0]}}" ng:attr:y="{{item.rect[1]}}" ng:attr:width="{{item.rect[4]}}" ng:attr:height="{{item.rect[5]}}" style="display: table;">
-            <div xmlns="http://www.w3.org/1999/xhtml" class="myContent"><div>
-            <a class="btn btn-default btn-xs myAdd" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'myAdd': !isOnList(item)}"><i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}</a>
-            <a class="btn btn-default btn-xs myInfo" style="position: absolute; right: 0; top: 0;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = 0; showModal()" data-show-if="vm['item' + $index]"><i class="fa fa-info-circle"></i></a>
-            </div>
+    <div style="display: none" data-gsn-svg-image=".circImage" data-src="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}"></div>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" preserveAspectRatio="xMinYMin slice">
+      <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
+      <g data-ng-repeat="item in vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].Items | orderBy:['-ItemId']" ng-cloak="" style="position: relative">
+        <foreignObject class="circItemContainer" ng:attr:x="{{item.rect[0]}}" ng:attr:y="{{item.rect[1]}}" ng:attr:width="{{item.rect[4]}}" ng:attr:height="{{item.rect[5]}}" style="display: table;"  data-ng-class="{'active': item.ItemId == vm.activeItem.ItemId }"  data-ng-click="vm.activeItem = (vm.activeItem.ItemId == item.ItemId) ? null : item">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="myContent" href="javascript:void(0)">
+              <div>
+                <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'myAdd': !isOnList(item)}">
+                  <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
+                </a>
+                <a class="btn btn-default btn-xs myInfo" style="position: absolute; right: 0; top: 0;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = 0; showModal()" data-show-if="vm['item' + $index]">
+                  <i class="fa fa-info-circle"></i>
+                </a>
+              </div>
             </div>
         </foreignObject>
       </g>
@@ -64,18 +70,11 @@
   <div class="popup-content"></div>
 </div>
 <style>
-.map g {
-  fill: rgba(255,255,255,0);
-}
-
-.map g:hover {
-  fill: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-}
 .map {
   display: block;
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
 .myContent {
   top: 0;
   bottom: 0;
@@ -87,19 +86,16 @@
   text-align: center;
 }
 
-.myContent > * {
+.myContent > div {
   display: table-cell;
   vertical-align: middle
 }
-.myContent a {
-  opacity: 0.5;
-}
 
-.map .myAdd, .map .myInfo {
+.myAdd, .myInfo {
   display: none;
 }
 
-.map g:hover .myAdd, .map g:hover .myInfo {
+.circItemContainer:hover .myAdd, .circItemContainer:hover .myInfo {
   display: block;
 }
 
