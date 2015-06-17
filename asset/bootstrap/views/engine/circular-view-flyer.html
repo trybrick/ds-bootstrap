@@ -16,12 +16,14 @@
   <div class="map">
     <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 520 1163" style="enable-background:new 0 0 520 1163;" xml:space="preserve">
       <image width="520" height="1163" xlink:href="{{vm.digitalCirc.Circulars[0].Pages[0].ImageUrl}}" ng-cloak=""></image>
-      <g ng:attr:id="item_{{item.ItemId}}" data-ng-repeat="item in vm.digitalCirc.Circulars[0].Pages[0].Items" ng-cloak="">
-          <rect ng:attr:x="{{item.rect[0]}}" ng:attr:y="{{item.rect[1]}}" ng:attr:width="{{item.rect[4]}}" ng:attr:height="{{item.rect[5]}}" />
-          <a href="javascript:void" data-ng-click="doToggleCartItem($event, item)">
-            <rect class="circbtn" ng:attr:x="{{item.rect[2] - 50}}" ng:attr:y="{{item.rect[3] - 25}}" width="50" height="20" rx="5" ry="5" />
-            <text class="circbtn-text" ng:attr:x="{{item.rect[2] - 50}}" ng:attr:y="{{item.rect[3] - 10}}">More ...</text>
-          </a>
+      <g ng:attr:id="item_{{item.ItemId}}" data-ng-repeat="item in vm.digitalCirc.Circulars[0].Pages[0].Items | orderBy:['-ItemId']" ng-cloak="" style="position: relative">
+        <foreignObject ng:attr:x="{{item.rect[0]}}" ng:attr:y="{{item.rect[1]}}" ng:attr:width="{{item.rect[4]}}" ng:attr:height="{{item.rect[5]}}" style="display: table;">
+            <div xmlns="http://www.w3.org/1999/xhtml" class="myContent"><div>
+            <a class="btn btn-default btn-xs myAdd" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'myAdd': !isOnList(item)}"><i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}</a>
+            <a class="btn btn-default btn-xs myInfo" style="position: absolute; right: 0; top: 0;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = 0; showModal()" data-show-if="vm['item' + $index]"><i class="fa fa-info-circle"></i></a>
+            </div>
+            </div>
+        </foreignObject>
       </g>
     </svg>
   </div>
@@ -34,24 +36,40 @@
 .map g {
   fill: rgba(255,255,255,0);
 }
+
 .map g:hover {
   fill: rgba(255, 255, 255, 0.3);
-  cursor: crosshair;
+  cursor: pointer;
+}
+.map {
+  display: block;
+    margin: 0 auto;
+}
+.myContent {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: table;
+  height: 100%;
+  text-align: center;
 }
 
-.map g:hover .circbtn, .map g:hover .circbtn-text {
-  display:block;
+.myContent > * {
+  display: table-cell;
+  vertical-align: middle
+}
+.myContent a {
+  opacity: 0.5;
 }
 
-.circbtn {
-  fill: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
+.map .myAdd, .map .myInfo {
   display: none;
 }
-.circbtn-text {
-  fill: rgba(0, 0, 0, 0.5);
-  stroke: #000;
-  cursor: pointer;
-  display: none;
+
+.map g:hover .myAdd, .map g:hover .myInfo {
+  display: block;
 }
+
 </style>

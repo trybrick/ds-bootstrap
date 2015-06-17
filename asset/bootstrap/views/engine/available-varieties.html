@@ -18,7 +18,7 @@
   <div class="availableVarietiesList" data-ng-if="vm.selectedItem.Varieties.length > 0">
     <ul>
       <li class="row" data-ng-repeat="item in vm.selectedItem.Varieties">
-        <button type="button" class="btn btn-default btn-xs btnMarianos col-md-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+        <button type="button" class="btn btn-default btn-xs col-md-3" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
         <p class="col-md-9 pull-right">{{item.Description}}</p>
       </li>
     </ul>
