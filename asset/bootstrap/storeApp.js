@@ -103,7 +103,7 @@ var storeApp = angular
 
               var resizer = debounce(function(){
                 var actualWidth = element.parent().width();
-                var ratio = width / (actualWidth || width || 1);
+                var ratio = actualWidth / (width || actualWidth || 1);
                 var newHeight = ratio * height;
 
                 if (newHeight > height){
