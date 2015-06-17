@@ -127,7 +127,6 @@ git_components/
 .idea/
 .DS_Store
 asset/roundy
-asset/bootstrap
 asset/common
 asset/silver
 asset/bronze

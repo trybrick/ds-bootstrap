@@ -1,0 +1,28 @@
+<div class="modal-content">
+  <div class="modal-header">
+
+    <div class="close" data-ng-click="vm['item' + $index] = 0">&times;</div>
+  Item Details
+  </div>
+  <div class="modal-body noPad text-center" itemscope itemtype="http://schema.org/Product" style="position: relative">
+  <button class="btn btn-default" data-ng-click="doToggleCircularItem($event, item)" style="position: absolute; top: 10px; right: 10px; z-index: 1">{{ isOnList(item) && "Remove" || "Add"}}</button>
+    <img itemprop="image" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="height: 200px;"/>
+    <p itemprop="description">
+      <span itemprop="name">{{item.Description}}</span><br />
+      {{item.ItemDescription}}
+    </p>
+
+    <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
+    <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+      <a class="left carousel-control" role="button" href="javascript:void(0)" data-ng-click="vm['item' + $index] = 0; vm['item' + ($index - 1)] = 1; closeModal()">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" role="button" href="javascript:void(0)" data-ng-click="vm['item' + $index] = 0; vm['item' + ($index + 1)] = 1; closeModal()">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>
