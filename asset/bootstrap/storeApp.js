@@ -99,7 +99,7 @@ var storeApp = angular
             svg[0].setAttributeNS("", "viewBox", "0 0 " + width + " " + height + ""); 
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
-            var isIE = /Trident.*rv:11\.0/.test(navigator.userAgent) || /msie/.get(navigator.userAgent);
+            var isIE = /Trident.*rv:11\.0/.test(navigator.userAgent) || /msie/.test(navigator.userAgent);
 
             if (isIE && attrs.syncHeight){
               var resizer = debounce(function(){
