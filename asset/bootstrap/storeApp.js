@@ -99,21 +99,22 @@ var storeApp = angular
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
 
-
-            var resizer = debounce(function(){
-              var actualWidth = element.width();
-              var ratio = width / (actualWidth || width || 1);
-              var newHeight = ratio * height;
-
-              if (newHeight > height){
-                myElement.height(newHeight);
-              }
-            }, 200);
-
             if (attrs.syncHeight){
+
+              var resizer = debounce(function(){
+                var actualWidth = element.parent().width();
+                var ratio = width / (actualWidth || width || 1);
+                var newHeight = ratio * height;
+
+                if (newHeight > height){
+                  angular.element(attrs.syncHeight).height(newHeight);
+                }
+              }, 200);
+
               resizer();
               angular.element($window).on('resize', resizer);
             }
+
             angular.element('rect').click();
           }
         });
