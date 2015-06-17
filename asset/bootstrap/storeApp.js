@@ -88,8 +88,8 @@ var storeApp = angular
           if (!err) {
             element.html('');
             element.append(img);
-            width = img.width || img.offsetWidth;
-            height = img.height || img.offsetHeight; 
+            width = img.width || img.naturalWidth || img.offsetWidth;
+            height = img.height || img.naturalHeight || img.offsetHeight; 
 
             // set viewBox
             img = angular.element(attrs.gsnSvgImage);
