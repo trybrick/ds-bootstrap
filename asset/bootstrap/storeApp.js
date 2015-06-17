@@ -84,6 +84,7 @@ var storeApp = angular
       };
 
       scope.$watch('vm.pageIdx', function() {
+        var $win = angular.element($window);
         loadImage(attrs.src, function(err, img) {
           if (!err) {
             element.html('');
@@ -112,7 +113,7 @@ var storeApp = angular
               }, 200);
 
               resizer();
-              angular.element($window).on('resize', resizer);
+              $win.on('resize', resizer);
             }
 
             // re-adjust
@@ -121,7 +122,8 @@ var storeApp = angular
             }, 200);
             reAdjust();
 
-            angular.element($window).on('resize', reAdjust);
+            $win.on('resize', reAdjust);
+            $win.on('orientationchange', reAdjust);
           }
         });
       });
