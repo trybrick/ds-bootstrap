@@ -113,7 +113,6 @@ var storeApp = angular
               $window.on('resize', resizer)
             }
             angular.element('rect').click();
-
           }
         });
       });
