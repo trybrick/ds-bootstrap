@@ -102,11 +102,16 @@ var storeApp = angular
             if (attrs.syncHeight){
 
               var resizer = debounce(function(){
+                var screenWidth = angular.element('layout-container').width() - 20; 
                 var actualWidth = element.parent().width();
+                if (screenWidth < actualWidth){
+                  actualWidth = screenWidth;
+                }
+
                 var ratio = actualWidth / (width || actualWidth || 1);
                 var newHeight = ratio * height;
 
-                if (newHeight > height){
+                if (newHeight != height){
                   angular.element(attrs.syncHeight).height(newHeight);
                 }
               }, 200);
