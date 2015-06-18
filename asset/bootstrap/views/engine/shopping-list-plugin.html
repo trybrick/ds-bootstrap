@@ -1,5 +1,5 @@
 <div data-gsn-shopping-list="">
-  <div class="text-center">
+  <div class="text-center generic-content">
     <h4>My Shopping List</h4>
     <div class="input-group input-group-sm" style="width: 100%;">
       <input type="text" class="form-control" data-ng-model="addString" placeholder="add your own item" ui-keypress="{13:'doAddOwnItem()'}" />
@@ -14,16 +14,16 @@
     <button type="button" class="btn btn-default" data-ng-click="goUrl('/mylist')"><i title="manage list" class="fa fa-list fa-2x"></i><span><br />manage</span></button>
   </div>
   <div data-gsn-spinner="{radius:20, width:4, length: 8}" data-show-if="!mylist.hasLoaded()"></div>
-  <div class="text-center">
+  <div class="text-center generic-content">
     <p>You have {{totalQuantity}} items on your list</p>
     <br />
   </div>
-  <div class="row" data-ng-repeat="item in topitems | pagingFilter:5:0" style="border-top: 1px solid #ccc; margin: 0; padding-top: 5px">
-    <div class="col-xs-3">
+  <div class="row generic-content" data-ng-repeat="item in topitems | pagingFilter:5:0" style="border-top: 1px solid #ccc; margin: 0; padding-top: 5px">
+    <div class="col-xs-3 generic-content">
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="width: 100%" />
       <span class="price">{{item.PriceString}}</span>
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-9 generic-content">
       <a class="pull-right" href="javascript:void(0)" data-ng-click="doItemRemove(item)"><i class="pull-right glyphicon glyphicon-remove"></i></a>  
       {{item.Quantity}} x <span data-ng-bind-html="item.Description | trustedHtml"></span>  
     </div>
