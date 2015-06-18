@@ -37,8 +37,8 @@
   
   <div class="layout-container container noPad">
     <!-- Header -->
-    <header>        
-      <div class="hidden-print login-menu" style="position: absolute; top: 5px; right: 15px; z-index: 1" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+    <header style="position: relative">        
+      <div class="hidden-print login-menu" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
       <div style="position: relative" data-content-position="10">
         <a href="javascript:void(0)" data-ng-click="goUrl('/')" data-gsn-ft-config="logo">
           <img data-ng-src="{{item.Description || 'http://placehold.it/1170x150/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" style="padding-left: 20px; padding-right: 90px" />
@@ -68,7 +68,7 @@
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print container noPad header-bar" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
+      <div class="hidden-print container noPad header-bar" style="z-index: 11" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
     </header>
 
     <!-- Main Content container-->
