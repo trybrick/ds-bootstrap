@@ -11,8 +11,8 @@
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
     Sign in <i class="fa fa-caret-down"></i>
   </a>
-  <div style="padding:17px; width: 300px" class="dropdown-menu login-menu">
-    <form role="form" class="myLoginForm" name="myLoginForm" data-ng-submit="login()" data-stop-event="click">
+  <div style="padding:17px; width: 300px" class="dropdown-menu generic-content">
+    <form role="form" class="myLoginForm" name="myLoginForm" data-ng-submit="login()" data-stop-event="click" class="generic-content">
         <label>Sign in</label> 
         <input id="usernameField" name="usernameField" type="text" class="form-control" placeholder="Email or username" data-ng-model="profile.UserName" required="required" />
         <input id="passwordField" name="passwordField" type="password" class="form-control" placeholder="Password" data-ng-model="profile.Password" required="required" />
