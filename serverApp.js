@@ -41,6 +41,7 @@ function startServer(chainId) {
 
       var k = fs.readFileSync(fullPath, 'utf8');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
+      k = k.replace('cdn-staging.gsngrocers.com/asset/bootstrap', 'localhost:' + port + '/asset/bootstrap');
       response.send(k.replace(/\?nocache=[^'"]+/gi, "?nocache=" + (new Date().getTime())));
     }
   });
