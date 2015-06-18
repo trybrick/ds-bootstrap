@@ -46,29 +46,29 @@
         <div class="hidden-print hidden-xs login-menu" style="position: absolute; bottom: -20px; right: 0px; z-index: 1" >
           <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline"> 
             <li data-ng-show="item.Description" data-gsn-ft-config="android">
-              <a href="item.Description" target="_blank"><i class="fa fa-android"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-android"></i></a>
             </li>
             <li data-ng-show="item.Description" data-gsn-ft-config="apple">
-              <a href="item.Description" target="_blank"><i class="fa fa-apple"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-apple"></i></a>
             </li>
             <li data-ng-show="item.Description" data-gsn-ft-config="facebook">
-              <a href="item.Description" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-facebook"></i></a>
             </li>
             <li data-ng-show="item.Description" data-gsn-ft-config="twitter">
-              <a href="item.Description" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-twitter"></i></a>
             </li>
             <li data-ng-show="item.Description" data-gsn-ft-config="pinterest">
-              <a href="item.Description" target="_blank"><i class="fa fa-pinterest"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-pinterest"></i></a>
             </li>
             <li data-ng-show="item.Description" data-gsn-ft-config="youtube">
-              <a href="item.Description" target="_blank"><i class="fa fa-youtube"></i></a>
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-youtube"></i></a>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print container noPad" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
+      <div class="hidden-print container noPad header-bar" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
     </header>
 
     <!-- Main Content container-->
