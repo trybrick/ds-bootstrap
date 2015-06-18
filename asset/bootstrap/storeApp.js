@@ -99,7 +99,7 @@ var storeApp = angular
             svg[0].setAttributeNS("", "viewBox", "0 0 " + width + " " + height + ""); 
             img.attr("width", width).attr("height", height).attr("xlink:href", attrs.src);
             img.show();
-            var isIE = /Trident.*rv:11\.0/.test(navigator.userAgent) || /msie/.test(navigator.userAgent);
+            var isIE = /Trident.*rv:11\.0/.test(navigator.userAgent) || /msie/gi.test(navigator.userAgent);
 
             if (isIE && attrs.syncHeight){
               var resizer = debounce(function(){
@@ -152,8 +152,8 @@ var storeApp = angular
         angular.element(attrs.gsnHoverSync).css({top: pos.top - ppos.top, left: pos.left - ppos.left, width: rect.width, height: rect.height}).show();
       }, 200);
 
-      element.mouseover(doDisplay);
-      element.click(doDisplay);
+      element.on('mouseover', doDisplay);
+      element.on('click', doDisplay);
     }
   }]);
 })(angular);
