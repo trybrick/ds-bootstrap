@@ -29,7 +29,7 @@
           data-ng-click="vm.activeItem = item"
           id="item_{{item.ItemId}}">
           <div style="position: relative" class="hover-zoom">
-            <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
+            <a class="btn btn-default btn-xs" data-ng-click="vm.activeItem.ItemId == item.ItemId ? doToggleCartItem($event, item) : ''" data-ng-class="{'circAddButton': !isOnList(item)}">
               <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
             </a>
             <a class="btn btn-default btn-xs circInfoButton" style="position: absolute; right: 8px; top: 8px; padding: 5px 10px 5px 10px;" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
@@ -72,9 +72,7 @@
 }
 
 .circAddButton, .circInfoButton {
-  opacity: 0.3;
-  width: 0;
-  height: 0;
+  opacity: 0.2;
 }
 
 .myContent.active .circAddButton, .myContent.active .circInfoButton {
