@@ -1,4 +1,4 @@
-<div class="dropdown login-menu pull-right" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
+<div class="dropdown pull-right" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
     {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
   </a>
@@ -7,11 +7,11 @@
     <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
   </div>
 </div>
-<div class="dropdown login-menu pull-right" data-ng-cloak="" data-ng-if="!isLoggedIn" data-gsn-login="" data-ng-class="{ 'open': gvm.loginMenuActive }">
+<div class="dropdown pull-right" data-ng-cloak="" data-ng-if="!isLoggedIn" data-gsn-login="" data-ng-class="{ 'open': gvm.loginMenuActive }">
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
     Sign in <i class="fa fa-caret-down"></i>
   </a>
-  <div style="padding:17px; width: 300px" class="dropdown-menu">
+  <div style="padding:17px; width: 300px" class="dropdown-menu login-menu">
     <form role="form" class="myLoginForm" name="myLoginForm" data-ng-submit="login()" data-stop-event="click">
         <label>Sign in</label> 
         <input id="usernameField" name="usernameField" type="text" class="form-control" placeholder="Email or username" data-ng-model="profile.UserName" required="required" />
