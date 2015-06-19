@@ -1,8 +1,8 @@
 <div class="dropdown pull-right" data-ng-cloak="" data-ng-show="isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
   <a href="javascript:void(0)" data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive">
-    {{profile.FirstName + ' ' + profile.LastName}} <i class="fa fa-caret-down"></i>
+    <i class="fa fa-user"></i> {{ gvm.profile.FirstName + ' ' + gvm.profile.LastName}} <i class="fa fa-caret-down"></i>
   </a>
-  <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch">
+  <div style="padding:17px;" class="dropdown-menu dropdown-menu-touch generic-content">
     <a href="javascript:void(0)" data-ng-click="goUrl('/profile')"><i class="fa fa-user"></i> Profile </a><br /><br />
     <a href="javascript:void(0)" data-ng-click="logout()">Sign-out</a><br />
   </div>
