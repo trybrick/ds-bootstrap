@@ -7,10 +7,10 @@
 @colBody        : #000;
 @bgHeader       : @bgDefault;
 @colHeader      : @colDefault;
-@bgFooter       : @bgDefault;
-@colFooter      : @colDefault;
 */
 
+@bgFooter       : @bgHeader;
+@colFooter      : @colHeader;
 @dropDown : true;
 
 .social-icons {
@@ -112,6 +112,33 @@
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;} 
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
  
+.ripple {
+  width: 1px; 
+  height: 1px; 
+  border-radius: 1px; 
+  z-index: -1; 
+  position: absolute; 
+  top: 50%; 
+  left: 50%;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: @bgDefault;
+}
+
+/*Ripple Effect*/
+@-webkit-keyframes ripple {
+    100% {opacity: 0; -webkit-transform: scale(100);}
+}
+@-moz-keyframes ripple {
+    100% {opacity: 0; -moz-transform: scale(100);}
+}
+@-o-keyframes ripple {
+    100% {opacity: 0; -o-transform: scale(100);}
+}
+@keyframes ripple {
+    100% {opacity: 0; transform: scale(100);}
+}
+
 .ddm() when (@dropDown) {
   > .dropdown-menu {
     background: @bgDefault;

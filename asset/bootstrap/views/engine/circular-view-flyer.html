@@ -32,10 +32,10 @@
             <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
               <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
             </a>
-            <a class="btn btn-default btn-xs circInfoButton" style="position: absolute; right: 8px; top: 8px; padding: 5px 10px 5px 10px; z-index: 1" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
+            <a class="btn btn-default btn-xs circInfoButton" title="View Item details..." data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="showModal()" data-show-if="vm['item' + $index]" data-disable-scroll-top="true">
               <i class="fa fa-info-circle"></i>
             </a>
-            <div class="myRipple"></div>
+            <div class="ripple" style="opacity: 0.3"></div>
           </div>
         </div>
       </div>
@@ -74,6 +74,10 @@
   height: 100%;
 }
 
+.circInfoButton {
+  position: absolute; right: 8px; top: 8px; padding: 5px 10px 5px 10px; z-index: 1;
+}
+
 .circAddButton, .circInfoButton {
   opacity: 0;
   position: absolute;
@@ -104,33 +108,19 @@
   transform: scale(1.2); 
 }
 
+.link-inline a {
+  margin-left: -95px;
+}
+
 .modal-dialog {
   margin-top: 100px;
 }
 
-.myRipple {
-  width: 1px; height: 1px; border-radius: 1px; z-index: -1; border: #ccc solid 1px; position: absolute; top: 50%; left: 50%
-}
-
-.myContent.active .myRipple {
+.myContent.active .ripple {
   -webkit-animation:ripple 0.65s linear;
    -moz-animation:ripple 0.65s linear;
     -ms-animation:ripple 0.65s linear;
      -o-animation:ripple 0.65s linear;
         animation:ripple 0.65s linear;
-}
-
-/*Ripple Effect*/
-@-webkit-keyframes ripple {
-    100% {opacity: 0; -webkit-transform: scale(100);}
-}
-@-moz-keyframes ripple {
-    100% {opacity: 0; -moz-transform: scale(100);}
-}
-@-o-keyframes ripple {
-    100% {opacity: 0; -o-transform: scale(100);}
-}
-@keyframes ripple {
-    100% {opacity: 0; transform: scale(100);}
 }
 </style>
