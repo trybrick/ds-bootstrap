@@ -10,7 +10,7 @@
   </div>
   <div class="generic-content">                                                                                                                  
     <button class="btn btn-default btn-xs pull-right" 
-    data-ng-click="doToggleCircularItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "Remove" || "Add"}}</button>
+    data-ng-click="doToggleCartItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "Remove" || "Add"}}</button>
     <h4>{{gvm.selectedItem.PriceString}}</h4>
   </div>
   <div class="availableDescription generic-content">{{gvm.selectedItem.ItemDescription}}</div>
