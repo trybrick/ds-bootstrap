@@ -13,12 +13,13 @@ var storeApp = angular
         {   login: 0, store: 0, path: '/', tpl: gsn.getThemeUrl('/views/home.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
         , { login: 0, store: 0, layout: le[3], path: '/article/:id', tpl: gsn.getThemeUrl('/views/engine/article.html') }
-        , { login: 0, store: 1, layout: le[4], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view.html')}
-        , { login: 0, store: 1, layout: le[4], path: '/circular/:viewtype', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/circular', tpl: gsn.getThemeUrl('/views/engine/circular-view-flyer.html')}
+        , { login: 0, store: 1, layout: le[4], path: '/circular/list', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/circular/text', tpl: gsn.getThemeUrl('/views/engine/circular-view.html') }
         , { login: 0, store: 0, layout: le[3], path: '/contactus', tpl: gsn.getThemeUrl('/views/engine/contact-us.html'), controller: 'ContactUsCtrl' }
-        , { login: 0, store: 1, layout: le[3], path: '/coupons/digital', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
-        , { login: 0, store: 1, layout: le[3], path: '/coupons/printable', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
-        , { login: 0, store: 1, layout: le[3], path: '/coupons/store', tpl: gsn.getThemeUrl('/views/engine/coupons-view.html') }
+        , { login: 0, store: 1, layout: le[3], path: '/coupons/digital', tpl: gsn.getThemeUrl('/views/engine/coupons-digital.html') }
+        , { login: 0, store: 1, layout: le[3], path: '/coupons/printable', tpl: gsn.getThemeUrl('/views/engine/coupons-printable.html') }
+        , { login: 0, store: 1, layout: le[3], path: '/coupons/store', tpl: gsn.getThemeUrl('/views/engine/coupons-store.html') }
         , { login: 0, store: 0, layout: le[3], path: '/mealplannerfull', tpl: gsn.getThemeUrl('/views/engine/meal-planner.html') }
         , { login: 1, store: 0, layout: le[3], path: '/savedlists', tpl: gsn.getThemeUrl('/views/engine/saved-lists.html') }
         , { login: 0, store: 0, layout: le[3], path: '/mylist', tpl: gsn.getThemeUrl('/views/engine/shopping-list.html') }
