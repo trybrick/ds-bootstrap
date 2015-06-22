@@ -35,7 +35,7 @@
 <body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
   
-  <div class="layout-container container noPad">
+  <div class="layout-container container main-container">
     <!-- Header -->
     <header style="position: relative">        
       <div class="hidden-print" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
@@ -68,7 +68,7 @@
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print container noPad header-bar" style="z-index: 11" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
+      <div class="hidden-print header-bar" style="z-index: 11" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
     </header>
 
     <!-- Main Content container-->
@@ -112,9 +112,16 @@
     <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
     $(document).ready(function () {
       setTimeout(less.refreshStyles, 1000);
-      $(document).on('click.nav','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') ) {
-            $(this).removeClass('in').addClass('collapse');
+      $(document.body).on('click','.navbar-collapse',function(e) {
+        // get anchor tag
+        var myTarget = $(e.target);
+        if (!myTarget.is('a')) {
+          myTarget = $(e.target).parent('a');
+        }
+
+        // if next element is not a dropdown then collapse
+        if (!myTarget.next().hasClass('dropdown-menu')) {
+          $('.navbar-collapse').removeClass('in').addClass('collapse');
         }
       });
     });

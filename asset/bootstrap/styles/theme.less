@@ -13,9 +13,16 @@
 @colFooter      : @colHeader;
 @dropDown : true;
  
-.container {
+.main-container {
   width: 940px;
   margin: 0 auto; /* To center your page within the body */
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    width: 100%;
+  }
 }
 
 .social-icons {
