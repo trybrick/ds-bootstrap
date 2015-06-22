@@ -12,7 +12,22 @@
   <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></div>
   <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/registration'}"><a href="javascript:void(0)" data-ng-click="goUrl('/registration')">Register</a></div>
 </div>
-<div class="col-md-4 footer-right" data-gsn-ft-config="footer-right" data-overwrite="true"></div>
+<div class="col-md-4 footer-right" data-gsn-ft-config="footer-right">
+  
+  <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
+  <div data-ng-if="!item.Description">
+    <style>
+    @media (min-width: 767px) {
+      .footer-left, .footer-center {
+        width: 50%;
+      }
+      .footer-right {
+        width: 0;
+      }
+    }
+    </style>
+  </div>
+</div>
 
 <!-- bottom bar that you canot remove -->
 <div class="col-md-12">
