@@ -23,9 +23,9 @@
       <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" style="width: 100%" />
       <span class="price">{{item.PriceString}}</span>
     </div>
-    <div class="col-xs-9 generic-content">
-      <a class="pull-right" href="javascript:void(0)" data-ng-click="doItemRemove(item)"><i class="pull-right glyphicon glyphicon-remove"></i></a>  
-      {{item.Quantity}} x <span data-ng-bind-html="item.Description | trustedHtml"></span>  
+    <div class="col-xs-9">
+      <a class="btn btn-default btn-xs pull-right" href="javascript:void(0)" data-ng-click="doItemRemove(item)" style="border-radius: 20px; padding: 5px !important; margin-top: -5px; margin-right: -2px;"><i class="pull-right glyphicon glyphicon-remove"></i></a>  
+      {{item.Quantity}} x <span data-ng-bind-html="item.Description | trustedHtml" class="generic-content"></span>  
     </div>
   </div>
 </div>
