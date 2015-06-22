@@ -32,7 +32,7 @@
     <div>Open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div><br />
     <div>Phone: <span itemprop="telephone">{{marker.location..PharmacyPhone}}</span></div><br />
   </div>
-  <div data-ng-show="marker.location.Redirect">
+  <div data-ng-show="marker.location.Redirect" class="hidden-info">
     <a href="javascript:void(0)" data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))">
       <h5>Store Details</h5>
     </a>

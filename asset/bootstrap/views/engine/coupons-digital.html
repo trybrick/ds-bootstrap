@@ -48,10 +48,10 @@
     <div data-ng-show="selectedCoupons.targeted.length > 0 && vm.sortBy == 'EndDate'">
       Limited Time Coupons
       <br />
-      <div class="col-md-4 col-sm-6 coupons" data-ng-include="getThemeUrl('/views/engine/coupons-digital-item.html')" data-ng-repeat="item in selectedCoupons.targeted"></div>
+      <div class="col-md-4 col-sm-6 coupons" data-ng-include="getThemeUrl('/views/engine/coupons-item.html')" data-ng-repeat="item in selectedCoupons.targeted"></div>
     </div>
     <div data-infinite-scroll="loadMore()">
-      <div class="col-md-4 col-sm-6 coupons" data-ng-include="getThemeUrl('/views/engine/coupons-digital-item.html')" data-ng-repeat="item in selectedCoupons.items"></div>
+      <div class="col-md-4 col-sm-6 coupons" data-ng-include="getThemeUrl('/views/engine/coupons-item.html')" data-ng-repeat="item in selectedCoupons.items"></div>
     </div>          
   </div>
 </div>
