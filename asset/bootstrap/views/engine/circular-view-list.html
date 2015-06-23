@@ -20,16 +20,16 @@
         <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{sortByName}} <span class="caret"></span></button>
         <ul class="dropdown-menu" role="menu">
           <li>
-            <a href="javascript:void(0)" data-ng-click="toggleSort('PageNumber');sortByName='page'">page</a>
+            <a href="javascript:void(0)" data-ng-click="toggleSort('PageNumber');sortByName='Page'">Page</a>
           </li>
           <li>
-            <a href="javascript:void(0)" data-ng-click="toggleSort('CategoryName');sortByName='department'">department</a>
+            <a href="javascript:void(0)" data-ng-click="toggleSort('CategoryName');sortByName='Department'">Department</a>
           </li>
           <li>
-            <a href="javascript:void(0)" data-ng-click="toggleSort('BrandName');sortByName='brand'">brand</a>
+            <a href="javascript:void(0)" data-ng-click="toggleSort('BrandName');sortByName='Brand'">Brand</a>
           </li>
           <li>
-            <a href="javascript:void(0)" data-ng-click="toggleSort('Description');sortByName='alphabetic'">alphabetic</a>
+            <a href="javascript:void(0)" data-ng-click="toggleSort('Description');sortByName='Alphabetic'">Alphabetic</a>
           </li>
         </ul>
       </div>
@@ -53,8 +53,8 @@
             <span class="sr-only">Toggle Dropdown</span>
           </button>
           <div class="dropdown-menu dropdown-menu-right" style="padding: 10px">
-            <span class="pull-right">Department: <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" placeholder="--all departments--" class="text-center" /></span>
-            <span class="pull-right">Brand: <input type="text" list="brands" data-ng-model="vm.filter.BrandName" placeholder="--all brands--" class="text-center" /></span>
+            <span class="pull-right">Department: <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" placeholder="--All Departments--" class="text-center" /></span>
+            <span class="pull-right">Brand: <input type="text" list="brands" data-ng-model="vm.filter.BrandName" placeholder="--All Brands--" class="text-center" /></span>
             <span class="pull-right">
               <button type="reset">Reset</button>
             </span>
@@ -74,7 +74,7 @@
       <div class="row items thumbnail" itemscope itemtype="http://schema.org/Product">
           <div class="col-md-8 col-xs-8">
             <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
-              <img itemprop="image" data-gsn-popover="" data-selector=".productImagePopOver" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+              <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
             </div>
             <p itemprop="description">
               <span itemprop="name">{{item.Description}}</span><br />
@@ -86,14 +86,10 @@
             <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
           </div>
           <div class="col-md-1 col-xs-3">
-            <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "Remove" || "Add"}}</button>
+            <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
           </div>
       </div>
       <div class="row" data-ng-repeat-end=""></div>
-
-      <div class="gsn-popover">
-        <div class="popover-content"></div>
-      </div>
       <div>
         <div class="pull-right">{{allItems.length}} of {{vm.cacheItems.length}}</div>
         <h5>Disclaimer:</h5>
