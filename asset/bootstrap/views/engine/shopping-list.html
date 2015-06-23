@@ -2,23 +2,23 @@
 <div data-ctrl-shopping-list="" data-gsn-shopping-list="" class="col-md-12">
   <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="!mylist.hasLoaded()"></div>
   <h1>My Shopping List</h1>
-  <div class="col-md-12">
+  <div class="row">
     <div class="col-md-4">
       <div class="input-group addItemManage">
         <input type="text" class="form-control" data-ng-model="addString" placeholder="add own item" ui-keypress="{13:'doAddOwnItem()'}">
         <span class="input-group-btn">
-          <button class="btn btn-default" data-ng-click="doAddOwnItem()" type="button">Add</button>
+          <button class="btn btn-default" data-ng-click="doAddOwnItem()" type="button"><i class="fa fa-plus-circle"></i></button>
         </span>
       </div>
     </div>
     <div class="col-md-8">
       <div class="btn-group" data-ng-show="mylist.hasLoaded()">
-        <button type="button" class="btn btn-default" data-ng-click="goUrl('/mylist/print', '_blank')"><i class="fa fa-print"></i><br />Print</button>
-        <button type="button" class="btn btn-default" data-ng-click="goUrl('/mylist/email')"><i class="fa fa-envelope"></i><br />Email</button>
-        <button type="button" class="btn btn-default" data-ng-click="goUrl('/savedlists')"><i class="fa fa-folder-open"></i><br />Previous</a></button>
-        <button type="button" class="btn btn-default" data-gsn-modal="getThemeUrl('/views/engine/modal-shopping-list-title.html')" data-ng-click="doIfLoggedIn(showModal)"><i class="fa fa-file"></i><br />Save</button>
-        <button type="button" class="btn btn-default" data-ng-click="deleteCurrentList()"><i class="fa fa-minus-circle"></i><br />Delete</button>
-        <button type="button" class="btn btn-default" data-ng-click="startNewList()"><i class="fa fa-plus-circle"></i><br />New</button>
+        <button type="button" class="btn btn-default btn-sm" data-ng-click="goUrl('/mylist/print', '_blank')"><i class="fa fa-print"></i><br />Print</button>
+        <button type="button" class="btn btn-default btn-sm" data-ng-click="goUrl('/mylist/email')"><i class="fa fa-envelope"></i><br />Email</button>
+        <button type="button" class="btn btn-default btn-sm" data-ng-click="goUrl('/savedlists')"><i class="fa fa-folder-open"></i><br />Previous</a></button>
+        <button type="button" class="btn btn-default btn-sm" data-gsn-modal="getThemeUrl('/views/engine/modal-shopping-list-title.html')" data-ng-click="doIfLoggedIn(showModal)"><i class="fa fa-file"></i><br />Save</button>
+        <button type="button" class="btn btn-default btn-sm" data-ng-click="deleteCurrentList()"><i class="fa fa-minus-circle"></i><br />Delete</button>
+        <button type="button" class="btn btn-default btn-sm" data-ng-click="startNewList()"><i class="fa fa-plus-circle"></i><br />New</button>
       </div>
     </div>
   </div>

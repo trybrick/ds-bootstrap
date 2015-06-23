@@ -2,9 +2,6 @@
   <h1>{{myMarkers[0].location.StoreName}}</h1>
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{myMarkers[0].location.StoreName}}"></div>
   <div class="staticContent" data-ng-if="myMarkers[0].location.Misc1" data-ng-bind-html="myMarkers[0].location.Misc1 | removeAspx | trustedHtml"></div>
-  <div class="staticContent" data-ng-if="!myMarkers[0].location.Misc1">
-    <img src="http://placehold.it/1080x300?text=Store+Front+Image+Goes+Here" />
-  </div>
   <div class="row" style="padding-top: 10px">
     <div class="col-md-6 col-sm-6 staticBlock">
       <!-- the map -->
@@ -35,4 +32,12 @@
   .staticBock img {
     width: 100%;
   }
+  .store-info-item {
+    display: block;
+    overflow: auto;
+  }
+  .hidden-info {
+    display: none;
+  }
+  
 </style>

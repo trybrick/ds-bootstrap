@@ -15,17 +15,18 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">                             
   <meta name="format-detection" content="telephone=no">
 
-  <meta name="author" content="Grocery Shopping Network">
+  <meta name="author" content="[chainname]">
   <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
   <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">     
 
   <title>[chainname]</title>
   <link href="http://cdn-staging.gsngrocers.com/script/lib/twitter-bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
-  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css">    
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+  <link href="http://cdn-staging.gsngrocers.com/asset/common/styles/global.css" rel="stylesheet" type="text/css"> 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
   <!-- Your custom css goes below here -->
-  <style type="text/less">
+  <style type="text/less">  
+      @import "//clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home%20page&meta=less&type=text/less";
       @import "//cdn-staging.gsngrocers.com/asset/bootstrap/styles/theme.less";
   </style> 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
@@ -33,34 +34,47 @@
 <body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div> 
   
-  <div class="layout-container container noPad">
+  <div class="layout-container container main-container">
     <!-- Header -->
-    <header data-gsn-ft-config="logo">
-      <div data-ng-if="item.Description" data-ng-bind-html="item.Description"></div>
-      <div data-ng-if="!item.Description" style="position: relative">
-        <div class="hidden-print pull-right login-menu" style="position: absolute; top: 5px; right: 15px; z-index: 1" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
-        <a href="javascript:void(0)" data-ng-click="goUrl('/')">
-          <img data-ng-src="http://placehold.it/1170x150/f8f8f8?text=Banner Logo" alt="Store Logo" class="logo" />
+    <header style="position: relative">        
+      <div class="hidden-print" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')"></div>
+      <div style="position: relative" data-content-position="10">
+        <a href="javascript:void(0)" data-ng-click="goUrl('/')" data-gsn-ft-config="logo">
+          <img data-ng-src="{{item.Description || 'http://placehold.it/1170x150/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" style="padding-left: 20px; padding-right: 90px" />
         </a>
+        <div class="hidden-print hidden-xs login-menu" style="position: absolute; bottom: 5px; right: 5px; z-index: 1">
+          <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline"> 
+            <li data-ng-show="item.Description" data-gsn-ft-config="android" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-android"></i></a>
+            </li>
+            <li data-ng-show="item.Description" data-gsn-ft-config="apple" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-apple"></i></a>
+            </li>
+            <li data-ng-show="item.Description" data-gsn-ft-config="facebook" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li data-ng-show="item.Description" data-gsn-ft-config="twitter" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li data-ng-show="item.Description" data-gsn-ft-config="pinterest" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li data-ng-show="item.Description" data-gsn-ft-config="youtube" data-ng-cloak="">
+              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky="" style="width: 100%; left: 0"></div>
+      <div class="hidden-print header-bar" style="z-index: 11" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
     </header>
 
     <!-- Main Content container-->
     <div class="mainContent" data-ng-include="currentLayout"></div>
 
     <!-- Footer -->
-    <footer class="hidden-print" data-ng-include="getThemeUrl('/views/footer.html')" data-gsn-ft-config="footer"></footer>
-
-    <!-- bottom bar that you canot remove -->
-    <div style="clear: both;">
-        <div class="col-md-12 text-center default-color">
-            <span>&copy; {{ currentYear }} Grocery Shopping Network</span> | <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
-            Patent No US 7,734,514 B2.</a>
-        </div>
-    </ul>
+    <footer class="hidden-print text-center" data-ng-include="getThemeUrl('/views/footer.html')"></footer>
   </div>    
 
   <!-- above the fold scripts -->
@@ -79,8 +93,6 @@
 
   <!-- below the fold: js -->                                                                                 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><!-- bootstrap -->    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script><!-- bootstrap to angular bridge --> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script><!-- for circular imagemap -->
 
   <!--begin:analytics-->                 
   <script>
@@ -97,9 +109,17 @@
   <script>
     <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
     $(document).ready(function () {
-      $(document).on('click.nav','.navbar-collapse.in',function(e) {
-        if( $(e.target).is('a') ) {
-            $(this).removeClass('in').addClass('collapse');
+      setTimeout(less.refreshStyles, 1000);
+      $(document.body).on('click','.navbar-collapse',function(e) {
+        // get anchor tag
+        var myTarget = $(e.target);
+        if (!myTarget.is('a')) {
+          myTarget = $(e.target).parent('a');
+        }
+
+        // if next element is not a dropdown then collapse
+        if (!myTarget.next().hasClass('dropdown-menu')) {
+          $('.navbar-collapse').removeClass('in').addClass('collapse');
         }
       });
     });
