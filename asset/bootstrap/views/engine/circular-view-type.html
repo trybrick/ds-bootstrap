@@ -3,11 +3,11 @@
   <i class="fa fa-picture-o"></i>
   <br />ads
 </a>
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/list')" title="list view" data-ng-class="{ 'active': currentPath == '/circular/list' }">
+<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/list')" title="list view" data-ng-class="{ 'active': currentPath.indexOf('list') > 0 }">
   <i class="fa fa-list"></i>
   <br />list
 </a>
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/text')" title="text only view" data-ng-class="{ 'active': currentPath == '/circular/text' }">
+<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/text')" title="text only view" data-ng-class="{ 'active': currentPath.indexOf('text') > 0 }">
   <i class="fa fa-font"></i>
   <br />text
 </a>
