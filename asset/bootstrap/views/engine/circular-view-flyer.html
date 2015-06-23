@@ -30,7 +30,7 @@
      </div>
     </div>
     <div class="dcircular-content" data-ng-show="vm.circIdx > 0 && vm.pageIdx > 0" style="position: relative">
-      <div style="margin: 0 auto; height: auto; position: relative">
+      <div style="margin: 0 auto; height: auto; position: relative" data-ng-click="vm.activeItem = null">
         <div data-ng-if="vm.digitalCirc.Circulars.length > 1"><a href="javascript:void(0)" data-ng-click="vm.circIdx = 0" class="dcircular-back-to-list">&larr; Choose Another Ad</a><br /></div>
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul>
         <div class="myImageMap" data-stop-event="click">
