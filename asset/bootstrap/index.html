@@ -37,9 +37,9 @@
   <div class="layout-container container main-container">
     <!-- Header -->
     <header style="position: relative">
-      <div class="hidden-print" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')">
-        </div>
       <div style="position: relative" data-content-position="11" data-gsn-ft-content="">
+        <div class="hidden-print" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')">
+        </div>
         <a href="javascript:void(0)" data-ng-click="goUrl('/')" data-gsn-ft-config="logo">
           <img data-ng-src="{{item.Description || 'http://placehold.it/1170x180/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" style="padding-left: 20px; padding-right: 90px" />
         </a>
