@@ -38,7 +38,7 @@
     <h2 itemprop="name">{{marker.location.StoreName}} Pharmacy</h2>
     <div itemprop="description"></div><br />
     <div>Open: <span itemprop="openingHours">{{marker.location.PharmacyHours}}</span></div><br />
-    <div>Phone: <span itemprop="telephone">{{marker.location..PharmacyPhone}}</span></div><br />
+    <div data-ng-if="marker.location.PharmacyPhone">Phone: <span itemprop="telephone">{{marker.location.PharmacyPhone}}</span></div><br />
   </div>
   <div class="generic-content">
     <a data-ng-href="https://maps.google.com?saddr=Current+Location&amp;daddr={{marker.location.Latitude}},{{marker.location.Longitude}}" target="_blank">Get Direction</a>
