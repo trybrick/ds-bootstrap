@@ -8,23 +8,15 @@
       <p itemprop="description">{{item.ItemDescription}}</p>
       <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
       <div class="savings" data-ng-show="item.Savings">SAVE - {{item.SavingsString}}</div>
-      <div style="margin-right: 25px;">
-      <button class="btn btn-default btn-sm" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
-      </div>
     </div>
     <div class="col-md-7" style="position: relative; overflow: auto; display: block;">
+      <div style="position: absolute; top: 0px; right: 26px; z-index: 1">
+        <button class="btn btn-default btn-sm" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
+      </div>
       <div style="width: 100%; max-height: 300px; overflow: scroll;">
         <img class="myimage" itemprop="image" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
       </div>
     </div>
-    <a class="left carousel-control" role="button" href="javascript:void(0)" data-ng-click="vm['item' + $index] = 0; vm['item' + ($index - 1)] = 1; closeModal()">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" role="button" href="javascript:void(0)" data-ng-click="vm['item' + $index] = 0; vm['item' + ($index + 1)] = 1; closeModal()">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
   </div>
   <div class="text-center" style="height: 5px">
   </div>
@@ -44,17 +36,4 @@
   height: 100%;
   width: 100%;
 }
-
-/*
-.myimage:hover, .myimage:active { 
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  transform: scale(1.5);
-  padding-left: 50px;
-  padding-top: 40px;
-}
-*/
-
 </style>
