@@ -9,7 +9,7 @@ var storeApp = angular
       for(var i = 1; i < 5; i++){
         le.push(gsn.getThemeUrl('/views/layout-gsn' + i + '.html'));
       }
-      var homeFile = gsn.config.ApiUrl + '/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=template&type=text/html';
+      var homeFile = gsn.config.ApiUrl + '/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=home&type=text/html';
       var urls = [
         {   login: 0, store: 0, path: '/', tpl: homeFile }
         , { login: 0, store: 0, layout: le[3], path: '/article', tpl: gsn.getThemeUrl('/views/engine/article.html') }
