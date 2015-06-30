@@ -34,49 +34,7 @@
 <body ng-cloak="">
   <div data-bs-display-mode="bsDisplayMode"><!-- do not hide this div, it is use to detect display size --></div>
 
-  <div class="layout-container container main-container">
-    <!-- Header -->
-    <header style="position: relative">
-      <div style="position: relative" data-content-position="11" data-gsn-ft-content="">
-        <div class="hidden-print" style="position: absolute; top: 5px; right: 15px; z-index: 12" data-ng-include="getThemeUrl('/views/menu-login.html')">
-        </div>
-        <a href="javascript:void(0)" data-ng-click="goUrl('/')" data-gsn-ft-config="logo">
-          <img data-ng-src="{{item.Description || 'http://placehold.it/1170x180/f8f8f8?text=Store Logo'}}" alt="Store Logo" class="logo" style="padding-left: 20px; padding-right: 90px" />
-        </a>
-        <div class="hidden-print hidden-xs login-menu" style="position: absolute; bottom: 5px; right: 5px; z-index: 1">
-          <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline">
-            <li data-ng-show="item.Description" data-gsn-ft-config="android" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-android"></i></a>
-            </li>
-            <li data-ng-show="item.Description" data-gsn-ft-config="apple" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-apple"></i></a>
-            </li>
-            <li data-ng-show="item.Description" data-gsn-ft-config="facebook" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li data-ng-show="item.Description" data-gsn-ft-config="twitter" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li data-ng-show="item.Description" data-gsn-ft-config="pinterest" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-pinterest"></i></a>
-            </li>
-            <li data-ng-show="item.Description" data-gsn-ft-config="youtube" data-ng-cloak="">
-              <a data-ng-href="{{item.Description}}" target="_blank"><i class="fa fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Full control of menu either through GSN Admin or replace the dive below with your own menu -->
-      <div class="hidden-print header-bar" style="z-index: 11" data-ng-include="getThemeUrl('/views/menu.html')" class="hidden-print" data-gsn-sticky=""></div>
-    </header>
-
-    <!-- Main Content container-->
-    <div class="mainContent" data-ng-include="currentLayout"></div>
-
-    <!-- Footer -->
-    <footer class="hidden-print text-center" data-ng-include="getThemeUrl('/views/footer.html')"></footer>
-  </div>
+  <div class="layout-container container main-container" data-ng-include="http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html"></div>
 
   <!-- above the fold scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
