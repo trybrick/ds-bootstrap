@@ -9,6 +9,10 @@
 </div>
 <div class="pull-right" data-ng-cloak="" data-ng-if="!isLoggedIn" data-ng-class="{ 'open': gvm.loginMenuActive }">
   <a href="javascript:void(0)" data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-ng-click="showModal()">
-    Sign in <i class="fa fa-caret-right"></i>
+    Sign in
   </a>
+  <a href="javascript:void(0)" data-ng-click="goUrl('/registration')">
+    Register
+  </a>
+
 </div>
