@@ -4,12 +4,12 @@
 <div class="recipeIdeas generic-content" data-ng-if="gvm.selectedItem.RecipeSearch">
   <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/search?q=' + gvm.selectedItem.RecipeSearch)">Recipe Ideas</a>
 </div>
-<div>
+<div class="generic-content">
   <img class="availableVarietiesImage" data-ng-src="{{gvm.selectedItem.SmallImageUrl  || getThemeUrl('/images/no_image.jpg')}}" />
 </div>
-<div class="generic-content">                                                                                                                  
+<div class="theme-color">                                                                                                                  
   <button class="btn btn-default btn-xs pull-right" 
-  data-ng-click="doToggleCartItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "Remove" || "Add"}}</button>
+  data-ng-click="doToggleCartItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "REMOVE" || "ADD ITEM"}}</button>
   <h4>{{gvm.selectedItem.PriceString}}</h4>
 </div>
 <div class="availableDescription generic-content">{{gvm.selectedItem.ItemDescription}}</div>

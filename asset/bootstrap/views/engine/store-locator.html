@@ -45,9 +45,9 @@
     </div>
   </div>
   <!-- stores -->
-  <div class="allStores row">
-    <div data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
-      <div><h2>{{group.key}}</h2></div><br />
+  <div class="allStores" class="row col-md-12">
+    <div class="row" data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
+      <div><h2>{{group.key}}</h2></div>
       <div data-ng-repeat="marker in group.items"
         class="col-md-3 col-sm-4 col-xs-12 singleStoreInfo" 
         data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" 
@@ -67,7 +67,7 @@
     width: 50px;
   }
   .store-info-item {
-    height: 220px; 
+    height: 280px; 
     overflow-y: scroll; 
     overflow-x: hidden;
   }
