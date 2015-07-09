@@ -140,11 +140,12 @@
 
  .nav-tabs {
     > li > a {
+      background: @bgDefault;
       color: @colDefault;
       &:hover, &:focus {
-        color: @colHighlight; }}
-    > .active {
-      > a, > a:hover, > a:focus {
+        color: @colHighlight; 
+        background: @bgHighlight; }}
+    > li.active > a, > a:hover, > a:focus {
         color: @colHighlight;
         background: @bgHighlight; }}}
         
