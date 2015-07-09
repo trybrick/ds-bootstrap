@@ -74,7 +74,7 @@
         background: @bgDefault;
         color: @colDefault;
         &:hover,  &:focus {
-          color: @colHighlight; 
+          color: @colHighlight;
           background: @bgHighlight;
         }}}
     > .active {
@@ -101,7 +101,7 @@
   border-color: @bgHighlight;
   .navbar-brand {
     color: @colDefault;
-    &:hover, &:focus { 
+    &:hover, &:focus {
       color: @colHighlight; }}
   .navbar-text {
     color: @colDefault; }
@@ -138,6 +138,16 @@
     &:hover {
       color: @colHighlight; }}}
 
+ .nav-tabs {
+    > li > a {
+      color: @colDefault;
+      &:hover, &:focus {
+        color: @colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background: @bgHighlight; }}}
+        
 @media (max-width: 767px) {
   a {
     color: @colBody;
