@@ -1,0 +1,7 @@
+<div class="hidden-meta" data-ng-if="partialContents[0]" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline)}}"></div>
+
+<div data-tabset="" class="col-md-12">
+  <div data-tab="" data-ng-repeat="item in partialContents" data-heading="{{item.Headline}}">
+    <div class="staticContent" data-ng-bind-html="item.Description | trustedHtml"></div>
+  </div>
+</div> 
