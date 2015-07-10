@@ -34,6 +34,11 @@
     color: @colBody;
   }
 
+  a {
+    color: @colBody;
+    &:hover, &:focus {
+      color: @colBody; }}
+
   .btn-default, .theme-default {
     background: @bgDefault;
     color: @colDefault;
@@ -69,7 +74,7 @@
         background: @bgDefault;
         color: @colDefault;
         &:hover,  &:focus {
-          color: @colHighlight; 
+          color: @colHighlight;
           background: @bgHighlight;
         }}}
     > .active {
@@ -96,7 +101,7 @@
   border-color: @bgHighlight;
   .navbar-brand {
     color: @colDefault;
-    &:hover, &:focus { 
+    &:hover, &:focus {
       color: @colHighlight; }}
   .navbar-text {
     color: @colDefault; }
@@ -135,9 +140,9 @@
 
 @media (max-width: 767px) {
   a {
-    color: @colDefault;
+    color: @colBody;
     &:hover, &:focus {
-      color: @colHighlight; }}
+      color: @colBody; }}
   .navbar-default .navbar-nav .open .dropdown-menu {
     > li > a {
       color: @colDefault;
