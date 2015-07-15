@@ -55,6 +55,8 @@
             xml:space="preserve" preserveAspectRatio="xMinYMin meet">
             <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
             <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item" 
+            data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1"
+            data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1"
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
         </div>
