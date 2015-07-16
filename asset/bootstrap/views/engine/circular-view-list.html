@@ -76,7 +76,7 @@
             <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
               <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
             </div>
-            <p itemprop="description">
+            <p itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true">
               <span itemprop="name">{{item.Description}}</span><br />
               {{item.ItemDescription}}
             </p>
