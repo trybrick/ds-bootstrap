@@ -35,6 +35,7 @@ var storeApp = angular
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
+        , { login: 0, store: 0, path: '/registration/facebook', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
         , { login: 0, store: 0, layout: le[3], path: '/signin', tpl: gsn.getThemeUrl('/views/engine/signin.html') }
         , { login: 0, store: 0, layout: le[1], path: '/store/:id', tpl: gsn.getThemeUrl('/views/engine/store-info.html') }
         , { login: 0, store: 0, layout: le[2], path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
