@@ -52,6 +52,9 @@ var storeApp = angular
           controller: v.controller,
           layout: v.layout })
       });
+
+      $routeProvider.when('/coupons/printable', {redirectTo: '/coupons', caseInsensitiveMatch: true});
+
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
 

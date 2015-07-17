@@ -40,7 +40,7 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      k = k.replace('https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1', '/asset/bootstrap/storeApp.js');
+      k = k.replace('https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1', '/asset/bootstrap/storeApp.js?nocache=1');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
       k = k.replace('cdn-staging.gsngrocers.com/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
       k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=2");
