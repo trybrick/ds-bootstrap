@@ -72,22 +72,27 @@
         </div>
       </div>
       <div class="row items thumbnail" itemscope itemtype="http://schema.org/Product">
-          <div class="col-md-8 col-xs-8">
-            <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
-              <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
-            </div>
-            <p itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">>
-              <span itemprop="name">{{item.Description}}</span><br />
-              {{item.ItemDescription}}
-            </p>
+        <div class="col-md-8 col-xs-8">
+          <div class="hidden meta">
+            <div class="product-id">{{item.Id}}</div>
+            <div class="product-brand">{{item.BrandName}}</div>
+            <div class="product-category">{{item.CategoryName}}</div>
           </div>
-          <div class="col-md-3 col-xs-9">
-            <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
-            <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+          <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
+            <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           </div>
-          <div class="col-md-1 col-xs-3">
-            <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
-          </div>
+          <p itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+            <span itemprop="name">{{item.Description}}</span><br />
+            {{item.ItemDescription}}
+          </p>
+        </div>
+        <div class="col-md-3 col-xs-9">
+          <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
+          <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+        </div>
+        <div class="col-md-1 col-xs-3">
+          <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
+        </div>
       </div>
       <div class="row" data-ng-repeat-end=""></div>
       <div>
