@@ -37,7 +37,7 @@
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-        <span data-ng-bind-html="item.Description | trustedHtml"></span> - 
+        <span data-ng-bind-html="item.Description | replaceWith:'Â':'gi':'' | trustedHtml"></span> - 
         <span class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></span>
       </div>
     </div>
@@ -68,8 +68,8 @@
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div>{{item.Description1}}</div>
-              <div>{{item.Description2}}</div>
+              <div>{{item.Description1 | replaceWith:'Â':'gi':''}}</div>
+              <div>{{item.Description2 | replaceWith:'Â':'gi':''}}</div>
               <div>{{item.TopTagLine}}</div>
               <div>
                 {{item.Description3}}
