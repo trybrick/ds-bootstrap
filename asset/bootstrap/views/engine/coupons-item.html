@@ -10,7 +10,7 @@
     </div>
     <div class="product-description" itemprop="description">
       <h4 data-ng-bind-html="item.Description1" itemprop="name"></h4>
-      <p title="{{item.Description2}}">{{item.Description2 | truncate:false:60:' ...'}}</p>
+      <p title="{{item.Description2}}" data-ng-bind-html="item.Description2 | truncate:false:60:' ...'"></p>
       <h5>expires: {{item.EndDate | date: 'M / dd / yyyy'}}</h5>
     </div>
   </div>

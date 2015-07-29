@@ -15,7 +15,7 @@
         <h4>{{groupItem.key}}</h4>
         <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div class="pull-right">{{item.Quantity}}</div>
-          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description | trustedHtml"></span></div>
+          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description"></span></div>
           <div data-ng-hide="item.IsCoupon">
             <span>{{item.PriceString}}</span>
           </div>
@@ -37,7 +37,7 @@
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-        <span data-ng-bind-html="item.Description | trustedHtml"></span> - 
+        <span data-ng-bind-html="item.Description"></span> - 
         <span class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></span>
       </div>
     </div>
@@ -87,6 +87,12 @@
         </table>
       </div>
     </div>
+  </div>
+  <div class="hidden" style="display:none">
+    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notinstalled.html')" data-show-if="printer.notinstalled" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notsupported.html')" data-show-if="printer.notsupported" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-blocked.html')" data-show-if="printer.blocked" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
   </div>
 </div>
 <div class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">

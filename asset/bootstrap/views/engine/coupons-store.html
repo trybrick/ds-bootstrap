@@ -46,8 +46,6 @@
           </div>
           <div class="text-center">
             <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
-            <button class="btn btn-default btn-xs" data-ng-click="printManufacturerCoupon($event, item)">Print Now</button>
-            <p class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></p>
           </div>
         </div>
       </div>
