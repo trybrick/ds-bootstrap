@@ -15,7 +15,7 @@
         <h4>{{groupItem.key}}</h4>
         <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div class="pull-right">{{item.Quantity}}</div>
-          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description | trustedHtml"></span></div>
+          <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description"></span></div>
           <div data-ng-hide="item.IsCoupon">
             <span>{{item.PriceString}}</span>
           </div>
@@ -37,7 +37,7 @@
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-        <span data-ng-bind-html="item.Description | replaceWith:'Â':'gi':'' | trustedHtml"></span> - 
+        <span data-ng-bind-html="item.Description"></span> - 
         <span class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></span>
       </div>
     </div>
@@ -68,8 +68,8 @@
           <tr>
             <td>
               <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
-              <div>{{item.Description1 | replaceWith:'Â':'gi':''}}</div>
-              <div>{{item.Description2 | replaceWith:'Â':'gi':''}}</div>
+              <div>{{item.Description1}}</div>
+              <div>{{item.Description2}}</div>
               <div>{{item.TopTagLine}}</div>
               <div>
                 {{item.Description3}}

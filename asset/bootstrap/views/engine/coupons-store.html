@@ -36,13 +36,13 @@
         <div class="text-center">
           <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           <div class="product-description">
-            <h4>{{item.Description1 | trustedHtml}}</h4>
-            <p>{{item.Description2 | trustedHtml}}</p>
+            <h4>{{item.Description1}}</h4>
+            <p>{{item.Description2}}</p>
             <h5>expires: {{item.EndDate | date: 'M / dd / yyyy'}}</h5>
             <p data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</p>  
-            <p>{{item.TopTagLine | trustedHtml}}</p>
-            <p>{{item.Description3 | trustedHtml}}{{item.Description4 | trustedHtml}}</p>
-            <p >{{item.BottomTagLine | trustedHtml}}</p> 
+            <p>{{item.TopTagLine}}</p>
+            <p>{{item.Description3}}{{item.Description4}}</p>
+            <p >{{item.BottomTagLine}}</p> 
           </div>
           <div class="text-center">
             <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
