@@ -4,13 +4,13 @@
   <form role="form" name="myForm" data-ng-submit="registerProfile()" data-ng-hide="isLoggedIn">
     <div class="row">
       <div class="col-md-6">
-       <div class="form-group" data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid}">
+       <div class="form-group" data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid || !profile.PrimaryStoreId}">
           <label for="primarystoreid">
             Choose a store: *
           </label>
           <br />
           <select class="form-control" name="primarystoreid" data-ng-model="profile.PrimaryStoreId" data-ng-options="store.StoreId as store.StoreName for store in stores" data-ng-required="true">
-            <option value="">-- choose a store --</option>
+            <option value="" style="display: none">-- choose a store --</option>
           </select>
         </div>
         <div class="form-group has-feedback" data-ng-class="{'has-success': !myForm.firstname.$invalid, 'has-error': myForm.firstname.$invalid}">
