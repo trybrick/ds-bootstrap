@@ -1,7 +1,7 @@
 <div class="col-md-12" data-ctrl-account="" data-ng-init="disableNavigation = true">
   <h1>Profile</h1>
   <form role="form" name="myForm" data-ng-submit="updateProfile()" data-ng-hide="profileUpdated">
-    <div class="form-group" data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid}">
+    <div class="form-group"  data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid || !profile.PrimaryStoreId}">
       <label for="primarystoreid">
         Choose a store: *
       </label>
