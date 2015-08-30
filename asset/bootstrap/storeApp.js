@@ -27,6 +27,7 @@ var storeApp = angular
         , { login: 0, store: 0, path: '/mylist/print', tpl: gsn.getThemeUrl('/views/engine/shopping-list-print.html') }
         , { login: 0, store: 0, layout: le[2], path: '/mylist/email', tpl: gsn.getThemeUrl('/views/engine/shopping-list-email.html') }
         , { login: 1, store: 0, layout: le[3], path: '/myrecipes', tpl: gsn.getThemeUrl('/views/engine/my-recipes.html') }
+        , { login: 0, store: 1, layout: le[4], path: '/product', tpl: gsn.getThemeUrl('/views/engine/product.html') }
         , { login: 1, store: 0, path: '/profile', tpl: gsn.getThemeUrl('/views/engine/profile-edit.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, layout: le[2], path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
