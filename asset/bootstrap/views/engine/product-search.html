@@ -29,6 +29,9 @@
     </div>
 
     <div class="row">
+    <datalist id="departments">
+      <option value="{{item.key}}" data-bindonce="" data-ng-repeat="item in vm.searchResult.NonSaleItemResultGrouping">
+    </datalist>
       <h3 class="product-search-header font-book text-center">Top Item Matches</h3>
       <div class="itemMatchesPager" data-pagination="" data-max-size="10" data-total-items="totalItems" data-page="currentPage" data-items-per-page="itemsPerPage" data-ng-show="vm.hasAllItems"></div>
       <div style="width: 100%;" class="text-center">
@@ -46,6 +49,9 @@
   <span aria-hidden="true">&raquo;</span>
 </a></li>
         </ul>
+         <div class="col-md-12" style="text-align: right">
+      Department: <input type="text" list="departments" data-ng-model="vm.filter.CategoryName" placeholder="--All Departments--" class="text-center" />
+    </div>
     </div>
       <div class="row">
         {{vm.searchResult.NonSaleItemResult.key}} 
@@ -54,7 +60,7 @@
                 <div class="col-md-8">Item</div>
                 <div class="col-md-2"></div>
               </div>
-        <div class="row result" data-ng-repeat="item in vm.searchResult.NonSaleItemResult.items | pagingFilter:itemsPerPage:(vm.pageIdx-1)" data-ng-include="getThemeUrl('/views/engine/product-item.html')"></div>
+        <div class="row result" data-ng-repeat="item in vm.searchResult.NonSaleItemResult.items | filter:vm.filter.CategoryName | pagingFilter:itemsPerPage:(vm.pageIdx-1)" data-ng-include="getThemeUrl('/views/engine/product-item.html')"></div>
       </div>
     </div>
 
