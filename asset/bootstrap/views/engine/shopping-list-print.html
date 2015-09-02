@@ -16,6 +16,7 @@
         <div class="circular-item" data-ng-repeat="item in groupItem.fitems">
           <div class="pull-right">{{item.Quantity}}</div>
           <div><img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}" data-ng-show="item.IsCoupon"><span data-ng-bind-html="item.Description"></span></div>
+		  <div data-ng-show="item.Comment">(<span data-ng-bind-html="item.Comment"></span>)</div>
           <div data-ng-hide="item.IsCoupon">
             <span>{{item.PriceString}}</span>
           </div>
