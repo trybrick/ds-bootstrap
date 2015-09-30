@@ -55,7 +55,8 @@ var storeApp = angular
           layout: v.layout })
       });
 
-      $routeProvider.when('/coupons/printable', {redirectTo: '/coupons', caseInsensitiveMatch: true});
+      $routeProvider.when('/coupons/printable', { redirectTo: '/coupons', caseInsensitiveMatch: true });
+      $routeProvider.when('/circulars', { redirectTo: '/circular', caseInsensitiveMatch: true });
 
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
