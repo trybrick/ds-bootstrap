@@ -21,6 +21,10 @@
   display: none;
 }
 
+.myModal {
+  min-width: 90vw;
+}
+
 .ddm() when (@dropDown) {
   > .dropdown-menu {
     background: @bgDefault;
@@ -146,7 +150,11 @@
     &:hover {
       color: @colHighlight; }}}
 
-@media (max-width: 767px) {
+@media (max-width: 767px) {        
+  .myModal {
+    min-width: auto;
+  }
+
   a {
     color: @colBody;
     &:hover, &:focus {
@@ -161,3 +169,4 @@
         color: @colHighlight;
         background: @bgHighlight; }}}
 }
+
