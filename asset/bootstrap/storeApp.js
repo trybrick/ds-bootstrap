@@ -42,6 +42,7 @@ var storeApp = angular
         , { login: 0, store: 0, layout: le[1], path: '/store/:id', tpl: gsn.getThemeUrl('/views/engine/store-info.html') }
         , { login: 0, store: 0, layout: le[2], path: '/storelocator', tpl: gsn.getThemeUrl('/views/engine/store-locator.html') }
         , { login: 0, store: 0, layout: le[3], path: '/unsubscribe', tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html') }
+        , { login: 0, store: 0, layout: le[2], path: '/applyJob', tpl: gsn.getThemeUrl('/views/engine/employment-apply.html') }       
       ];
 
 
