@@ -33,8 +33,10 @@ var storeApp = angular
         , { login: 0, store: 0, layout: le[3], path: '/recipe/search', tpl: gsn.getThemeUrl('/views/engine/recipe-search.html') }
         , { login: 0, store: 0, layout: le[2], path: '/recipe', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
         , { login: 0, store: 0, layout: le[2], path: '/recipe/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
+		, { login: 0, store: 0, layout: le[2], path: '/recipecenter/recipe/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-details.html') }
         , { login: 0, store: 0, layout: le[2], path: '/recipecenter', tpl: gsn.getThemeUrl('/views/engine/recipe-center.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
+		, { login: 0, store: 0, layout: le[3], path: '/recipecenter/recipevideo', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, layout: le[3], path: '/recipevideo/:id', tpl: gsn.getThemeUrl('/views/engine/recipe-video.html') }
         , { login: 0, store: 0, path: '/registration', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
         , { login: 0, store: 0, path: '/registration/facebook', tpl: gsn.getThemeUrl('/views/engine/registration.html') }
