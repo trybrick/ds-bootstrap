@@ -61,6 +61,7 @@ var storeApp = angular
       $routeProvider.when('/coupons/printable', { redirectTo: '/coupons', caseInsensitiveMatch: true });
       $routeProvider.when('/circulars', { redirectTo: '/circular', caseInsensitiveMatch: true });
 	  $routeProvider.when('/circulars/:id/:page', { redirectTo: '/circular', caseInsensitiveMatch: true });
+	  $routeProvider.when('/account/login', { redirectTo: '/profile', caseInsensitiveMatch: true });
 
       $routeProvider.otherwise({ templateUrl: gsn.getThemeUrl('/views/engine/static-content.html'), caseInsensitiveMatch: true} );
     }]);
