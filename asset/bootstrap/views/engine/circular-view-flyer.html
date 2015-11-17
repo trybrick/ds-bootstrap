@@ -57,7 +57,7 @@
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
           <svg id="myFlyer" version="1.1" 
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-            xml:space="preserve" preserveAspectRatio="xMinYMin meet">
+            xml:space="preserve" preserveAspectRatio="xMinYMin meet" style="margin-right: 15px;">
             <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
             <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item" 
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
