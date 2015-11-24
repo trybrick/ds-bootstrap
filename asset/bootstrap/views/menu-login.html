@@ -16,11 +16,11 @@
     Register
   </a>
 </div>
-<div class="pull-right google-translate" data-gsn-ft-config="lang" title="{{item.Description}}" data-ng-if="item.Description">
-  <div id="google_translate_element" ></div>
+<div class="pull-right google-translate" data-gsn-ft-config="lang" title="{{item.Description}}">
+  <div id="google_translate_element" data-ng-if="item.Description"></div>
   <script>
     function googleTranslateElementInit() {
-      
+
           var title = angular.element('.google-translate').attr("title");
         setTimeout(function() {
           debugger;
