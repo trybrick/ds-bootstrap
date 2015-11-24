@@ -20,12 +20,15 @@
   <div id="google_translate_element"></div>
   <script>
     function googleTranslateElementInit() {
-        var title = angular.element('.google-translate').attr("title");
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: title,
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
+        setTimeout(function() {
+          debugger;
+          var title = angular.element('.google-translate').attr("title");
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: title,
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }, 1000)
     }
   </script>
   <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
