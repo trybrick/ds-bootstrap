@@ -20,9 +20,10 @@
   <div id="google_translate_element" ></div>
   <script>
     function googleTranslateElementInit() {
+      
+          var title = angular.element('.google-translate').attr("title");
         setTimeout(function() {
           debugger;
-          var title = angular.element('.google-translate').attr("title");
           new google.translate.TranslateElement({
               pageLanguage: 'en',
               includedLanguages: title,
