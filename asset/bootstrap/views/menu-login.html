@@ -17,12 +17,12 @@
   </a>
 </div>
 <div class="pull-right google-translate" data-gsn-ft-config="lang" data-ng-if="item.Description">
-  <div id="google_translate_element" title="{{item.Description}}"></div>
+  <div id="google_translate_element" class="google_translate_element" title="{{item.Description}}"></div>
   <script>
     function googleTranslateElementInit() {
         setTimeout(function() {
           debugger;
-          var title = angular.element('#google_translate_element').attr("title");
+          var title = angular.element('.google_translate_element').attr("title");
           new google.translate.TranslateElement({
               pageLanguage: 'en',
               includedLanguages: title,
