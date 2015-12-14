@@ -16,3 +16,19 @@
     Register
   </a>
 </div>
+<div class="pull-right google-translate" data-gsn-ft-config="lang" title="{{item.Description}}" style="margin-right: 5px">
+  <div id="google_translate_element" data-ng-if="item.Description"></div>
+  <script>
+    function googleTranslateElementInit() {
+        var title = angular.element('.google-translate').attr("title");
+        setTimeout(function() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: title,
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }, 1000)
+    }
+  </script>
+  <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
