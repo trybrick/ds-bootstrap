@@ -1,7 +1,7 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
-<div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
+<div data-ctrl-coupon-classic="" class="coupons-printable col-md-12" data-ng-init="sortByName = 'About to Expire';">
   <div data-ng-include="getThemeUrl('/views/engine//coupons-tabs.html')"></div>
-  <h1>Printable Coupons</h1>
+  <h1 class="title">Printable Coupons</h1>
   <div class="row">
     <div class="col-md-4 col-xs-12">
       <div style="margin-top: 6px; margin-left: -15px">
@@ -42,9 +42,9 @@
     </div>
   </div>
   <div class="hidden" style="display:none">
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notinstalled.html')" data-show-if="printer.notinstalled" data-event-to-close="gsnevent:gcprinter-ready"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-notsupported.html')" data-show-if="printer.notsupported" data-event-to-close="gsnevent:gcprinter-ready"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-blocked.html')" data-show-if="printer.blocked" data-event-to-close="gsnevent:gcprinter-ready"></div>
-    <div data-gsn-modal="getContentUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
+    <div data-gsn-modal="getThemeUrl('/../common/views/modal-gcprinter-notinstalled.html')" data-show-if="printer.notinstalled" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getThemeUrl('/../common/views/modal-gcprinter-notsupported.html')" data-show-if="printer.notsupported" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getThemeUrl('/../common/views/modal-gcprinter-blocked.html')" data-show-if="printer.blocked" data-event-to-close="gsnevent:gcprinter-ready"></div>
+    <div data-gsn-modal="getThemeUrl('/../common/views/modal-gcprinter-printed.html')" data-show-if="printer.printed != null"></div>
   </div>
 </div>
