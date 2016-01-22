@@ -1,4 +1,3 @@
-<div class="row">
 <div class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
@@ -6,6 +5,7 @@
   <div class="hidden-meta" data-gsn-og-image="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}"></div>
 
   <h1>Weekly Ads</h1>
+  <div id="brxLeaderboard"></div>
   <div data-ng-show="vm.noCircular">
     <h3>No circular for this store.</h3>
   </div>
@@ -19,7 +19,7 @@
   	<div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
   </div>
   <br/>
-  <div class="row" data-ng-click="vm.activeItem = null">
+  <div class="row" data-ng-click="vm.activeItem = null" style="width: 95%">
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
     		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
@@ -70,7 +70,6 @@
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
     </div>
   </div>
-</div>
 </div>
 <style>
 .myFakeFlyer {
