@@ -1,5 +1,5 @@
 <li>
-    <a href="javascript:void(0)" aria-label="Previous" data-ng-click="var pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1;; goUrl('?c=' + vm.circIdx + '&amp;p=' + pageIdx); $event.preventDefault();">
+    <a href="javascript:void(0)" aria-label="Previous" data-ng-click="pageIdx2 = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1;; goUrl('?c=' + vm.circIdx + '&amp;p=' + pageIdx2); $event.preventDefault();">
         <span aria-hidden="true">&laquo;</span>
     </a>
 </li>
@@ -7,7 +7,7 @@
     <a href="javascript:void(0)" data-ng-href="?c={{vm.circIdx}}&amp;p={{$index + 1}}" data-ng-click="goUrl('?c=' + vm.circIdx + '&amp;p=' + ($index + 1));$event.preventDefault();">{{$index + 1}}</a>
 </li>
 <li>
-    <a href="javascript:void(0)" aria-label="Next" data-ng-click="var pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1; goUrl('?c=' + vm.circIdx + '&amp;p=' + pageIdx); $event.preventDefault();">
+    <a href="javascript:void(0)" aria-label="Next" data-ng-click="pageIdx2 = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1; goUrl('?c=' + vm.circIdx + '&amp;p=' + pageIdx2); $event.preventDefault();">
         <span aria-hidden="true">&raquo;</span>
     </a>
 </li>
