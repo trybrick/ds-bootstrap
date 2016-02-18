@@ -8,7 +8,7 @@
 </li>
 <li>
     <a href="javascript:void(0)" aria-label="Next" 
-    data-ng-href="?c={{vm.circIdx}}&amp;p={{vm.pageIdx >= (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 2}}">
+    data-ng-href="?c={{vm.circIdx}}&amp;p={{(vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 2}}">
         <span aria-hidden="true">&raquo;</span>
     </a>
 </li>
