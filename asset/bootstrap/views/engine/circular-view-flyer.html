@@ -2,7 +2,7 @@
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
   <div class="hidden-meta" data-gsn-og-type="circular"></div>
-  <div class="hidden-meta" data-gsn-og-image="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[vm.pageIdx - 1].ImageUrl}}"></div>
+  <div class="hidden-meta" data-gsn-og-image="{{vm.page.ImageUrl}}"></div>
 
   <h1>Weekly Ads</h1>
   <div id="brxLeaderboard"></div>
@@ -36,12 +36,12 @@
         <div style="width: 100%;" class="text-center">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
         <div class="myImageMap" data-stop-event="click"
-            data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length : vm.pageIdx - 1"
-            data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1">
+            data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.circular.Pages.length : vm.pageIdx - 1"
+            data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.circular.Pages.length) ? 1 : vm.pageIdx + 1">
           <div data-ng-repeat="item in vm.page.Items" 
-            class="myContent" 
+            class="myContent" data-ng-cloak=""
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
-            data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId }"
+            data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId}"
             data-ng-click="vm.activeItem = item"
             id="item_{{item.ItemId}}" data-ng-cloak="">
             <div style="position: relative" class="hover-zoom">
@@ -67,7 +67,7 @@
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
       </div>
       <div class="myFakeFlyer" data-sync-height="#myFlyer" 
-        data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.pageIdx"></div>
+        data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.page"></div>
     </div>
   </div>
 </div>
@@ -163,5 +163,10 @@
   .link-inline a {
     margin-left: 0;
   }
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }
 </style>
