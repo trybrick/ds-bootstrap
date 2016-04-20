@@ -1,321 +1,332 @@
-﻿<style type="text/css">
-  #emailbody {
-    background: #f2f2f0;
-    line-height: normal;
-    width: 100%;
-    height: 100%;
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <title> </title>
+    <style type="text/css">
+.btn a:hover,
+.footer__links a:hover {
+  opacity: 0.8;
+}
+.wrapper .footer__share-button:hover {
+  color: #ffffff !important;
+  opacity: 0.8;
+}
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+.column {
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+.mso .font-avenir,
+.mso .font-cabin,
+.mso .font-open-sans,
+.mso .font-ubuntu {
+  font-family: sans-serif !important;
+}
+.mso .font-bitter,
+.mso .font-merriweather,
+.mso .font-pt-serif {
+  font-family: Georgia, serif !important;
+}
+.mso .font-lato,
+.mso .font-roboto {
+  font-family: Tahoma, sans-serif !important;
+}
+.mso .font-pt-sans {
+  font-family: "Trebuchet MS", sans-serif !important;
+}
+.mso .footer p {
+  margin: 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .fblike {
+    background-image: url(https://i7.createsend1.com/static/eb/customise/13-the-blueprint-3/images/fblike@2x.png) !important;
   }
-
-    #emailbody a:link, #emailbody a:visited, #emailbody a:active {
-      color: #5aa4ca;
-      text-decoration: underline;
-    }
-
-    #emailbody a:hover {
-      color: #0f616d;
-      text-decoration: underline;
-    }
-
-    #emailbody a.ulink, #emailbody a:visited.ulink, #emailbody a:active.ulink {
-      color: #414141;
-      text-decoration: none;
-      font-size: 11px;
-    }
-
-    #emailbody a:hover.ulink {
-      color: #414141;
-      text-decoration: underline;
-    }
-
-    #emailbody td, #emailbody tr, #emailbody table, #emailbody img, #emailbody br {
-      margin: 0!imporant;
-      padding: 0!imporant;
-      border: 0!imporant;
-      border-collapse: separate;
-    }
-
-    #emailbody > a:link, #emailbody > a:visited, #emailbody > a:active {
-      color: #5aa4ca;
-      text-decoration: underline;
-    }
-
-    #emailbody > a:hover {
-      color: #0f616d;
-      text-decoration: underline;
-    }
-
-    #emailbody > a.ulink, #emailbody > a:visited.ulink, #emailbody > a:active.ulink {
-      color: #414141;
-      text-decoration: none;
-      font-size: 11px;
-    }
-
-    #emailbody > a:hover.ulink {
-      color: #414141;
-      text-decoration: underline;
-    }
-
-    #emailbody > td, #emailbody > tr, #emailbody > table, #emailbody > img, #emailbody > br {
-      margin: 0!imporant;
-      padding: 0!imporant;
-      border: 0!imporant;
-      border-collapse: separate;
-    }
+  .tweet {
+    background-image: url(https://i8.createsend1.com/static/eb/customise/13-the-blueprint-3/images/tweet@2x.png) !important;
+  }
+  .linkedinshare {
+    background-image: url(https://i9.createsend1.com/static/eb/customise/13-the-blueprint-3/images/lishare@2x.png) !important;
+  }
+  .forwardtoafriend {
+    background-image: url(https://i4.createsend1.com/static/eb/customise/13-the-blueprint-3/images/forward@2x.png) !important;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .wrapper .size-18,
+  .wrapper .size-20 {
+    font-size: 17px !important;
+    line-height: 26px !important;
+  }
+  .wrapper .size-22 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+  .wrapper .size-24 {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+  .wrapper .size-26 {
+    font-size: 22px !important;
+    line-height: 31px !important;
+  }
+  .wrapper .size-28 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  .wrapper .size-30 {
+    font-size: 26px !important;
+    line-height: 34px !important;
+  }
+  .wrapper .size-32 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+  .wrapper .size-34,
+  .wrapper .size-36 {
+    font-size: 30px !important;
+    line-height: 38px !important;
+  }
+  .wrapper .size-40 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+  .wrapper .size-44 {
+    font-size: 34px !important;
+    line-height: 43px !important;
+  }
+  .wrapper .size-48 {
+    font-size: 36px !important;
+    line-height: 43px !important;
+  }
+  .wrapper .size-56 {
+    font-size: 40px !important;
+    line-height: 47px !important;
+  }
+  .wrapper .size-64 {
+    font-size: 44px !important;
+    line-height: 50px !important;
+  }
+  .divider {
+    Margin-left: auto !important;
+    Margin-right: auto !important;
+  }
+  .btn a {
+    display: block !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    padding: 12px 10px !important;
+    width: auto !important;
+  }
+  .btn--shadow a {
+    padding: 12px 10px 13px 10px !important;
+  }
+  .image img {
+    height: auto;
+    width: 100%;
+  }
+  .layout,
+  .column,
+  .preheader__webversion,
+  .header td,
+  .footer,
+  .footer__left,
+  .footer__right,
+  .footer__inner {
+    width: 320px !important;
+  }
+  .preheader__snippet,
+  .layout__edges {
+    display: none !important;
+  }
+  .preheader__webversion {
+    text-align: center !important;
+  }
+  .layout--full-width {
+    width: 100% !important;
+  }
+  .layout--full-width tbody,
+  .layout--full-width tr {
+    display: table;
+    Margin-left: auto;
+    Margin-right: auto;
+    width: 320px;
+  }
+  .column,
+  .layout__gutter,
+  .footer__left,
+  .footer__right {
+    display: block;
+    Float: left;
+  }
+  .footer__inner {
+    text-align: center;
+  }
+  .footer__links {
+    Float: none;
+    Margin-left: auto;
+    Margin-right: auto;
+  }
+  .footer__right p,
+  .footer__share-button {
+    display: inline-block;
+  }
+  .layout__gutter {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .layout--no-gutter.layout--has-border:not(.layout--full-width),
+  .layout--has-gutter.layout--has-border .column__background {
+    width: 322px !important;
+  }
+  .layout--has-gutter.layout--has-border {
+    left: -1px;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .border {
+    display: none;
+  }
+  .layout--no-gutter.layout--has-border:not(.layout--full-width),
+  .layout--has-gutter.layout--has-border .column__background {
+    width: 320px !important;
+  }
+  .layout--has-gutter.layout--has-border {
+    left: 0 !important;
+  }
+}
 </style>
-<div id="emailbody" bgcolor="#f2f2f0" topmargin="25" rightmargin="0" bottommargin="0" leftmargin="150" data-ctrl-email-preview>
-  <table id="Outer" width="539" border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f0">
-    <tr>
-      <td>
-        <table id="Header" width="539" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td width="30">
-              <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="30" height="1" /></td>
-            <td width="240">
-              <br />
-              <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">Welcome to {{email.ChainName}}!</font>
-            </td>
-            <td width="240" align="right">
-              <br />
-              <font face="Arial, Helvetica, sans-serif" size="1"><a class="ulink" data-ng-href="{{getFullPath('/profile')}}">Sign-in Here</a></font></td>
-            <td width="30">
-              <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="30" height="1" /></td>
-          </tr>
-          <tr>
-            <td height="5" colspan="4">
-              <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="1" height="5" /></td>
-          </tr>
-          <tr>
-            <td colspan="4">
-              <img width="539" height="165" data-ng-src="{{getFullPath(getThemeUrl('/images/email/thankYouHeader.jpg'))}}" /></td>
-          </tr>
-        </table>
-        <table id="Body" width="539" border="0" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-              <table id="Welcome" width="539" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" /></td>
-                  <td width="20" bgcolor="#FFFFFF">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" /></td>
-                  <td width="480" bgcolor="#FFFFFF">
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="5" color="#414141">Welcome, <font face="Arial, Helvetica, sans-serif"  color="#5aa4ca">{{email.FirstName}}!</font>
-
-                                        </font>
-                    <br />
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="3" color="#414141">You may now use all the features of our online system.</font>
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="3" color="#414141"><a data-ng-href="{{getFullPath('/profile')}}">Click here</a> to sign in and start using your exclusive benefits!</font>
-                    <br />
-                    <br />
-                    <div style="width: 440px; overflow: hidden;">{{email.Description}}</div>
-                    <br />
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" /></td>
-                </tr>
-              </table>
-              <table id="NewMemberBenefits" width="539" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="5">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="5" height="1" />
-                  </td>
-                  <td width="264" bgcolor="#FFFFFF">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/memberBenefits.jpg'))}}" width="264" height="61" />
-                  </td>
-                  <td width="250" bgcolor="#FFFFFF">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="250" height="1" />
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-              </table>
-              <table id="FeaturedBenefits" width="539" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" />
-                  </td>
-                  <td width="250" colspan="3" bgcolor="#FFFFFF">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/weeklyAds.jpg'))}}" width="250" height="55" />
-                  </td>
-                  <td width="250" colspan="3" bgcolor="#FFFFFF">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/couponSavings.jpg'))}}" width="250" height="55" />
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" />
-                  </td>
-                  <td width="14">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/weeklyAdsLeft.jpg'))}}" width="14" height="160" /></td>
-                  <td width="227" bgcolor="#e94f50" align="center">
-                    <a data-ng-href="{{getFullPath(getThemeUrl('/circular'))}}">
-                      <img height="140" border="0" data-ng-src="{{getFullPath(getThemeUrl('/images/email/weeklyAd.gif'))}}" />
-                    </a>
-                  </td>
-                  <td width="9">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/weeklyAdsRight.jpg'))}}" width="9" height="160" /></td>
-                  <td width="9">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/couponSavingsLeft.jpg'))}}" width="9" height="160" /></td>
-                  <td width="227" bgcolor="#e94f50" align="center">
-                    <div style="padding-bottom: 10px; padding-top: 10px">
-                      <table id="CouponSavings" width="227" height="140" bgcolor="#e94f50" border="0" cellpadding="0" cellspacing="0">
-                        <tr>
-                          <td width="40">
-                            <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="40" height="1" /></td>
-                          <td width="147" height="140" bgcolor="#FFFFFF" align="center">
-                            <a data-ng-href="{{getFullPath('/coupons')}}">
-                              <font face="Arial, Helvetica, sans-serif" size="5" color="#414141">You could save<br /><font face="Arial, Helvetica, sans-serif"  color="#e94f50" size="6">{{email.ManufacturerCouponTotalSavings}}</font><br />this week!</font>
-                            </a>
-                          </td>
-                          <td width="40">
-                            <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="40" height="1" /></td>
-                        </tr>
-                      </table>
-                    </div>
-                  </td>
-                  <td width="14">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/couponSavingsRight.jpg'))}}" width="14" height="160" /></td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" />
-                  </td>
-                  <td width="250" colspan="3" bgcolor="#FFFFFF">
-                    <a data-ng-href="{{getFullPath('/circular')}}">
-                      <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/weeklyAdsView.jpg'))}}" width="250" height="38" border="0" />
-                    </a>
-                  </td>
-                  <td width="250" colspan="3" bgcolor="#FFFFFF">
-                    <a data-ng-href="{{getFullPath('/coupons')}}">
-                      <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/couponSavingsView.jpg'))}}" width="250" height="38" border="0" />
-                    </a>
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-              </table>
-              <table id="OtherBenefits" width="539" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" />
-                  </td>
-                  <td width="168" colspan="3">
-                    <a data-ng-href="{{getFullPath('/recipecenter')}}">
-                      <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/recipeIdeas.jpg'))}}" width="168" height="153" border="0" />
-                    </a>
-                  </td>
-                  <td width="164" colspan="3">
-                    <a data-ng-href="{{getFullPath('/recipevideo')}}">
-                      <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/cookingVideos.jpg'))}}" width="164" height="153" border="0" />
-                    </a>
-                  </td>
-                  <td width="168" colspan="3">
-                    <a data-ng-href="{{getFullPath('/mylist')}}">
-                      <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/groceryLists.jpg'))}}" width="168" height="153" border="0" />
-                    </a>
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-                <tr>
-                  <td width="19" background="{{getFullPath(getThemeUrl('/images/email/bgLeft.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="19" height="1" />
-                  </td>
-                  <td width="17" bgcolor="#FFFFFF" align="right" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsLeft.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="139" bgcolor="#E6E6E6" valign="center">
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">View new recipe ideas to share with the family!</font>
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1">
-                                            <a data-ng-href="{{getFullPath('/recipecenter')}}">View Recipe Ideas </a>
-                                        </font>
-                  </td>
-                  <td width="12" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsRight.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="12" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsLeft.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="140" bgcolor="#E6E6E6" valign="center">
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">Watch videos to improve your cooking methods!</font>
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">
-                                            <a data-ng-href="{{getFullPath('/recipevideo')}}">Watch Cooking Videos </a>
-                                        </font>
-                  </td>
-                  <td width="12" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsRight.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="12" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsLeft.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="139" bgcolor="#E6E6E6" valign="center">
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">Create and save lists to make shopping quicker!</font>
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1"><a data-ng-href="{{getFullPath('/mylist')}}">Create Your List Here </a></font>
-                  </td>
-                  <td width="17" bgcolor="#FFFFFF" align="left" valign="top">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/benefitsRight.jpg'))}}" width="12" height="60" />
-                  </td>
-                  <td width="20" background="{{getFullPath(getThemeUrl('/images/email/bgRight.jpg'))}}">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="20" height="1" />
-                  </td>
-                </tr>
-              </table>
-              <table id="Footer" width="539" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td colspan="3">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/footer.jpg'))}}" width="539" height="27" /></td>
-                </tr>
-                <tr>
-                  <td width="30">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="30" height="1" /></td>
-                  <td width="480">
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1">
-                                            <a data-ng-href="{{getFullPath('/profile')}}">unsubscribe</a> | 
-                                            <a data-ng-href="{{getFullPath('/privacy')}}">privacy policy</a> | 
-                                            <a data-ng-href="{{getFullPath('/contactus')}}">contact us</a> | 
-                                            <a data-ng-href="{{getFullPath('/profile')}}">sign in to your account</a>
-
-                                        </font>
-                    <br />
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">
-                                            <b>NOTE:</b> To ensure delivery to your inbox (not bulk or junk folders), please add <b><i><a data-ng-href="mailto:{{email.FromEmail}}">{{email.FromEmail}}</a></i></b> to your address book or safelist.
-                                        </font>
-                    <br />
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#414141">
-                                            Email News is an opt-in, recurring email from {{email.ChainName}}. This email address was obtained through e-mail sign up on our website located at <a data-ng-href="{{getFullPath()}}">{{getFullPath()}}</a>.
-                                        </font>
-                    <br />
-                    <font face="Arial, Helvetica, sans-serif" size="1" color="#9b9b9b">Copyright {{email.CopyrightYear}} Grocery Shopping Network</font>
-                    <br />
-                    <br />
-                  </td>
-                  <td width="30">
-                    <img data-ng-src="{{getFullPath(getThemeUrl('/images/email/spacer.gif'))}}" width="30" height="1" />
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</div>
+    
+  <!--[if !mso]><!--><style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Cabin:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400);
+</style><link href="https://fonts.googleapis.com/css?family=Cabin:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400" rel="stylesheet" type="text/css" /><!--<![endif]--><style type="text/css">
+body,.wrapper{background-color:#f5f7fa}.wrapper h1{color:#44a8c7;font-size:26px;line-height:34px}.wrapper h1{}.wrapper h1{font-family:Cabin,Avenir,sans-serif}.mso .wrapper h1{font-family:sans-serif !important}.wrapper h2{color:#44a8c7;font-size:20px;line-height:28px}.wrapper h3{color:#434547;font-size:16px;line-height:24px}.wrapper a{color:#5c91ad}.wrapper a:hover{color:#375a6c !important}@media only screen and (max-width: 620px){.wrapper h1{}.wrapper h1{font-size:22px;line-height:31px}.wrapper h2{}.wrapper h2{font-size:17px;line-height:26px}.wrapper h3{}.wrapper p{}}.column,.column__background td{color:#60666d;font-size:14px;line-height:21px}.column,.column__background td{font-family:"Open Sans",sans-serif}.mso .column,.mso .column__background td{font-family:sans-serif 
+!important}.border{background-color:#b1c1d8}.layout--no-gutter.layout--has-border:not(.layout--full-width),.layout--has-gutter.layout--has-border .column__background,.layout--full-width.layout--has-border{border-top:1px solid #b1c1d8;border-bottom:1px solid #b1c1d8}.wrapper blockquote{border-left:4px solid #b1c1d8}.divider{background-color:#b1c1d8}.wrapper .btn a{color:#fff}.wrapper .btn a{font-family:"Open Sans",sans-serif}.mso .wrapper .btn a{font-family:sans-serif !important}.wrapper .btn a:hover{color:#fff !important}.btn--flat a,.btn--shadow a,.btn--depth a{background-color:#5c91ad}.btn--ghost a{border:1px solid #5c91ad}.preheader--inline,.footer__left{color:#b9b9b9}.preheader--inline,.footer__left{font-family:"Open Sans",sans-serif}.mso .preheader--inline,.mso .footer__left{font-family:sans-serif !important}.wrapper .preheader--inline a,.wrapper .footer__left 
+a{color:#b9b9b9}.wrapper .preheader--inline a:hover,.wrapper .footer__left a:hover{color:#b9b9b9 !important}.header__logo{color:#c3ced9}.header__logo{font-family:Roboto,Tahoma,sans-serif}.mso .header__logo{font-family:Tahoma,sans-serif !important}.wrapper .header__logo a{color:#c3ced9}.wrapper .header__logo a:hover{color:#859bb1 !important}.footer__share-button{background-color:#7b7c7d}.footer__share-button{font-family:"Open Sans",sans-serif}.mso .footer__share-button{font-family:sans-serif !important}.layout__separator--inline{font-size:20px;line-height:20px;mso-line-height-rule:exactly}
+</style><meta name="robots" content="noindex,nofollow" />
+<meta property="og:title" content="My First Campaign" />
+</head>
+<!--[if mso]>
+  <body class="mso">
+<![endif]-->
+<!--[if !mso]><!-->
+  <body class="full-padding" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #f5f7fa;">
+<!--<![endif]-->
+    <div class="wrapper" style="background-color: #f5f7fa;">
+      <table style='border-collapse: collapse;table-layout: fixed;color: #b9b9b9;font-family: "Open Sans",sans-serif;' align="center">
+        <tbody><tr>
+          <td class="preheader__snippet" style="padding: 10px 0 5px 0;vertical-align: top;width: 280px;">
+            
+          </td>
+          <td class="preheader__webversion" style="text-align: right;padding: 10px 0 5px 0;vertical-align: top;width: 280px;">
+            
+          </td>
+        </tr>
+      </tbody></table>
+      <table class="header" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;" align="center" id="emb-email-header-container">
+        <tbody><tr>
+          <td style="padding: 0;width: 600px;">
+            <div class="header__logo emb-logo-margin-box" style="font-size: 26px;line-height: 32px;Margin-top: 8px;Margin-bottom: 20px;color: #c3ced9;font-family: Roboto,Tahoma,sans-serif;Margin-left: 20px;Margin-right: 20px;">
+              <div class="logo-center" style="font-size:0px !important;line-height:0 !important;" align="center" id="emb-email-header"><img style="height: auto;width: 100%;border: 0"  alt="{{email.ChainName}}" src="{{email.emailLogo}}"/></div>
+            </div>
+          </td>
+        </tr>
+      </tbody></table>
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <h3 class="size-20" style="Margin-top: 0;Margin-bottom: 0;font-style: normal;font-weight: normal;color: #434547;font-size: 20px;line-height: 28px;"><span style="color:#28B178"><strong>Hello, {{email.FirstName}}!</strong></span></h3>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <p class="size-18" style="Margin-top: 0;Margin-bottom: 0;font-size: 18px;line-height: 26px;">Thank you for signing up with {{email.ChainName}}. We are really happy to have you! Get started below!</p>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <div class="btn btn--depth" style="text-align:center;">
+        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-weight: bold;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #f5f7fa !important;border: 1px solid rgba(0, 0, 0, 0.25);box-shadow: inset 0 -3px 0 -1px rgba(0, 0, 0, 0.2), inset 0 2px 1px -1px #ffffff;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.21);background-color: #2AB07B;font-family: Merriweather, Georgia, serif;font-size: 14px;line-height: 24px;padding: 12px 35px;" data-ng-href="{{getFullPath(getThemeUrl('/circular'))}}" data-width="78">Get Started</a><![endif]>
+      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" data-ng-href="{{getFullPath(getThemeUrl('/circular'))}}" style="width:150px" arcsize="8%" strokecolor="#228E22" filled="t"><v:fill type="gradient" angle="180" color="#2AB07B" color2="#26A126"></v:fill><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#F5F7FA;font-family:Georgia,serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">Get Started</center></v:textbox></v:roundrect><![endif]--></div>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <p class="size-18" style="Margin-top: 0;Margin-bottom: 0;font-size: 18px;line-height: 26px;">After signing in, you'll be able to have access to: weekly ads, coupons, recipe ideas, cooking videos, grocery lists &amp; much more.</p>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <p style="Margin-top: 0;Margin-bottom: 0;text-align: center;"><a style="text-decoration: underline;transition: opacity 0.1s ease-in;color: #5c91ad;" data-ng-href="{{getFullPath('/privacy')}}">privacy policy</a> |<a style="text-decoration: underline;transition: opacity 0.1s ease-in;color: #5c91ad;" data-ng-href="{{getFullPath('/contactus')}}"> contact us</a> | <a style="text-decoration: underline;transition: opacity 0.1s ease-in;color: #5c91ad;" data-ng-href="{{getFullPath('/profile')}}">sign in to your account</a></p>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <p style="Margin-top: 0;Margin-bottom: 0;"><strong>NOTE: To ensure delivery to your inbox (not bulk or junk folders), please add <a style="text-decoration: none;transition: opacity 0.1s ease-in;color: #5c91ad;"data-ng-href="mailto:{{email.FromEmail}}">{{email.FromEmail}}</a> to your address book or safelist.</strong></p>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+  
+      <table class="layout layout--no-gutter" style="border-collapse: collapse;table-layout: fixed;Margin-left: auto;Margin-right: auto;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #ffffff;" align="center" emb-background-style>
+        <tbody><tr>
+          <td class="column" style='padding: 0;text-align: left;vertical-align: top;color: #60666d;font-size: 14px;line-height: 21px;font-family: "Open Sans",sans-serif;width: 600px;'>
+    
+            <div style="Margin-left: 20px;Margin-right: 20px;Margin-top: 24px;Margin-bottom: 24px;">
+      <p class="size-14" style="Margin-top: 0;Margin-bottom: 0;font-size: 14px;line-height: 21px;"><span style="color:#b9b9b9">Copyright {{email.CopyrightYear}} Brick, Inc.</span></p>
+    </div>
+    
+          </td>
+        </tr>
+      </tbody></table>
+      
+    </div>
+  
+</body></html>
