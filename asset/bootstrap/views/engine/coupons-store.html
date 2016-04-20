@@ -42,7 +42,7 @@
             <p data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</p>  
             <p>{{item.TopTagLine}}</p>
             <p>{{item.Description3}}{{item.Description4}}</p>
-            <p >{{item.BottomTagLine}}</p> 
+            <p >{{item.BottomTagLine.replace('##storename##', gvm.currentStore.StoreName)}}</p> 
           </div>
           <div class="text-center">
             <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>
