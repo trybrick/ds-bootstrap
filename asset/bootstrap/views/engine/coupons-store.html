@@ -31,9 +31,9 @@
   <div class="col-md-12">   
     <br style="clear: both;"/><br />                                            
     <div class="col-md-12" data-ng-show="selectedCoupons.items.length <= 0 && vm.filterBy">No results returned.</div>
-    <div class="row" data-infinite-scroll="loadMore()">
+    <div class="row col-md-12" data-infinite-scroll="loadMore()">
           <div data-ng-repeat-start="item in selectedCoupons.items" data-ng-class="{'row': $index % 3 === 0 }"></div>
-      <div class="col-md-4 col-sm-4 col-xs-12" data-ng-body="">
+      <div class="col-md-4 col-sm-4 col-xs-12" data-body="">
         <div class="text-center">
           <img data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           <div class="product-description">
