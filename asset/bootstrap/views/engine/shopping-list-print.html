@@ -43,6 +43,41 @@
     </div>
   </div>
 
+  <div class="row">
+    <!-- circular coupons -->
+    <div data-ng-repeat="item in circularCoupons">
+      <div class="col-md-6 col-xs-12 couponContainerDiv">
+        <table border="0" cellspacing="0" cellpadding="4"> 
+          <tr height="30">
+            <td width="150" align="center" rowspan="3">
+              <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+              <br />
+              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
+            </td>
+            <td align="center">
+              <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>
+              <div class="couponTitle2">EXPIRES {{item.EndDate | date: 'M / dd / yyyy'}}</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</div>
+              <div class="couponDescription1">{{item.Description}}</div>
+              <div class="couponDescription2">{{item.PriceString}}</div>
+              <div class="couponDescription3">{{item.Description2}}</div>
+              <div class="couponDescription4">Limit ONE - One coupon may be used per customer. Good at {{gvm.currentStore.StoreName}}.</div>
+            </td>
+          </tr>
+          <tr data-gsn-ft-config="couponlogo">
+            <td colspan="2" data-ng-if="item.Description">
+              <br />
+              <img class="chainLogoImage" align="right" data-ng-src="{{item.Description}}" border="0">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
   <div class="row" data-ng-if="instoreCoupons.length > 0">
     <div data-ng-repeat="item in instoreCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
@@ -51,7 +86,7 @@
             <td width="150" align="center" rowspan="3">
               <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
               <br />
-              <img class="barcodeImage" data-ng-src="{{item.CouponImageUrl}}"/>
+              <img class="barcodeImage" data-ng-src="{{item.BarcodeImageUrl}}"/>
             </td>
             <td align="center">
               <div class="couponTitle1">{{ChainName | uppercase}} STORE COUPON</div>

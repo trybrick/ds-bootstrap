@@ -36,9 +36,11 @@
     <br style="clear: both;"/><br />
     <div data-ng-show="selectedCoupons.items.length <= 0 && vm.filterBy">No results returned.</div>
     <div data-infinite-scroll="loadMore()">
-      <div class="col-md-4 col-sm-6 coupons" data-ng-repeat="item in selectedCoupons.items"
+      <div data-ng-repeat-start="item in selectedCoupons.items" data-ng-class="{'row': $index % 3 === 0 }"></div>
+      <div class="col-md-4 col-sm-6 coupons" data-body=""
         data-ng-include="getThemeUrl('/views/engine/coupons-item.html')">
       </div>
+      <div data-ng-repeat-end=""></div>
     </div>
   </div>
   <div class="hidden" style="display:none">
