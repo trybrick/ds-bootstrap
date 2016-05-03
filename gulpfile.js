@@ -12,7 +12,8 @@ gulp.task("default", function() {
       ACL: 'public-read', //  Needs to be user-defined
       keyTransform: function(relative_filename) {
         var new_name = `/ds/${branch}/asset/${relative_filename}`;
-        console.log(new_name);
+
+        // console.log(new_name);
         // or do whatever you want
         return new_name;
       }
