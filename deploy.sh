@@ -1,3 +1,3 @@
 #!/bin/sh
-echo -e "test18"
+echo -e "test19"
 aws s3 sync "./asset" "s3://brick-web/ds/$1"
