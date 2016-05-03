@@ -1,2 +1,2 @@
 #!/bin/sh
-echo 'this does nothing'
+echo 'test sum more'
