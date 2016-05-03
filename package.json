@@ -27,6 +27,10 @@
     "test": "tests"
   },
   "dependencies": {},
+  "engines": {
+    "node": ">= 4.3.0"
+  },
+  "license": "UNLICENSED",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-s3-upload": "^1.6.0",
