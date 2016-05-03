@@ -1,3 +1,2 @@
 #!/bin/sh
-npm install
-node node_modules/gulp/bin/gulp --branch $1
+echo 'this does nothing'
