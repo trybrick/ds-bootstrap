@@ -61,7 +61,7 @@
         <li><a data-ng-href=\ "http://www.facebook.com/sharer.php?u={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\"><i class=\"fa fa-facebook\"></i></a>
         </li>
         <li>
-            <a href=\ "http://twitter.com/share?url={{encodeURIComponent(getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&q=' + item.ItemId))}}&amp;text={{item.Description}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\"><i class=\"fa fa-twitter\"></i></a>
+            <a href=\ "http://twitter.com/share?url={{encodeURIComponent(getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId))}}&amp;text={{item.Description}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\"><i class=\"fa fa-twitter\"></i></a>
         </li>
         <li>
             <a href=\ "https://plus.google.com/share?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}\" target=\ "_blank\" tabindex=\ "0\">
@@ -78,7 +78,9 @@
 <style>
 .sharing-menu ul {
     overflow: auto;
-    top:60; right: 0; position: fixed;
+    top:60; right: 0; 
+    position: fixed;
+    z-index: 99;
 }
 
 .sharing-menu ul li {
