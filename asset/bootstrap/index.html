@@ -48,18 +48,18 @@
 <div class="sharing-menu">
     <ul>
         <li>
-        <a data-ng-href="http://www.facebook.com/sharer.php?u={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-facebook"></i></a>
+        <a data-ng-href="http://www.facebook.com/sharer.php?u={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-facebook"></i></a>
         </li>
         <li>
-            <a href="http://twitter.com/share?url={{encodeURIComponent(getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId))}}&amp;text={{item.Description}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-twitter"></i></a>
+            <a href="http://twitter.com/share?url={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-twitter"></i></a>
         </li>
         <li>
-            <a href="https://plus.google.com/share?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}" target="_blank" tabindex="0">
+            <a href="https://plus.google.com/share?url={{getFullPath(currentPath)}}" target="_blank" tabindex="0">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li>
-            <a href="http://pinterest.com/pin/create/button/?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}" rel="nofollow" target="_blank" tabindex="0">
+            <a href="http://pinterest.com/pin/create/button/?url={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0">
                 <i class="fa fa-pinterest"></i>
             </a>
         </li>
