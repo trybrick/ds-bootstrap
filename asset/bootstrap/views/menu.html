@@ -1,57 +1,121 @@
 <nav class="navbar navbar-default my-navbar" style="width: 100%">
-  <div class="container-fluid" style="width: 100%">
-    <div class="navbar-header" style="width: 100%">
-      <button type="button" class="navbar-toggle collapsed" style="float: left; margin-left: 15px;" data-toggle="collapse" data-target="#main-nav-bar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="pull-right" data-ng-class="{ 'open': gvm.shoppingListActive }" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) > 0">
-        <a class="btn btn-default navbar-btn" href="javascript:void(0)"data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
+    <div class="container-fluid" style="width: 100%">
+        <div class="navbar-header" style="width: 100%">
+            <button type="button" class="navbar-toggle collapsed" style="float: left; margin-left: 15px;" data-toggle="collapse" data-target="#main-nav-bar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="pull-right" data-ng-class="{ 'open': gvm.shoppingListActive }" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) > 0">
+                <a class="btn btn-default navbar-btn" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive">
           My List
           <span class="badge badgeCount">{{getShoppingListCount()}}</span>
           <span class="glyphicon glyphicon-chevron-down"></span>
           <span class="sr-only">Toggle Shopping List</span>
         </a>
-        <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff">
-          <li data-ng-if="gvm.shoppingListActive">
-            <div class="shopping-list" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"></div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="main-nav-bar"  style="width: 100%; padding-left: 5px; padding-right: 5px">
-      <ul class="nav navbar-nav nav-hover" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement" style="margin-left: -15px">
-        <li data-ng-repeat="menu in siteMenu | orderBy:'Position'" class="dropdown" dropdown itemprop="name">
-          <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
-          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name">
-            <span data-ng-bind-html="menu.Name | trustedHtml"></span> <i class="fa fa-caret-down"></i>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'" >
-            <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
-              <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="sm.Name | trustedHtml"></span></a>
-            </li>  
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) <= 0">
-        <li data-ng-class="{ 'open': gvm.shoppingListActive }">
-          <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" >
+                <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff">
+                    <li data-ng-if="gvm.shoppingListActive">
+                        <div class="shopping-list" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav-bar" style="width: 100%; padding-left: 5px; padding-right: 5px">
+            <ul class="nav navbar-nav nav-hover" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement" style="margin-left: -15px">
+                <li data-ng-repeat="menu in siteMenu | orderBy:'Position'" class="dropdown" dropdown itemprop="name">
+                    <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="menu.Name | trustedHtml"></span></a>
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-ng-if="menu.Path == '#' || menu.Path == ''" itemprop="name">
+                        <span data-ng-bind-html="menu.Name | trustedHtml"></span> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'">
+                        <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
+                            <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}"><span data-ng-bind-html="sm.Name | trustedHtml"></span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) <= 0">
+                <li data-ng-class="{ 'open': gvm.shoppingListActive }">
+                    <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive">
             My List
             <span class="badge badgeCount">{{getShoppingListCount()}}</span>
             <span class="glyphicon glyphicon-chevron-down"></span>
             <span class="sr-only">Toggle Shopping List</span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff">
-            <li data-ng-if="gvm.shoppingListActive">
-              <div class="shopping-list" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"></div>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+                    <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff">
+                        <li data-ng-if="gvm.shoppingListActive">
+                            <div class="shopping-list" data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
+<div data-gsn-sticky="" data-top="60" class="sharing-menu">
+    <ul>
+        <li><a data-ng-href=\ "http://www.facebook.com/sharer.php?u={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\"><i class=\"fa fa-facebook\"></i></a>
+        </li>
+        <li>
+            <a href=\ "http://twitter.com/share?url={{encodeURIComponent(getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&q=' + item.ItemId))}}&amp;text={{item.Description}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\"><i class=\"fa fa-twitter\"></i></a>
+        </li>
+        <li>
+            <a href=\ "https://plus.google.com/share?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}\" target=\ "_blank\" tabindex=\ "0\">
+                <i class=\ "fa fa-google-plus\"></i>
+            </a>
+        </li>
+        <li>
+            <a href=\ "http://pinterest.com/pin/create/button/?url={{getFullPath('/circular/list?cache=no&amp;storenbr=' + gvm.currentStore.StoreNumber + '&amp;q=' + item.ItemId)}}\" rel=\ "nofollow\" target=\ "_blank\" tabindex=\ "0\">
+                <i class=\ "fa fa-pinterest\"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<style>
+.sharing-menu ul {
+    overflow: auto;
+    top:60; right: 0; position: fixed;
+}
+
+.sharing-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: -30px;
+}
+
+.sharing-menu ul li a i {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.fa-facebook {
+    background: #3b5998;
+}
+
+.fa-pinterest {
+    background: #c92228;
+}
+
+.fa-twitter {
+    background: #00aced;
+}
+
+.fa-google-plus {
+    background: #dd4b39;
+}
+
+.popout-menu ul li a i:hover {
+    opacity: .7;
+}
+</style>
