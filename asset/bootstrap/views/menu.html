@@ -60,6 +60,8 @@
     <ul>
         <li>
         <a data-ng-href="http://www.facebook.com/sharer.php?u={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-facebook"></i></a>
+
+        <i class="fa fa-share-alt"></i>
         </li>
         <li>
             <a href="http://twitter.com/share?url={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-twitter"></i></a>
@@ -83,10 +85,10 @@
 
 .sharing-menu {
     top: 60px; 
-    right: 0; 
+    left: 0; 
     position: fixed;
     z-index: 99;
-    margin-right: -20px;
+    margin-left: -20px;
     transition: all 0.2s ease-in-out;
 }
 
