@@ -61,7 +61,7 @@
         <li>
         <a data-ng-href="http://www.facebook.com/sharer.php?u={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-facebook"></i></a>
 
-        <i class="fa fa-share-alt"></i>
+        <span style="background-color: #555; padding: 5px"><i class="fa fa-share-alt"></i></span>
         </li>
         <li>
             <a href="http://twitter.com/share?url={{getFullPath(currentPath)}}" rel="nofollow" target="_blank" tabindex="0"><i class="fa fa-twitter"></i></a>
@@ -80,15 +80,14 @@
 </div>
 <style>
 .sharing-menu:hover {
-  margin-left: 0px;
+  left: 0px;
 }
 
 .sharing-menu {
     top: 60px; 
-    left: 0; 
+    left: -45px; 
     position: fixed;
-    z-index: 99;
-    margin-left: -40px;
+    z-index: 77;
     transition: all 0.2s ease-in-out;
 }
 
