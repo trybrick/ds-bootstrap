@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="row item-content" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
-        <div class="col-md-10 col-xs-12 itemdata-container" data-ng-click="vm['item' + $index] = $index; showModal();">
+        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container" data-ng-click="vm['item' + $index] = $index; showModal();">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
             <div class="product-brand">{{item.BrandName}}</div>
@@ -88,7 +88,7 @@
           </p>
           <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
-        <div class="col-md-2 col-xs-12" class="additem-container" data-ng-click="vm['item' + $index] = $index; showModal();">
+        <div class="col-md-2 col-sm-2 col-xs-12" class="additem-container" data-ng-click="vm['item' + $index] = $index; showModal();">
           <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
           <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
         </div>
@@ -105,6 +105,7 @@
 <style>
 .myimage-container {
   padding-right: 5px;
+  text-align: center;
 }
 
 .itemdata-container {
@@ -115,6 +116,7 @@
 .item-content {
   overflow: hidden;
   padding: 5px;
+  text-align: center;
 }
 
 .item-content:hover .item-add-button {
