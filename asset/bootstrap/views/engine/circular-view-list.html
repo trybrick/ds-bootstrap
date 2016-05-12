@@ -79,7 +79,7 @@
             <div class="product-brand">{{item.BrandName}}</div>
             <div class="product-category">{{item.CategoryName}}</div>
           </div>
-          <div class="myimage-container" data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-4 col-xs-12">
+          <div data-ng-if="currentPath.indexOf('text') < 0" class=" myimage-container col-md-4 col-sm-4 col-xs-12">
             <img itemprop="image" class="myimage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           </div>
           <p itemprop="description">
@@ -104,15 +104,7 @@
 </div>
 <style>
 .myimage-container {
-  float: left;
   padding-right: 5px;
-}
-
-@media(max-width: 767px) {
-    .myimage-container {
-        float: none;
-        text-align: center;
-    }
 }
 
 .itemdata-container {
