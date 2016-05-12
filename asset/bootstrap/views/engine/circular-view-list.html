@@ -89,8 +89,10 @@
           <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-12" class="additem-container" data-ng-click="vm['item' + $index] = $index; showModal();">
-          <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
-          <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+          <div class="item-product-price" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}
+ <div class="subdescription" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+          </div>
+         
         </div>
       </div>
       <div class="row" data-ng-repeat-end=""></div>
@@ -153,5 +155,16 @@
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.item-product-price {
+    color: #40c781;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'helvetica neue'
+}
+
+.item-product-price .subdescription {
+    color: #7d7d7d;
 }
 </style>
