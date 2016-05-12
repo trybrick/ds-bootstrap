@@ -72,7 +72,7 @@
           <h5>Description</h5>
         </div>
       </div>
-      <div class="row item-content thumbnail" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
+      <div class="row item-content" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
         <div class="col-md-8 col-xs-12" data-ng-click="vm['item' + $index] = $index; showModal();">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
@@ -80,7 +80,7 @@
             <div class="product-category">{{item.CategoryName}}</div>
           </div>
           <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
-            <img itemprop="image" data-ng-src="{{item.ImageUrl.replace('.com/circular/', '.com/rs/200,fit/circular/') || getThemeUrl('/images/no_image.jpg')}}" />
+            <img itemprop="image" class="myimage" data-ng-src="{{item.ImageUrl.replace('.com/circular/', '.com/rs/200,fit/circular/') || getThemeUrl('/images/no_image.jpg')}}" />
           </div>
           <p itemprop="description">
             <span itemprop="name">{{item.Description}}</span><br />
@@ -103,13 +103,9 @@
   </div>
 </div>
 <style>
-.circularItem img {
-    width: auto;
-}
-@media(max-width: 767px) {
-    .circularItem img {
-        width: 60%;
-    }
+.myimage {
+  max-width: 200px;
+  max-height: 200px;
 }
 .item-add-button {
 
