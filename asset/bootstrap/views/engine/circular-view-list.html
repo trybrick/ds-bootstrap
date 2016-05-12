@@ -74,6 +74,12 @@
       </div>
       <div class="row item-content" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
         <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container" data-ng-click="vm['item' + $index] = $index; showModal();">
+        <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
+                    <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="item.zoom = !item.zoom"><i class="fa fa-search-minus" data-ng-show="item.zoom"></i><i class="fa fa-search-plus" data-ng-show="!item.zoom"></i></a>
+                    <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="item.zoom">
+                        <img class="myimage-zoom" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+                    </div>
+                </div>
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
             <div class="product-brand">{{item.BrandName}}</div>
@@ -180,5 +186,18 @@
 
 .item-product-price .subdescription {
     color: #ec1c24;
+}
+
+.item-tools {
+    color: #40c781;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 9;
+    display: none;
+}
+
+.item-content:hover .item-tools {
+    display: inline;
 }
 </style>
