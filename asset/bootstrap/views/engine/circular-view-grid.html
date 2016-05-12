@@ -91,6 +91,8 @@
                             <div class="item-top-content-inner">
                                 <div class="item-product-price">
                                     <span class="price-num">{{item.PriceString}}</span>
+
+ <div class="subdescription" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
                                 </div>
                                 <div class="item-product">
                                     <div class="item-top-title">
@@ -309,7 +311,8 @@
 }
 
 .item-product-price .subdescription {
-    color: #7d7d7d;
+    color: #ec1c24;
+    font-size: 1.5em;
 }
 
 .old-price {
