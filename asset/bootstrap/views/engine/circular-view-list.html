@@ -73,7 +73,7 @@
         </div>
       </div>
       <div class="row item-content" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
-        <div class="col-md-10 col-xs-12" data-ng-click="vm['item' + $index] = $index; showModal();">
+        <div class="col-md-10 col-xs-12 itemdata-container" data-ng-click="vm['item' + $index] = $index; showModal();">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
             <div class="product-brand">{{item.BrandName}}</div>
@@ -103,9 +103,7 @@
   </div>
 </div>
 <style>
-.myimage-container img {
-  text-align: center;
-  vertical-align: middle;
+.itemdata-container {
   min-height: 100px;
   overflow: hidden;
 }
