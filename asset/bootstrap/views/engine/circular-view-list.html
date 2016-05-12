@@ -73,13 +73,13 @@
         </div>
       </div>
       <div class="row item-content" itemscope itemtype="http://schema.org/Product">
-        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container">
-        <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
+          <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
                     <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="item.zoom = !item.zoom"><i class="fa fa-search-minus" data-ng-show="item.zoom"></i><i class="fa fa-search-plus" data-ng-show="!item.zoom"></i></a>
                     <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="item.zoom">
                         <img class="myimage-zoom" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
                     </div>
                 </div>
+        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
             <div class="product-brand">{{item.BrandName}}</div>
