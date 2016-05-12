@@ -72,8 +72,8 @@
           <h5>Description</h5>
         </div>
       </div>
-      <div class="row item-content" itemscope itemtype="http://schema.org/Product" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
-        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container" data-ng-click="vm['item' + $index] = $index; showModal();">
+      <div class="row item-content" itemscope itemtype="http://schema.org/Product">
+        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container">
         <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
                     <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="item.zoom = !item.zoom"><i class="fa fa-search-minus" data-ng-show="item.zoom"></i><i class="fa fa-search-plus" data-ng-show="!item.zoom"></i></a>
                     <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="item.zoom">
@@ -95,7 +95,7 @@
           </div>
           <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
-        <div class="col-md-2 col-sm-2 col-xs-12" class="additem-container" data-ng-click="vm['item' + $index] = $index; showModal();">
+        <div class="col-md-2 col-sm-2 col-xs-12" class="additem-container">
           <div class="item-product-price" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}
  <div class="subdescription" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
           </div>
