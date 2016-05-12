@@ -86,9 +86,9 @@
             <span itemprop="name">{{item.Description}}</span><br />
             {{item.ItemDescription}}
           </p>
+                    <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
         <div class="col-md-2 col-xs-12" class="additem-container" data-ng-click="vm['item' + $index] = $index; showModal();">
-          <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
           <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
           <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
         </div>
