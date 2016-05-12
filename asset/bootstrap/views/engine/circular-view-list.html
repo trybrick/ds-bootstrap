@@ -84,8 +84,8 @@
           </div>
           <div itemprop="description" class="item-top-title">
             <h2 itemprop="name">{{item.Description}}</h2>
-            <div class="subdescription"></div>
-            {{item.ItemDescription}}
+            <div class="subdescription">
+            {{item.ItemDescription}}</div>
           </div>
           <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
@@ -160,7 +160,7 @@
 
 .item-top-title h2 {
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 700;
     color: #222;
 }
 
