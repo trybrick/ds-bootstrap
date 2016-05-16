@@ -72,27 +72,34 @@
           <h5>Description</h5>
         </div>
       </div>
-      <div class="row items thumbnail" itemscope itemtype="http://schema.org/Product">
-        <div class="col-md-8 col-xs-8">
+      <div class="row item-content" itemscope itemtype="http://schema.org/Product">
+          <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
+                    <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="item.zoom = !item.zoom"><i class="fa fa-search-minus" data-ng-show="item.zoom"></i><i class="fa fa-search-plus" data-ng-show="!item.zoom"></i></a>
+                    <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="item.zoom">
+                        <img class="myimage-zoom" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+                    </div>
+                </div>
+        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container">
           <div class="hidden meta">
             <div class="product-id">{{item.CircularItemId}}</div>
             <div class="product-brand">{{item.BrandName}}</div>
             <div class="product-category">{{item.CategoryName}}</div>
           </div>
-          <div data-ng-if="currentPath.indexOf('text') < 0" class="cold-md-4 col-sm-6 col-xs-12 circularItem">
-            <img itemprop="image" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+          <div data-ng-if="currentPath.indexOf('text') < 0" class=" myimage-container col-md-4 col-sm-4 col-xs-12">
+            <img itemprop="image" class="myimage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
           </div>
-          <p itemprop="description" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" data-ng-click="vm['item' + $index] = $index; showModal();" data-disable-scroll-top="true" data-track="{ 'action': 'CircularItem', 'category': item.CategoryName, 'label': item.Description, 'item': item, 'timedload': 50 }">
-            <span itemprop="name">{{item.Description}}</span><br />
-            {{item.ItemDescription}}
-          </p>
+          <div itemprop="description" class="item-top-title">
+            <h2 itemprop="name">{{item.Description}}</h2>
+            <div class="subdescription">
+            {{item.ItemDescription}}</div>
+          </div>
+          <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
-        <div class="col-md-3 col-xs-9">
-          <div class="SalePrice" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}</div>
-          <div class="savings" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
-        </div>
-        <div class="col-md-1 col-xs-3">
-          <button class="btn btn-default btn-xs pull-right" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
+        <div class="col-md-2 col-sm-2 col-xs-12" class="additem-container">
+          <div class="item-product-price" data-ng-show="item.PriceString" itemprop="price" content="{{item.SalePrice}}">{{item.PriceString}}
+ <div class="subdescription" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
+          </div>
+         
         </div>
       </div>
       <div class="row" data-ng-repeat-end=""></div>
@@ -105,13 +112,98 @@
   </div>
 </div>
 <style>
-.circularItem img {
-  width: auto;
+.myimage-container {
+  padding-right: 5px;
+  text-align: center;
 }
 
-@media(max-width: 767px){
-  .circularItem img {
-    width: 60%;
-  }
+.itemdata-container {
+  min-height: 100px;
+  overflow: hidden;
+}
+
+.item-content {
+  overflow: visible;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.item-content:hover .item-add-button {
+  margin-right: 0;
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.myimage {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.item-add-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -100px;
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.item-top-title h2 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #222;
+}
+
+.subdescription {
+    font-family: 'helvetica neue';
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #7d7d7d;
+}
+
+.item-product-price {
+    color: #40c781;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'helvetica neue'
+}
+
+.item-product-price .subdescription {
+    color: #ec1c24;
+}
+
+.item-tools {
+    color: #40c781;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 9;
+    display: none;
+}
+
+.item-content:hover .item-tools {
+    display: inline;
+}
+
+.myimage-zoom {
+    max-height: 300px;
+    max-width: 300px;
 }
 </style>

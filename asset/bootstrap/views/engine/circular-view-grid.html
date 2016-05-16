@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-7 col-xs-12">
-            <div class="pull-left" data-ng-include="gsnApi.getMetaUrl('content-circular-view-type')"></div>
+          <div class="pull-left" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
         </div>
         <div class="col-md-5 col-xs-12 text-right">
             <span>Sort by: </span>
@@ -73,8 +73,8 @@
             <div class="col-md-4 col-sm-4 item-wrapper" style="margin-top: 15px" data-body="" itemscope itemtype="http://schema.org/Product">
                 <div class="item-tools" class="dropdown" data-ng-class="{'open': item.zoom}">
                     <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="item.zoom = !item.zoom"><i class="fa fa-search-minus" data-ng-show="item.zoom"></i><i class="fa fa-search-plus" data-ng-show="!item.zoom"></i></a>
-                    <div class="dropdown-menu" style="margin-left: 10px;">
-                        <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
+                    <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="item.zoom">
+                        <img class="myimage-zoom" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
                     </div>
                 </div>
                 <div class="item">
@@ -91,6 +91,8 @@
                             <div class="item-top-content-inner">
                                 <div class="item-product-price">
                                     <span class="price-num">{{item.PriceString}}</span>
+
+ <div class="subdescription" data-ng-show="item.Savings">SAVINGS - {{item.SavingsString}}</div>
                                 </div>
                                 <div class="item-product">
                                     <div class="item-top-title">
@@ -103,7 +105,7 @@
                             </div>
                         </div>
                         <div style="text-align: center; padding: 5px">
-                            <button class="btn btn-success" style="width: 100%" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
+                            <button class="btn btn-default" style="width: 100%" data-ng-click="doToggleCircularItem($event, item)">{{ isOnList(item) && "REMOVE" || "ADD ITEM"}}</button>
                         </div>
                     </div>
                 </div>
@@ -309,7 +311,7 @@
 }
 
 .item-product-price .subdescription {
-    color: #7d7d7d;
+    color: #ec1c24;
 }
 
 .old-price {
@@ -437,5 +439,10 @@
 
 .popout-menu ul li a i:hover {
     opacity: .7;
+}
+
+.myimage-zoom {
+    max-height: 300px;
+    max-width: 300px;
 }
 </style>

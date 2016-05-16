@@ -1,7 +1,11 @@
 <div style="position: relative">
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular')" title="flyer view" data-ng-class="{ 'active': !isListView }">
+<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular')" title="flyer view" data-ng-class="{ 'active': !isListView && currentPath.indexOf('grid') < 0 }">
   <i class="fa fa-picture-o"></i>
   <br />ads
+</a>
+<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/grid')" title="grid view" data-ng-class="{ 'active': currentPath.indexOf('grid') > 0 }">
+  <i class="fa fa-th"></i>
+  <br />grid
 </a>
 <a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/list')" title="list view" data-ng-class="{ 'active': currentPath.indexOf('list') > 0 }">
   <i class="fa fa-list"></i>
