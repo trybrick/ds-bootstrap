@@ -2,5 +2,4 @@
 DEST_BRANCH_DEFAULT=master
 DEST_BRANCH=${1:-$DEST_BRANCH_DEFAULT}
 
-#echo "s3://brick-web/ds/$DEST_BRANCH/asset"
-aws s3 sync "./asset" "s3://brick-web/ds/$DEST_BRANCH/asset"
+aws s3 sync "./asset/bootstrap" "s3://brick-web/ds/$DEST_BRANCH/asset/bootstrap"
