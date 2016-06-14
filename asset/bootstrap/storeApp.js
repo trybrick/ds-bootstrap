@@ -204,6 +204,14 @@ var storeApp = angular
         path: '/recipevideo/:id',
         tpl: gsn.getThemeUrl('/views/engine/recipe-video.html')
       }
+      , { 
+        login: 0, 
+        store: 1, 
+        layout: le[4], 
+        path: '/specials', 
+        tpl:gsn.getThemeUrl('/views/engine/specials.html') 
+      }
+
       , {
         login: 0,
         store: 0,

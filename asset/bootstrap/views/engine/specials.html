@@ -1,0 +1,37 @@
+<div class="hidden" data-gsn-title="{{ChainName}} | search products"></div>
+<div data-ctrl-circular="" class="col-md-12 text-center" data-ng-init="itemsPerPage = 30" style="padding-top: 20px; padding-left: 40px;">
+  <div class="row">
+	<div class="row">
+		<label class="col-md-4" style="text-align:left">Shop By Dept: </label>
+		<div class="col-md-8">
+			<select class="form-control" data-ng-model="vm.filter.CategoryName" data-ng-change="vm.filter.BrandName=''; vm.filterBy=''">
+			  <option data-ng-repeat="item in vm.categories" value="{{item.key}}">{{item.key}}</option>
+			</select>
+		</div>
+	</div>
+	<div class="row" style="">
+		<label class="col-md-4" style="text-align:left">Shop By Brand: </label>
+		<div class="col-md-8">
+			<select class="form-control" data-ng-model="vm.filter.BrandName" data-ng-change="vm.filter.CategoryName=''; vm.filterBy=''">
+			  <option data-ng-repeat="item in vm.brands" value="{{item.key}}">{{item.key}}</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<label class="col-md-4" style="text-align:left">Search Items: </label>
+		<div class="col-md-8">
+			<input class="form-control" placeholder="Search Items" data-ng-model="vm.filterBy" data-ng-change="vm.filter.CategoryName=''; vm.filter.BrandName=''">
+		</div>
+	</div>
+  </div>
+  <div class="row">
+	<div data-infinite-scroll="loadMore()">
+		<div class="row column-headers">
+			<div class="col-md-2">&nbsp;</div>
+			<div class="col-md-8">Item</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row result" data-ng-repeat="item in allItems" data-ng-include="getThemeUrl('/views/engine/product-item.html')" style="padding-top: 5px;"></div>
+	</div>
+  </div>
+</div>
