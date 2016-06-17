@@ -1,4 +1,7 @@
 <!-- engine layout -->
+<div class="hidden-meta" data-ng-if="seo.Title" data-gsn-title="{{ ChainName + ' | ' seo.Title}}"></div>
+<div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.Description}}"></div>
+<div class="hidden-meta" data-ng-if="seo.Keywords" data-gsn-meta-keywords="{{seo.Keywords}}"></div>
 <div class="row">
   <div class="col-md-8" data-ng-view=""></div>
   <div class="col-md-4 text-center">
@@ -10,7 +13,7 @@
     </div>
   </div>
 </div>
-<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }">
+<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
 	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa fa-times"></i></div>
   <div style="padding: 5px" class="brickunit" data-dimensions="728x90" data-targeting='{"tile": "1"}'></div>
 </div>
