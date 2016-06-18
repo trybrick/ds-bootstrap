@@ -1,4 +1,7 @@
 <!-- engine layout -->
+<div class="hidden-meta" data-ng-if="seo.Title" data-gsn-title="{{ ChainName + ' | ' + seo.Title}}"></div>
+<div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.Description}}"></div>
+<div class="hidden-meta" data-ng-if="seo.Keywords" data-gsn-meta-keywords="{{seo.Keywords}}"></div>
 <div class="row">
   <div class="col-md-12" data-ng-view=""></div>
 </div>
