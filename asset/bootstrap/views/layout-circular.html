@@ -3,7 +3,7 @@
 <div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.Description}}"></div>
 <div class="hidden-meta" data-ng-if="seo.Keywords" data-gsn-meta-keywords="{{seo.Keywords}}"></div>
 <div class="row">
-  <div class="col-md-8 col-lg-9" data-ng-view=""></div>
+  <div class="col-md-8 col-lg-9" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-content.html')"></div>
   <div class="col-md-4 col-lg-3 text-center">
     <div data-gsn-sticky="" data-top="60" class="right-pods">
       <div style="padding: 5px" class="circplus"></div>
