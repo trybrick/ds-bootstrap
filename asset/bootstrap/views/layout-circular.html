@@ -5,6 +5,7 @@
 <div class="row" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')" >
   <div class="col-md-8 col-lg-9" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-content.html')"></div>
   <div class="col-md-4 col-lg-3 text-center">
+      <div style="padding: 5px" data-ng-include="getThemeUrl('/views/engine/available-varieties.html')" class="availableVarieties generic-content" data-ng-if="gvm.selectedItem"></div>
     <div data-gsn-sticky="" data-top="60" class="right-pods">
       <div style="padding: 5px" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
       <div style="padding: 5px" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-ng-show="vm.activeItem" data-ng-include="getThemeUrl('/views/engine/circular-view-grid-item2.html')">
