@@ -41,7 +41,7 @@
             class="myContent" data-ng-cloak=""
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId}"
-            data-ng-click="vm.activeItem = item; gvm.selectedItem = item"
+            data-ng-click="vm.activeItem = item; gvm.selectedItem = item; gsnApi.gsn.$rootScope.$broadcast('gsnevent:loadads');"
             id="item_{{item.ItemId}}" data-ng-cloak="">
             <div style="position: relative" class="hover-zoom"
             data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" 
