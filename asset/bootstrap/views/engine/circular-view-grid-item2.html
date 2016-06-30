@@ -1,12 +1,6 @@
-<div class="item-tools" class="dropdown" data-ng-class="{'open': vm.activeItem.zoom}">
-    <a href="javascript:void(0)" class="btn" style="margin-top: 5px; background-color: #555; color: #fff" data-ng-click="vm.activeItem.zoom = !vm.activeItem.zoom"><i class="fa fa-search-minus" data-ng-show="vm.activeItem.zoom"></i><i class="fa fa-search-plus" data-ng-show="!vm.activeItem.zoom"></i></a>
-    <div class="dropdown-menu" style="margin-left: 10px;" data-ng-if="vm.activeItem.zoom">
-        <img class="myimage-zoom" data-ng-src="{{vm.activeItem.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
-    </div>
-</div>
-<div class="item">
-    <div class="item-image" style="width: 180px; height: 180px; display: table-cell; vertical-align: middle">
-        <img itemprop="image" data-ng-src="{{vm.activeItem.ImageUrl.replace('.com/circular/', '.com/rs/200,fit/circular/') || getThemeUrl('/images/no_image.jpg')}}" class="img-responsive" />
+<div class="item" style="width: 300px">
+    <div class="item-image" style="width: 300px; height: 300px; display: table-cell; vertical-align: middle">
+        <img itemprop="image" data-ng-src="{{vm.activeItem.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" class="img-responsive" />
     </div>
     <div class="hidden meta">
         <div class="product-id">{{vm.activeItem.CircularItemId}}</div>
@@ -29,9 +23,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div style="text-align: center; padding: 5px">
-            <button class="btn btn-default" style="width: 100%" data-ng-click="doToggleCircularItem($event, vm.activeItem)">{{ isOnList(vm.activeItem) && "REMOVE" || "ADD ITEM"}}</button>
         </div>
     </div>
 </div>
