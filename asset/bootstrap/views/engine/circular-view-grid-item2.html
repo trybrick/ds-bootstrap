@@ -1,6 +1,6 @@
 <div class="item" style="width: 300px">
     <div class="item-image" style="width: 300px; height: 300px; display: table-cell; vertical-align: middle">
-        <img itemprop="image" data-ng-src="{{vm.activeItem.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" class="img-responsive" />
+        <img itemprop="image" data-ng-src="{{vm.activeItem.ImageUrl.replace('.com/circular/', '.com/rs/300,fit/circular/') || getThemeUrl('/images/no_image.jpg')}}" class="img-responsive" />
     </div>
     <div class="hidden meta">
         <div class="product-id">{{vm.activeItem.CircularItemId}}</div>
