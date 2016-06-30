@@ -9,7 +9,7 @@
       <div style="padding: 5px" class="circplus"></div>
       <div style="padding: 5px" data-ng-include="getThemeUrl('/views/engine/available-varieties.html')" class="availableVarieties generic-content" data-ng-if="gvm.selectedItem"></div>
       <div style="padding: 5px" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div> 
-      <div style="padding: 5px" data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-ng-include="getThemeUrl('/views/engine/circular-view-grid-item2.html')">
+      <div style="padding: 5px" data-gsn-ad-unit="5" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" data-ng-hide="!vm.activeItem" data-ng-include="getThemeUrl('/views/engine/circular-view-grid-item2.html')">
       </div>
     </div>
   </div>
