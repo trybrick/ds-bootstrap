@@ -42,7 +42,7 @@
             class="myContent" data-ng-cloak=""
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId}"
-            data-ng-click="vm.activeItem = item"
+            data-ng-click="vm.activeItem = item; gvm.selectedItem = item"
             id="item_{{item.ItemId}}" data-ng-cloak="">
             <div style="position: relative" class="hover-zoom">
               <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
