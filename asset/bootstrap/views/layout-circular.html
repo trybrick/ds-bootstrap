@@ -3,8 +3,8 @@
 <div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.Description}}"></div>
 <div class="hidden-meta" data-ng-if="seo.Keywords" data-gsn-meta-keywords="{{seo.Keywords}}"></div>
 <div data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')" >
-  <div class="col-md-8 col-lg-9" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-content.html')"></div>
-  <div class="col-md-4 col-lg-3 text-center">
+  <div class="col-lg-9 col-md-8" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-content.html')"></div>
+  <div class="col-lg-3 col-md-4 text-center">
     <div data-gsn-sticky="" data-bottom="100" class="right-pods">
       <div style="padding: 5px" data-ng-include="getThemeUrl('/views/engine/available-varieties.html')" class="availableVarieties generic-content" data-ng-if="gvm.selectedItem"></div>
       <div style="padding: 5px" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
@@ -12,7 +12,7 @@
     </div>
   </div>
 </div>
-<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
+<div data-gsn-sticky="" data-bottom="0" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" class="row">
 	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa fa-times"></i></div>
   <div style="padding: 5px" class="brickunit" data-dimensions="728x90" data-targeting='{"tile": "1"}'></div>
 </div>
