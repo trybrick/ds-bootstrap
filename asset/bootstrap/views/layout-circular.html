@@ -5,7 +5,7 @@
 <div class="row" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')" >
   <div class="col-md-8 col-lg-9" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-content.html')"></div>
   <div class="col-md-4 col-lg-3 text-center">
-    <div data-gsn-sticky="" data-top="55" class="right-pods">
+    <div data-gsn-sticky="" data-bottom="100" class="right-pods">
       <div style="padding: 5px" data-ng-include="getThemeUrl('/views/engine/available-varieties.html')" class="availableVarieties generic-content" data-ng-if="gvm.selectedItem"></div>
       <div style="padding: 5px" data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0"></div>
       </div>
@@ -16,3 +16,9 @@
 	<div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed"><i class="fa fa-times"></i></div>
   <div style="padding: 5px" class="brickunit" data-dimensions="728x90" data-targeting='{"tile": "1"}'></div>
 </div>
+
+<style>
+.right-pods .stuck {
+    margin-left: auto;
+}
+</style>
