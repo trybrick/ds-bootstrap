@@ -12,7 +12,7 @@
   data-ng-click="doToggleCartItem($event, gvm.selectedItem)">{{ isOnList(gvm.selectedItem) && "REMOVE" || "ADD ITEM"}}</button>
   <h4>{{gvm.selectedItem.PriceString}}</h4>
 </div>
-<div class="availableDescription generic-content">{{gvm.selectedItem.ItemDescription}}</div>
+<div class="availableDescription generic-content" data-ng-class="{'availableDescriptionHeight': gvm.selectedItem.Varieties.length > 0}">{{gvm.selectedItem.ItemDescription}}</div>
 <div data-ng-if="gvm.selectedItem.Varieties.length > 0"><strong>{{gvm.selectedItem.LinkedItemCount}}</strong>&nbsp;varieties.&nbsp;&nbsp;Select below.</div>
 <div class="availableVarietiesList generic-content" data-ng-if="gvm.selectedItem.Varieties.length > 0">
   <ul>
