@@ -23,9 +23,10 @@
     	<div class="dcircular-list-content">
     		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
          <a class="thumbnail dcircular-thumbnail" data-ng-href="?c={{$index + 1}}&amp;p=1">
-           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}"> 
+           <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}">
            <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
          </a>
+         <div data-ng-give-head="meta" class="hidden" data-remove="true" data-property="og:image" data-content="{{item.SmallImageUrl}}"></div>
        </div>
      </div>
     </div>
@@ -37,14 +38,14 @@
         <div class="myImageMap" data-stop-event="click"
             data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.circular.Pages.length : vm.pageIdx - 1"
             data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.circular.Pages.length) ? 1 : vm.pageIdx + 1">
-          <div data-ng-repeat="item in vm.page.Items" 
+          <div data-ng-repeat="item in vm.page.Items"
             class="myContent" data-ng-cloak=""
             data-ui-event="{'mouseover': 'vm.activeItem = item', 'mouseout': 'vm.activeItem = null'}"
             data-ng-class="{'active': vm.activeItem.ItemId == item.ItemId}"
             data-ng-click="vm.activeItem = item; gvm.selectedItem = item; gsnApi.gsn.$rootScope.$broadcast('gsnevent:loadads');"
             id="item_{{item.ItemId}}" data-ng-cloak="">
             <div style="position: relative" class="hover-zoom"
-            data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')" 
+            data-gsn-modal="getThemeUrl('/views/engine/modal-circular-item.html')"
             data-ng-dblclick="showModal()">
               <a class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)" data-ng-class="{'circAddButton': !isOnList(item)}">
                 <i class="fa" data-ng-class="{'fa-square-o': !isOnList(item), 'fa-check-square-o': isOnList(item)}"></i> {{ !isOnList(item) ? 'ADD ITEM' : 'ON LIST'}}
@@ -56,18 +57,18 @@
             </div>
           </div>
           <div class="dcircular-static" data-ng-if="vm.page.Items.length <= 0"><strong>* image only/non-interactive flyer</strong></div>
-          <svg id="myFlyer" version="1.1" 
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+          <svg id="myFlyer" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             xml:space="preserve" preserveAspectRatio="xMinYMin meet" style="margin-right: 15px;">
             <image width="1" height="1" xlink:href="" class="circImage" style="display: none"></image>
-            <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item" 
+            <rect ng:attr:x="{{item.rect.x}}" ng:attr:y="{{item.rect.y}}" ng:attr:width="{{item.rect.width}}" ng:attr:height="{{item.rect.height}}" opacity="0" data-ng-repeat="item in vm.page.Items | orderBy:['-ItemId']" ng-cloak="" data-gsn-hover-sync="#item_{{item.ItemId}}" data-ng-click="vm.activeItem = item"
             data-ng-class="{'onlist' : isOnList(item)}"></rect>
           </svg>
         </div>
         <div style="width: 100%;" class="text-center">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')"></ul></div>
       </div>
-      <div class="myFakeFlyer" data-sync-height="#myFlyer" 
+      <div class="myFakeFlyer" data-sync-height="#myFlyer"
         data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-watch="vm.page"></div>
     </div>
   </div>
@@ -129,12 +130,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-.hover-zoom a:hover, .hover-zoom a:active { 
+.hover-zoom a:hover, .hover-zoom a:active {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .link-inline a {
