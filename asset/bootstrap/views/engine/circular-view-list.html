@@ -12,10 +12,10 @@
   </div>
 
   <div class="row">
-    <div class="col-md-7 col-xs-12">
+    <div class="col-lg-6 col-md-7 col-xs-12">
       <div class="pull-left" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')"></div>
     </div>
-    <div class="col-md-5 col-xs-12 text-right">
+    <div class="col-lg-5 col-md-5 col-xs-12 text-right">
       <span>Sort by: </span>
       <div class="btn-group dropdown">
         <button style="" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">{{sortByName}} <span class="caret"></span></button>
@@ -41,7 +41,7 @@
     <datalist id="brands">
       <option value="{{item.key}}" data-bindonce="" data-ng-repeat="item in vm.brands">
     </datalist>
-    <div class="col-md-12">
+    <div class="col-lg-11 col-md-12">
       <form name="circularSearch" class="input-group pull-right" style="width: 300px; padding-top: 5px" data-ng-submit="gvm.searchActive = false">
         <input type="text" class="form-control" placeholder="Search for..." data-ng-model="vm.filterBy">
         <div class="input-group-btn" data-ng-class="{ 'open': gvm.searchActive }">

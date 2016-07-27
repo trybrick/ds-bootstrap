@@ -8,8 +8,8 @@
   </div>
 </div>
 <div class="col-md-2 col-xs-2">
-  <img data-selector=".productImagePopOver" data-ng-src="{{item.SmallImageUrl  || getContentUrl('/images/no_image.jpg')}}" alt="[Product Image]" style="max-width: 40px; max-height: 40px" data-gsn-popover="" />
-</div>                     
+  <img data-selector=".productImagePopOver" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="[Product Image]" style="max-width: 40px; max-height: 40px" data-gsn-popover="" />
+</div>
 <div class="col-md-5 col-xs-4" style="text-align: left;">{{item.Description}}</div>
 <div class="col-md-3 col-xs-3" data-ng-if="item.ProductId">
   <div class="SalePrice" data-ng-show="item.SalePrice">SALE - ${{item.SalePrice.toFixed(2)}}</div>

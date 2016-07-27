@@ -9,6 +9,8 @@ var storeApp = angular
     for (var i = 1; i < 5; i++) {
       le.push(gsn.getThemeUrl('/views/layout-gsn' + i + '.html'));
     }
+
+    var lec = gsn.getThemeUrl('/views/layout-circular.html');
     var homeFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=home&type=text/html&nocache=' + gsn.config.Version;
     var urls = [
       {
@@ -34,7 +36,7 @@ var storeApp = angular
       , {
         login: 0,
         store: 1,
-        layout: le[4],
+        layout: lec,
         path: '/circular',
         tpl: gsn.getThemeUrl('/views/engine/circular-view-flyer.html')
       }
