@@ -21,9 +21,11 @@
   <script>
     function googleTranslateElementInit() {
         var title = angular.element('.google-translate').attr("title");
+        if (!title) return;
+
         setTimeout(function() {
           new google.translate.TranslateElement({
-              pageLanguage: 'en',
+              pageLanguage: title.split(',')[0],
               includedLanguages: title,
               layout: google.translate.TranslateElement.InlineLayout.SIMPLE
           }, 'google_translate_element');
