@@ -33,38 +33,6 @@ function startServer(chainId) {
     var newUrl = 'http://clientapix.gsn2.com/api/v1' + req.url.replace('/proxy', '');
     req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
   });
-  var doDownload = function (req, res) {
-    var dest = '/asset/' + chainId + url.parse(req.url).pathname;
-    dest = path.join(servicePath, dest);
-    console.log('ab' + dest);
-    if (!fs.existsSync(dest)){
-
-      console.log(dest);
-      var newUrl = 'http://files.coborns.com/coborns.com/' + url.parse(req.url).pathname;
-      download(newUrl, dest, function() {
-        console.log('hi');
-        res.status(404).send('Not found');
-      });
-      return;
-    }
-    res.status(404).send('Not found');
-  };
-
-  app.use('/js', express.static(servicePath + '/asset/75/js'));
-  app.use('/assets/css', express.static(servicePath + '/asset/75/assets/css'));
-  app.use('/assets/js', express.static(servicePath + '/asset/75/assets/js'));
-  app.use('/css', express.static(servicePath + '/asset/75/css'));
-  app.use('/img', express.static(servicePath + '/asset/75/img'));
-  app.use('/fonts', express.static(servicePath + '/asset/75/fonts'));
-
-  /**/
-
-  //app.get('/js/*', doDownload);
-  //app.get('/fonts/*', doDownload);
-  //app.get('/assets/fonts/*', doDownload);
-  //app.get('/css/*', doDownload);
-  //app.get('/img/*', doDownload);
-
   app.use(methodOverride());
 
   // make sure that asset folder access are static file
@@ -74,7 +42,7 @@ function startServer(chainId) {
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
     if (myPath.length <= 2 || myPath.indexOf('.') < 0)
-      myPath = path.join('asset/bootstrap/index.html');
+      myPath = path.join('asset/' + chainId + '/index.html');
 
     console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
@@ -97,7 +65,7 @@ function startServer(chainId) {
   // Start server
   app.listen(port, function() {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+});
 }
 
 // skip first two arguments
