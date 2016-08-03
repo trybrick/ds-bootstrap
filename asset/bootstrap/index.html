@@ -56,6 +56,7 @@
   <link href="//cdn-staging.gsngrocers.com/asset/common/styles/print.css?nocache=1" rel="stylesheet" type="text/css" media="print">
 </head>
 <body data-ng-cloak="">
+  <div class="hidden-meta" data-gsn-ft-config="GoogleSiteVerifiction" data-ng-if="item.Description" data-ng-give-head="{{ item.Description }}"></div>
   <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
 
   <!-- above the fold scripts -->
