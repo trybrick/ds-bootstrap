@@ -56,11 +56,10 @@
   <link href="//cdn-staging.gsngrocers.com/asset/common/styles/print.css?nocache=1" rel="stylesheet" type="text/css" media="print">
 </head>
 <body data-ng-cloak="">
+  <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
   <div data-gsn-ft-config="GoogleSiteVerifiction" class="hidden-meta">
     <div data-gsn-meta-google-site-verification="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
   </div>
-  <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
-
   <!-- above the fold scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->
