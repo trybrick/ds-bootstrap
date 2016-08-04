@@ -21,7 +21,7 @@
     <div class="dcircular-list" data-ng-hide="vm.circIdx > 0 && vm.pageIdx > 0">
     	<div class="dcircular-list-content">
     		<div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
-         <a class="thumbnail dcircular-thumbnail" data-ng-click="goUrl('/circular?c=' + ($index + 1) + '&p=1', '_reload')" href="javascript:void(0)">
+         <a class="thumbnail dcircular-thumbnail" data-ng-click="goUrl('/circular?c=' + ($index + 1) + '&p=1')" href="javascript:void(0)">
            <img class="dcircular-image" alt="" data-ng-src="{{item.SmallImageUrl}}">
            <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
          </a>
