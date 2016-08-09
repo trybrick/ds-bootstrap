@@ -56,10 +56,20 @@
   <link href="//cdn-staging.gsngrocers.com/asset/common/styles/print.css?nocache=1" rel="stylesheet" type="text/css" media="print">
 </head>
 <body data-ng-cloak="">
-  <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
-  <div data-gsn-ft-config="GoogleSiteVerifiction" class="hidden-meta">
-    <div data-gsn-meta-google-site-verification="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
+  <div data-gsn-ft-config="meta-google-site-verification" class="hidden-meta">
+    <div data-gsn-google-site-verification="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
   </div>
+  <div data-gsn-ft-config="title" class="hidden-meta">
+    <div data-gsn-meta-title="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
+  </div>
+  <div data-gsn-ft-config="description" class="hidden-meta">
+    <div data-gsn-meta-description="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
+  </div>
+  <div data-gsn-ft-config="keywords" class="hidden-meta">
+    <div data-gsn-meta-keywords="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
+  </div>
+  <div class="layout-container" data-ng-include="'http://clientapix.gsn2.com/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
+
   <!-- above the fold scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->
