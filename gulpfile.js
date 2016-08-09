@@ -13,7 +13,7 @@ var exec =       require('child_process').exec;
 var path =       require('path');
 
 var config = {
-  chains: ['common', 'bootstrap'],
+  chains: ['common'],
   tasks: [ 'clone-ds', 'copy-ds'],
   tasksClone: [],
   tasksCopy: [],
@@ -54,7 +54,7 @@ function createCopyTask(chain) {
         }
     });
   });
-  
+
   config.tasksCopy.push('copy-ds-' + chain);
 }
 
