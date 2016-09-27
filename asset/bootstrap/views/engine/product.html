@@ -53,6 +53,8 @@
 
     <div class="row result" data-ng-repeat="item in vm.filteredProducts.items | pagingFilter:itemsPerPage:(vm.pageIdx-1)" data-ng-include="getThemeUrl('/views/engine/product-item.html')"></div>
 
+    <gsn-popover-dialog> </gsn-popover-dialog>
+
     <div class="productImagePopOver hidden" data-ng-non-bindable="">
       <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}" />
     </div>
