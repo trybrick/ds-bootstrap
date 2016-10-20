@@ -4,16 +4,16 @@
   <div class="row">
     <!-- search form-->
     <div class="col-md-3 col-sm-3">
-      <form name="myStoreLocatorForm">
+      <form name="myStoreLocatorForm" class="myStoreLocatorForm">
         Zip, City or State: <br />
         <input class="search" type="text" name="search" data-ng-model="search.storeLocator"><br />
         Find stores within: <br />
         <input class="radius" type="text" name="searchRadius" data-ng-model="searchRadius">
         miles
         <br />
-        <div class="form-group">
-          <button class="btn btn-xs" data-ng-click="doSearch()">Search</button>
-          <button class="btn btn-xs" data-ng-click="doClear()">Reset</button>
+        <div class="form-group search-btn">
+          <button class="btn btn-default btn-xs pull-right" data-ng-click="doClear()">Reset</button>
+          <button class="btn btn-default btn-xs pull-right" data-ng-click="doSearch()">Search</button>
         </div>
         <br />
       </form>
@@ -31,7 +31,7 @@
           <strong>{{currentMarker.location.StoreName}}</strong><br />
           <address>
             {{currentMarker.location.PrimaryAddress}}<br />
-            {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}  
+            {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}
           </address>
           <div>
             <a href="javascript:void(0)" class="btn btn-default btn-xs" data-ng-click="selectStore(currentMarker)">Select Store</a>
@@ -49,12 +49,12 @@
     <div class="row" data-ng-repeat="group in vmsl.myMarkerGrouping"><br />
       <div><h2>{{group.key}}</h2></div>
       <div data-ng-repeat="marker in group.items"
-        class="col-md-4 col-sm-4 col-xs-12 singleStoreInfo" 
-        data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" 
+        class="col-md-4 col-sm-4 col-xs-12 singleStoreInfo"
+        data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')"
         itemscope itemtype="http://schema.org/Store"></div>
     </div>
   </div>
-</div>    
+</div>
 <style>
   .singleStoreInfo div
   {
@@ -67,10 +67,13 @@
     width: 50px;
   }
   .store-info-item {
-    height: 280px; 
-    overflow-y: scroll; 
+    height: 280px;
+    overflow-y: scroll;
     overflow-x: hidden;
   }
 
-  
+  .myStoreLocatorForm .search-btn {
+    margin-left: 5px;
+  }
+
 </style>

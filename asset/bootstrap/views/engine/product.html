@@ -51,7 +51,7 @@
       <div class="col-md-3"></div>
     </div>
 
-    <div class="row result" data-ng-repeat="item in vm.filteredProducts.items | pagingFilter:itemsPerPage:(vm.pageIdx-1)" data-ng-include="getThemeUrl('/views/engine/product-item.html')"></div>
+    <div class="grid row result" data-ng-repeat="item in vm.filteredProducts.items | pagingFilter:itemsPerPage:(vm.pageIdx-1)" data-ng-include="getThemeUrl('/views/engine/product-item.html')"></div>
 
     <gsn-popover-dialog> </gsn-popover-dialog>
 
