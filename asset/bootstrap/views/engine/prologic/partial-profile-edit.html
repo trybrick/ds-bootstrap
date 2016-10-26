@@ -1,4 +1,4 @@
-﻿<div data-ctrl-account="" data-ng-init="disableNavigation = true">
+<div data-ctrl-account="" data-ng-init="disableNavigation = true">
     <button class="hidden" data-gsn-modal="getThemeUrl('/views/engine/modal-account-update-message.html')" data-show-if="profileStatus.profileUpdated || validLoyaltyCard.Updated" data-ng-click="showModal()"></button>
     <form role="form" name="myForm" data-ng-submit="updateProfile()">
         <div class="row profileInfo">
@@ -33,7 +33,7 @@
                     <p>When entering your card number, please use only the first 11 digits of the card number, leaving off the last digit. Do not use any spaces or dashes when entering the card number.</p>
                 </div>
                 <br />
-                <div data-ng-show="validLoyaltyCard.isValidLoyaltyCard" class="form-group" data-ng-include="getThemeUrl('/views/engine/Prologic/rewardcard-balance.html')"></div>
+                <div data-ng-show="validLoyaltyCard.isValidLoyaltyCard" class="form-group" data-ng-include="getThemeUrl('/views/engine/prologic/rewardcard-balance.html')"></div>
                 <div data-ng-show="!validLoyaltyCard.isValidLoyaltyCard && myForm.rewardcard.$viewValue.length>0 && myForm.rewardcard.$viewValue.length != 11" class="form-group"><p style="color: red;">Card number not valid. Please enter correct card number.</p></div>
             </div>
         </div>
@@ -66,4 +66,4 @@
             </div>
         </div>
     </form>
-</div> 
+</div>
