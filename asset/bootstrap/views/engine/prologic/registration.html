@@ -1,4 +1,4 @@
-﻿<div data-ctrl-pro-logic-registration="">
+<div data-ctrl-pro-logic-registration="">
 <form role="form" name="myForm" data-ng-submit="registerProfile()" data-ng-hide="isLoggedIn">
 	<div class="row registration">
 		<div class="col-md-6" >
@@ -63,11 +63,11 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<div class="checkbox">  
+			<div style="padding-bottom: 5px">
 				<input type="checkbox" name="receiveemail" data-ng-model="profile.ReceiveEmail"/>
 				Receive Weekly Email - Yes, I'd like to receive specials, recipe of the week, events, coupon savings, weekly circular, and featured articles.
 				<p><i class="fa fa-lock fa-2x"></i> Your trust is important to us. View our <a data-ng-href="/privacy">Privacy Policy</a> for detailed information.</p>
-			</div> 
+			</div>
 			<div class="form-group" data-ng-class="{'has-success': !myForm.primarystoreid.$invalid, 'has-error': myForm.primarystoreid.$invalid}">
 				<label for="primarystoreid">
 					Choose a store: <span class="required" data-ng-show="myForm.primarystoreid.$invalid">Required</span>
@@ -98,4 +98,4 @@
 		<button class="btn btn-default btnSilver" data-ng-click="goUrl('/profile/rewardcard')">Go to Profile Page</button>
 	</div>
 </div>
-</div> 
+</div>
