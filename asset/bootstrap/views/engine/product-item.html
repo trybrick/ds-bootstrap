@@ -8,7 +8,7 @@
   </div>
 </div>
 <div class="col-md-2 col-xs-2">
-  <img data-selector=".productImagePopOver" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="[Product Image]" style="max-width: 40px; max-height: 40px" data-gsn-popover="" />
+  <img data-selector=".productImagePopOver" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" alt="[Product Image]" style="max-width: 40px; max-height: 40px" data-gsn-popover=""  popovertitle={{item.Description}} ng-click="showProductDetails(item)"/>
 </div>
 <div class="col-md-5 col-xs-4" style="text-align: left;">{{item.Description}}</div>
 <div class="col-md-3 col-xs-3" data-ng-if="item.ProductId">
@@ -16,7 +16,6 @@
   <div class="RegPrice" data-ng-show="item.RegularPrice">${{item.RegularPrice.toFixed(2)}}</div>
   <div class="SavingsAmount" data-ng-show="item.Savings">SAVINGS - {{item.Savings}}</div>
 </div>
-
 <div class="col-md-3 col-xs-3 product-search-price" data-ng-if="item.PriceString">
   {{item.PriceString}}
 </div>

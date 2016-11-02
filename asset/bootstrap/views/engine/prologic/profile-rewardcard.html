@@ -1,0 +1,20 @@
+<div data-ctrl-pro-logic-reward-card="">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a data-target="#profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a data-target="#member" role="tab" data-toggle="tab" data-ng-hide="!validLoyaltyCard.isValidLoyaltyCard">Card Member Info</a></li>
+    <li role="presentation"><a data-target="#reward" role="tab" data-toggle="tab">Club Rewards</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="profile">
+      <div data-ng-include="getThemeUrl('/views/engine/prologic/partial-profile-edit.html')"></div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="member">
+      <div data-ng-include="getThemeUrl('/views/engine/prologic/partial-rewardcard-member.html')"></div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="reward">
+      <div data-ng-include="getThemeUrl('/views/engine/prologic/partial-rewardcard-rewards.html')"></div>
+    </div>
+    </div>
+  </div>
+</div>
