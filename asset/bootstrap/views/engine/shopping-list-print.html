@@ -20,10 +20,10 @@
           <div data-ng-show="item.ItemTypeId == 13">Card Coupon</div>
         </div>
       </div>
-    </div>        
+    </div>
   </div>
   <!-- Ad Pods -->
-  <div class="row">    	
+  <div class="row">
     <div class="col-md-10 printCouponCategory">
       <h4>Manufacturer Coupon Print Status (must submit all coupons to redeem savings)</h4>
     </div>
@@ -32,7 +32,7 @@
     <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
       <div data-ng-if="item.IsCoupon">
         <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-        <span data-ng-bind-html="item.Description"></span> - 
+        <span data-ng-bind-html="item.Description"></span> -
         <span class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce=""></span>
       </div>
     </div>
@@ -47,7 +47,7 @@
     <!-- circular coupons -->
     <div data-ng-repeat="item in circularCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
-        <table border="0" cellspacing="0" cellpadding="4"> 
+        <table border="0" cellspacing="0" cellpadding="4">
           <tr height="30">
             <td width="150" align="center" rowspan="3">
               <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
@@ -81,7 +81,7 @@
   <div class="row" data-ng-if="instoreCoupons.length > 0">
     <div data-ng-repeat="item in instoreCoupons">
       <div class="col-md-6 col-xs-12 couponContainerDiv">
-        <table width="100%" border="0" cellspacing="0" cellpadding="4"> 
+        <table width="100%" border="0" cellspacing="0" cellpadding="4">
           <tr height="30">
             <td width="150" align="center" rowspan="3">
               <img class="productImage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
@@ -126,30 +126,30 @@
 </div>
 <div class="col-md-12" data-ng-if="!gsnApi.browser.isMobile">
   <p>Trouble printing manufacturer coupons? Download and install the Coupon Printing Plugin:<br />
-    <a href="http://cdn.coupons.com/ftp.coupons.com/Partners/CouponPrinter.exe">Windows Coupon Printing Plugin</a>
+    <a href="//cdn.coupons.com/ftp.coupons.com/Partners/CouponPrinter.exe">Windows Coupon Printing Plugin</a>
     <span>| </span>
-    <a href="http://cdn.coupons.com/ftp.coupons.com/safari/MacCouponPrinter.dmg">Mac Coupon Printing Plugin</a>
+    <a href="//cdn.coupons.com/ftp.coupons.com/safari/MacCouponPrinter.dmg">Mac Coupon Printing Plugin</a>
   </p>
 </div>
 
 <style>
 .couponTitle1 {
-  background-color:black; 
-  width:auto; 
-  border:1px solid black; 
-  float:left; 
-  color:white; 
-  padding:4px 10px; 
-  text-align:center; 
+  background-color:black;
+  width:auto;
+  border:1px solid black;
+  float:left;
+  color:white;
+  padding:4px 10px;
+  text-align:center;
   text-transform:uppercase
 }
 .couponTitle2 {
-  background-color:white; 
-  width:180px; 
-  border:1px solid black; 
-  float:left; 
-  color:black; 
-  padding:4px 10px; 
+  background-color:white;
+  width:180px;
+  border:1px solid black;
+  float:left;
+  color:black;
+  padding:4px 10px;
   text-align:center;
   clear: both;
 }
