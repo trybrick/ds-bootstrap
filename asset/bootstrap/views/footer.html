@@ -1,6 +1,6 @@
 <div class="col-md-4 col-sm-12 footer-left" data-gsn-ft-content="" data-content-position="12">
   <select data-ctrl-store-selector="" id="storeSelector" ng-model="vm.selectedOption">
-    <option style="display:none" value="" data-ng-if="!gvm.currentStore.StoreId" selected="selected"> ---Locate your Store--- </option>
+    <option value="" data-ng-hide="gvm.currentStore.StoreId"> ---Locate your Store--- </option>
 
     <option value="{{ (gvm.currentStore || {}).StoreId || 0}}" data-ng-if="gvm.currentStore.StoreId" selected="selected">{{gvm.currentStore.StoreName}} - {{gvm.currentStore.PostalCode}} </option>
 
