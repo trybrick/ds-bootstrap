@@ -1,6 +1,12 @@
 <div class="col-md-4 col-sm-12 footer-left" data-gsn-ft-content="" data-content-position="12">
-  {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
+  <select data-ctrl-store-selector="" id="storeSelector" ng-model="vm.selectedOption" data-ng-hide="gvm.currentStore">
+    <option value="">---Locate your Store---</option>
+    <option data-ng-repeat="option in vm.stores.slice(0,3)" value="{{item.point.StoreId}}">{{option.point.StoreName}} ZipCode: {{option.point.PostalCode}}</option>
+    <option value="more">--- More ---</option>
+  </select>
+
   <div data-ng-if="gvm.currentStore.StoreId">
+    {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
     {{gvm.currentStore.PrimaryAddress}} <br />
     {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
     {{gvm.currentStore.Phone}} <br />
