@@ -1,5 +1,5 @@
 <div class="col-md-4 col-sm-12 footer-left" data-gsn-ft-content="" data-content-position="12">
-  <select data-ctrl-store-selector="" id="storeSelector" ng-model="vm.selectedOption" style="color: #000" data-ng-if="vm.stores.length > 1">
+  <select data-ctrl-store-selector="" id="storeSelector" ng-model="vm.selectedOption" style="color: #000" data-ng-if="vm.storeList.length > 1">
     <option value="" data-ng-hide="gvm.currentStore.StoreId"> --- Locate your Store --- </option>
 
     <option value="{{ (gvm.currentStore || {}).StoreId || 0}}" data-ng-if="gvm.currentStore.StoreId">{{gvm.currentStore.StoreName}} - {{gvm.currentStore.PostalCode}} </option>
@@ -10,7 +10,7 @@
   </select> <br />
 
   <div data-ng-if="gvm.currentStore.StoreId">
-    <div data-ng-if="vm.stores.length <= 1">{{gvm.currentStore.StoreName}} <br /> </div>
+    <div data-ng-if="vm.storeList.length <= 1">{{gvm.currentStore.StoreName}} <br /> </div>
     {{gvm.currentStore.PrimaryAddress}} <br />
     {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
     {{gvm.currentStore.Phone}} <br />
