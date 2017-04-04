@@ -206,12 +206,12 @@ var storeApp = angular
         path: '/recipevideo/:id',
         tpl: gsn.getThemeUrl('/views/engine/recipe-video.html')
       }
-      , { 
-        login: 0, 
-        store: 1, 
-        layout: le[4], 
-        path: '/specials', 
-        tpl:gsn.getThemeUrl('/views/engine/specials.html') 
+      , {
+        login: 0,
+        store: 1,
+        layout: le[4],
+        path: '/specials',
+        tpl:gsn.getThemeUrl('/views/engine/specials.html')
       }
 
       , {
@@ -245,7 +245,8 @@ var storeApp = angular
         store: 0,
         layout: le[2],
         path: '/storelocator',
-        tpl: gsn.getThemeUrl('/views/engine/store-locator.html')
+        notFound: gsn.getThemeUrl('/views/engine/store-locator.html'),
+        tpl: gsn.getThemeUrl('/views/engine/static-content.html')
       }
       , {
         login: 0,
@@ -267,6 +268,7 @@ var storeApp = angular
     angular.forEach(urls, function(v, k) {
       $routeProvider.when(v.path, {
         templateUrl: v.tpl,
+        notFoundLayout: v.notFound,
         caseInsensitiveMatch: true,
         storeRequired: v.store,
         requireLogin: v.login,
