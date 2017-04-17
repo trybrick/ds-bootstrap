@@ -1,16 +1,6 @@
 <div class="col-md-4 col-sm-12 footer-left" data-gsn-ft-content="" data-content-position="12" data-ctrl-store-selector="">
-  <select ng-model="vm.selectedOption" style="color: #000" data-ng-if="vm.storeList.length > 1">
-    <option value="" data-ng-hide="gvm.currentStore.StoreId"> --- Locate your Store --- </option>
-
-    <option value="{{ (gvm.currentStore || {}).StoreId || 0}}" data-ng-if="gvm.currentStore.StoreId" data-ng-selected="true">{{gvm.currentStore.StoreName}} - {{gvm.currentStore.PostalCode}} </option>
-
-    <option data-ng-repeat="option in vm.stores.slice(0,3)" value="{{option.point.StoreId}}" data-ng-if="option.point.StoreId !== gvm.currentStore.StoreId" data-ng-selected="option.point.StoreId === gvm.currentStore.StoreId">{{option.point.StoreName}} - {{option.point.PostalCode}}</option>
-
-    <option value="/storelocator">--- More ---</option>
-  </select>
-
+  {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
   <div data-ng-if="gvm.currentStore.StoreId">
-    <div data-ng-if="vm.storeList.length < 2">{{gvm.currentStore.StoreName}} <br /> </div>
     {{gvm.currentStore.PrimaryAddress}} <br />
     {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
     {{gvm.currentStore.Phone}} <br />
