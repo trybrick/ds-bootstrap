@@ -142,7 +142,7 @@ gulp.task('build-deploy', function(cb){
 
 gulp.task('ds-common-config-for-local-cdn', function(){
   return gulp.src(['./git_components/ds-common/asset/config.json'])
-    .pipe(replace('http://cdn-staging.gsngrocers.com', ''))
+    .pipe(replace('http://cdn-staging.brickinc.net', ''))
     .pipe(gulp.dest('./asset'));
 });
 
