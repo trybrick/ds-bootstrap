@@ -101,9 +101,9 @@ gulp.task('build-copy', function(cb){
 });
 
 function createDeployTask(chain) {
-  var destFile = '../cdn-staging.gsngrocers.com/asset/' + chain;
+  var destFile = '../cdn-staging.brickinc.net/asset/' + chain;
   if (config.branch == 'production') {
-    destFile = '../cdn.gsngrocers.com/asset/' + chain;
+    destFile = '../cdn.brickinc.net/asset/' + chain;
   }
   var srcFile = './asset/' + chain;
 
