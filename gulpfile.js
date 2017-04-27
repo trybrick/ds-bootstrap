@@ -101,7 +101,7 @@ gulp.task('build-copy', function(cb){
 });
 
 function createDeployTask(chain) {
-  var destFile = '../cdn-staging.brickinc.net/asset/' + chain;
+  var destFile = '../cdn-stg.brickinc.net/asset/' + chain;
   if (config.branch == 'production') {
     destFile = '../cdn.brickinc.net/asset/' + chain;
   }
@@ -142,7 +142,7 @@ gulp.task('build-deploy', function(cb){
 
 gulp.task('ds-common-config-for-local-cdn', function(){
   return gulp.src(['./git_components/ds-common/asset/config.json'])
-    .pipe(replace('http://cdn-staging.brickinc.net', ''))
+    .pipe(replace('http://cdn-stg.brickinc.net', ''))
     .pipe(gulp.dest('./asset'));
 });
 
