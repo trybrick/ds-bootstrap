@@ -30,7 +30,7 @@ function startServer(chainId) {
   apps[chainId] = app;
   app.engine('html', require('ejs').renderFile);
   app.use('/proxy', function (req, res) {
-    var newUrl = 'http://clientapix.gsn2.com/api/v1' + req.url.replace('/proxy', '');
+    var newUrl = 'http://clientapi-stg.brickinc.net/api/v1' + req.url.replace('/proxy', '');
     req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
   });
   app.use(methodOverride());
@@ -54,9 +54,9 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      k = k.replace('https://clientapix.gsn2.com/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
+      k = k.replace('https://clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
-      k = k.replace('cdn-staging.gsngrocers.com/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
+      k = k.replace('cdn-stg.brickinc.net/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
       k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=2");
       response.send(k);
     }
