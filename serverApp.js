@@ -30,7 +30,7 @@ function startServer(chainId) {
   apps[chainId] = app;
   app.engine('html', require('ejs').renderFile);
   app.use('/proxy', function (req, res) {
-    var newUrl = 'http://clientapi-stg.brickinc.net/api/v1' + req.url.replace('/proxy', '');
+    var newUrl = 'https://clientapi-stg.brickinc.net/api/v1' + req.url.replace('/proxy', '');
     req.pipe(request({ uri: newUrl, method: req.method })).pipe(res);
   });
   app.use(methodOverride());
