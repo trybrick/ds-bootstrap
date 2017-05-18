@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) <= 0">
        <li data-ng-class="{ 'open': gvm.storeLocatorActive }" class="">
         <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
-          My <strong>STORE:</strong> {{gvm.currentStore.StoreName}} ({{gvm.currentStore.City}}, {{gvm.currentStore.StateName}})
+          <i class="fa fa-map-marker" aria-hidden="true"></i> {{gvm.currentStore.StoreName}}
           <span class="glyphicon glyphicon-chevron-down"></span>
           <span class="sr-only">Toggle Shopping List</span>
         </a>
