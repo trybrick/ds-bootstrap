@@ -82,7 +82,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-  <script src="https://cdn2.brickinc.net/script/wu.min.js"></script>
+  <script src="https://cdn2.brickinc.net/script/wu.min.js?nocache=1"></script>
 
   <script src="https://clientapi-stg.brickinc.net/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
   <script data-brickid="[chainid]" src="//cdn-stg.brickinc.net/script/bricktag/bricktag.min.js?nocache=1"></script>
@@ -150,11 +150,6 @@ if (googleTagId) {
         }
       });
     });
-
-    if (typeof (require) !== 'undefined') {
-      Wu = require('Wu');
-      window.Wu = Wu;
-    }
   </script>
 </body>
 </html>
