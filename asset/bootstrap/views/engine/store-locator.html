@@ -6,14 +6,13 @@
     <div class="col-md-3 col-sm-3">
       <form name="myStoreLocatorForm" class="myStoreLocatorForm">
         Zip, City or State: <br />
-        <input class="search" type="text" name="search" data-ng-model="search.storeLocator">
-
-        <br />
+        <input class="search" type="text" name="search" data-ng-model="search.storeLocator"><br />
         Find stores within: <br />
         <input class="radius" type="text" name="searchRadius" data-ng-model="searchRadius">
         miles
         <br />
         <div class="form-group search-btn">
+          <button class="btn btn-default btn-xs pull-right" data-ng-click="doSearchGeo()"><i class="fa fa-location-arrow" aria-hidden="true"></i> By Geo</button>
           <button class="btn btn-default btn-xs pull-right" data-ng-click="doSearch()">Search</button>
           <button class="btn btn-default btn-xs pull-right" data-ng-click="doClear()">Reset</button>
         </div>
