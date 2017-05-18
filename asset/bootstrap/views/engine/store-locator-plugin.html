@@ -1,6 +1,6 @@
 <div style="background: #fff; padding: 5px" data-ctrl-store-selector="">
   <table class="table table-hover">
-     <tr data-ng-repeat="item in vm.stores.slice(0,3)" data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }">
+    <tr data-ng-repeat="item in vm.stores.slice(0,3)" data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }">
        <td><a href="javascript:void(0)" class="col-xs-12"
               style="color: #000 !important;"
               data-ng-click="selectStore(item.StoreId)">
@@ -8,8 +8,8 @@
       </td>
     </tr>
   </table>
-  <div class="generic-content" style="padding-top: 10px;">
-    Find other stores: <br />
+  <div class="generic-content" style="padding-top: 10px;" data-ng-if="vm.stores.length > 3">
+    Locate more stores: <br />
     <form  action="/storelocator" method="get">
     <div class="input-group">
       <input type="text" class="form-control" name="search" placeholder="City, State or Zip">
