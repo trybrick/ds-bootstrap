@@ -1,15 +1,21 @@
 <div style="background: #fff; padding: 5px" data-ctrl-store-selector="">
-  <a href="javascript:void(0)" class="col-xs-12"
-    data-ng-repeat="item in vm.stores.slice(0,3)"
-    style="border-top: 1px solid #ccc; margin: 0; padding-top: 5px"
+  <ul>
+     <li data-ng-repeat="item in vm.stores.slice(0,3)">
+
+         <a href="javascript:void(0)" class="col-xs-12"
+
+    style="border-bottom: 1px solid #ccc; margin: 0; padding-top: 5px; color: #000 !important;"
     data-ng-click="selectStore(item.StoreId)">
     {{item.point.StoreName}} - {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
   </a>
+     </li>
+  </ul>
+
   <div class="generic-content">
     Find other stores: <br />
-    <form  action="/action_page.php" method="get">
+    <form  action="/storelocator" method="get">
     <div class="input-group">
-      <input type="text" class="form-control" name="search" placeholder="Search for...">
+      <input type="text" class="form-control" name="search" placeholder="City, State or Zip">
       <span class="input-group-btn">
         <button class="btn btn-secondary" type="button">Go!</button>
       </span>
