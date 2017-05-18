@@ -37,6 +37,18 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) <= 0">
+       <li data-ng-class="{ 'open': gvm.storeLocatorActive }" class="">
+        <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.storeLocatorActive = !gvm.storeLocatorActive">
+          My <strong>STORE:</strong> {{gvm.currentStore.StoreName}} ({{gvm.currentStore.City}}, {{gvm.currentStore.StateName}})
+          <span class="glyphicon glyphicon-chevron-down"></span>
+          <span class="sr-only">Toggle Shopping List</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff">
+          <li data-ng-if="gvm.storeLocatorActive">
+            <div class="shopping-list" data-ng-include="getThemeUrl('/views/engine/store-locator-plugin.html')"></div>
+          </li>
+        </ul>
+      </li>
       <li data-ng-class="{ 'open': gvm.shoppingListActive }">
         <a class="btn btn-default list" href="javascript:void(0)" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive">
           My List
