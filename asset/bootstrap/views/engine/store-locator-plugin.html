@@ -1,13 +1,13 @@
 <div style="background: #fff; padding: 5px" data-ctrl-store-selector="">
-  <ul class="list-group">
-     <li class="list-group-item" data-ng-repeat="item in vm.stores.slice(0,3)">
-
+  <table class="table table-hover">
+     <tr data-ng-repeat="item in vm.stores.slice(0,3)" data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }">
+     <td>
          <a href="javascript:void(0)" class="col-xs-12"
-
-    style="border-bottom: 1px solid #ccc; margin: 0; padding-top: 5px; color: #000 !important;"
+    style="color: #000 !important;"
     data-ng-click="selectStore(item.StoreId)">
-    {{item.point.StoreName}} - {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
-  </a>
+    {{item.point.StoreName}} - {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}</a>
+    </td>
+  </tr>
      </li>
   </ul>
 
