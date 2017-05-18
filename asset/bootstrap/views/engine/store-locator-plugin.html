@@ -1,0 +1,11 @@
+<div class="row" data-gsn-shopping-list="" style="background: #fff" data-ctrl-store-selector="">
+  <a href="javascript:void()" class="col-xs-12"
+    data-ng-repeat="option in vm.stores.slice(0,3)"
+    style="border-top: 1px solid #ccc; margin: 0; padding-top: 5px"
+    data-ng-click="selectStore()">
+    {{item.point.StoreName}} - {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
+  </a>
+  <div class="generic-content">
+    <a href="/storelocator">see more stores</a>
+  </div>
+</div>
