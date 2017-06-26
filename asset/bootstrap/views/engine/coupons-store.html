@@ -1,4 +1,5 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | coupons"></div>
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | Coupon and Savings"></div>
+
 <div data-ctrl-coupon-classic="" class="col-md-12" data-ng-init="sortByName = 'About to Expire';">
   <div data-ng-include="getThemeUrl('/views/engine/coupons-tabs.html')"></div>
   <h1>Store Coupons</h1>
@@ -28,8 +29,8 @@
         </div>
       </form>
   </div>
-  <div class="col-md-12">   
-    <br style="clear: both;"/><br />                                            
+  <div class="col-md-12">
+    <br style="clear: both;"/><br />
     <div class="col-md-12" data-ng-show="selectedCoupons.items.length <= 0 && vm.filterBy">No results returned.</div>
     <div class="row col-md-12" data-infinite-scroll="loadMore()">
           <div data-ng-repeat-start="item in selectedCoupons.items" data-ng-class="{'row': $index % 3 === 0 }"></div>
@@ -40,10 +41,10 @@
             <h4>{{item.Description1}}</h4>
             <p>{{item.Description2}}</p>
             <h5>expires: {{item.EndDate | date: 'M / dd / yyyy'}}</h5>
-            <p data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</p>  
+            <p data-ng-show="item.ProductCode"><strong>PLU:</strong>{{item.ProductCode}}</p>
             <p>{{item.TopTagLine}}</p>
             <p>{{item.Description3}}{{item.Description4}}</p>
-            <p >{{item.BottomTagLine.replace('##storename##', gvm.currentStore.StoreName)}}</p> 
+            <p >{{item.BottomTagLine.replace('##storename##', gvm.currentStore.StoreName)}}</p>
           </div>
           <div class="text-center">
             <button class="btn btn-default btn-xs" data-ng-click="doToggleCartItem($event, item)">{{ isOnList(item) && "Remove" || "Add To List"}}</button>

@@ -13,10 +13,14 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-  <title>[chainname]</title>
-  <meta name="author" content="[chainname]">
-  <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
-  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">
+  <title name="title">[chainname]</title>
+  <meta itemprop="type" property="og:type" content="article" />
+  <meta itemprop="title" property="og:title" content="[chainname]" />
+  <meta name="description" itemprop="description" property="og:description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas." />
+  <meta itemprop="image" property="og:image" content="//cdn2.brickinc.net/api/v1/content/favpng/[chainid]" />
+  <meta itemprop="url" property="og:url" content="" />
+
+
 
   <!-- Favicon set -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -72,9 +76,7 @@
   <div data-gsn-ft-config="description" class="hidden-meta">
     <div data-gsn-meta-description="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
   </div>
-  <div data-gsn-ft-config="keywords" class="hidden-meta">
-    <div data-gsn-meta-keywords="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
-  </div>
+
   <div class="layout-container" data-ng-include="'//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
 
   <!-- site content -->
