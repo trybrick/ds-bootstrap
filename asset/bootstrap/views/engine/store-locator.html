@@ -1,4 +1,5 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | store locator"></div>
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | Store Locator"></div>
+
 <h1>Locate Your Favorite Store</h1>
 <div data-ctrl-store-locator="" data-ng-init="singleStoreRedirect = '/store'" style="padding: 15px;">
   <div class="row">
@@ -12,6 +13,7 @@
         miles
         <br />
         <div class="form-group search-btn">
+          <button class="btn btn-default btn-xs pull-right hidden" data-ng-click="doSearchGeo()"><i class="fa fa-location-arrow" aria-hidden="true"></i> By Geo</button>
           <button class="btn btn-default btn-xs pull-right" data-ng-click="doSearch()">Search</button>
           <button class="btn btn-default btn-xs pull-right" data-ng-click="doClear()">Reset</button>
         </div>

@@ -13,17 +13,30 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
-  <title>[chainname]</title>
-  <meta name="author" content="[chainname]">
-  <meta name="description" content="Shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas.">
-  <meta name="keywords" content="Weekly Specials, Recipes, Coupons, Meal Planning, Cooking Videos, Low Prices, Shop Online">
+  <title name="title">[chainname]</title>
+  <meta itemprop="type" property="og:type" content="article" />
+  <meta name="title" itemprop="title" property="og:title" content="[chainname]" />
+  <meta name="description" itemprop="description" property="og:description" content="[chainname] shop for groceries with our meal planning solutions, save hundreds of dollars with printable coupons and find all recipes and meal ideas." />
+  <meta itemprop="image" property="og:image" content="//cdn2.brickinc.net/api/v1/content/favpng/[chainid]" />
+  <meta itemprop="url" property="og:url" content="" />
 
-
-  <!-- Favicon set -->
+  <!-- misc settings -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
 
+  <link href="//cdn.brickinc.net/script/lib/twitter-bootstrap/3.3.7/css/bootstrap.min.css?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css">
+  <link href="//cdn.brickinc.net/asset/common/styles/global.css?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" itemprop="stylesheet" rel="stylesheet" type="text/css">
+
+  <!-- Your custom css goes below here -->
+  <style type="text/less">
+      @import "//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home%20page&meta=less&type=text/less&nocache=1";
+      @import "//cdn-stg.brickinc.net/asset/bootstrap/styles/theme.less?nocache=1";
+  </style>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.js"></script>
+
+  <!--begin:exclude-->
   <link href="//cdn2.brickinc.net/api/v1/content/favpng/[chainid]" rel="apple-touch-icon" />
   <link href="//cdn2.brickinc.net/api/v1/content/favpng/[chainid]" rel="apple-touch-icon-precomposed" />
   <link href="//cdn2.brickinc.net/rx/57/api/v1/content/favpng/[chainid]" rel="apple-touch-icon" sizes="57x57" />
@@ -35,6 +48,7 @@
   <link href="//cdn2.brickinc.net/rx/144/api/v1/content/favpng/[chainid]" rel="apple-touch-icon" sizes="144x144" />
   <link href="//cdn2.brickinc.net/rx/152/api/v1/content/favpng/[chainid]" rel="apple-touch-icon" sizes="152x152" />
   <link href="//cdn2.brickinc.net/rx/180/api/v1/content/favpng/[chainid]" rel="apple-touch-icon" sizes="180x180" />
+
   <!-- android -->
   <link href="//cdn2.brickinc.net/rx/16/api/v1/content/favpng/[chainid]" rel="icon" sizes="16x16" />
   <link href="//cdn2.brickinc.net/rx/32/api/v1/content/favpng/[chainid]" rel="icon" sizes="32x32" />
@@ -43,27 +57,17 @@
   <link href="//cdn2.brickinc.net/rx/192/api/v1/content/favpng/[chainid]" rel="icon" sizes="192x192" />
   <link href="//cdn2.brickinc.net/rx/194/api/v1/content/favpng/[chainid]" rel="icon" sizes="194x194" />
 
-  <link href="//cdn-stg.brickinc.net/script/lib/twitter-bootstrap/3.3.7/css/bootstrap.min.css?nocache=1" rel="stylesheet" type="text/css">
-  <link href="//cdn-stg.brickinc.net/asset/common/styles/global.css?nocache=1" rel="stylesheet" type="text/css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  <script>
+if (window.location.search.indexOf('siteid=') < 0) {
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PD8GN6');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Your custom css goes below here -->
-  <style type="text/less">
-      @import "//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home%20page&meta=less&type=text/less&nocache=1";
-      @import "//cdn-stg.brickinc.net/asset/bootstrap/styles/theme.less?nocache=1";
-  </style>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
-  <link href="//cdn-stg.brickinc.net/asset/common/styles/print.css?nocache=1" rel="stylesheet" type="text/css" media="print">
+  })(window,document,'script','dataLayer','GTM-PD8GN6');
+}</script>
+  <!--end:exclude-->
 </head>
 <body data-ng-cloak="">
-
   <div data-gsn-ft-config="meta-google-site-verification" class="hidden-meta">
     <div data-gsn-google-site-verification="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
   </div>
@@ -73,31 +77,33 @@
   <div data-gsn-ft-config="description" class="hidden-meta">
     <div data-gsn-meta-description="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
   </div>
-  <div data-gsn-ft-config="keywords" class="hidden-meta">
-    <div data-gsn-meta-keywords="{{ item.Description }}" class="hidden-meta" data-ng-if="item.Description"></div>
-  </div>
+
   <div class="layout-container" data-ng-include="'//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'"></div>
 
-  <!-- above the fold scripts -->
+  <!-- site content -->
+  <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
+
+  <!-- required scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script><!-- support for plugin that were written for jquery below 1.9 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
-  <script src="https://clientapi-stg.brickinc.net/api/v1/store/sitecontentscript/[chainid]?nocache=1"></script>
-  <script data-brickid="[chainid]" src="//cdn-stg.brickinc.net/script/bricktag/bricktag.min.js?nocache=1"></script>
+  <script src="https://cdn2.brickinc.net/script/wu.min.js?nocache=1"></script>
+  <script data-brickid="[chainid]" src="//cdn2.brickinc.net/script/bricktag/bricktag.min.js?nocache=1"></script>
+
   <script src="//cdn-stg.brickinc.net/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
-  <script src="https://clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1"></script>
+  <script src="//clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1"></script>
 
   <!-- angular depencencies -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-sanitize.min.js"></script><!-- security -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js"></script><!-- routing and history -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-animate.min.js"></script><!-- carousel -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
-
-  <!-- below the fold: js -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!-- bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-sanitize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-touch.min.js"></script>
+  <div data-bs-display-mode="bsDisplayMode"></div>
 
   <!--begin:analytics-->
-  <script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script><!-- bootstrap -->
+<script>
+if (window.location.search.indexOf('siteid=') < 0) {
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments);
@@ -105,32 +111,30 @@
       m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g;
       m.parentNode.insertBefore(a, m);
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  </script>
-<script>var clickySiteId = ((globalConfig || {}).data || {}).ClickySiteId;
-var clicky_site_ids = clicky_site_ids || [];
-var clicky_custom = { pageview_disable : 1, history_disable : 1 };
-if (clickySiteId) {
-  clicky_site_ids.push(clickySiteId);
-  (function() {
-    var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = '//static.getclicky.com/js';
-    ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-  })();
+  var clickySiteId = ((globalConfig || {}).data || {}).ClickySiteId;
+  var clicky_site_ids = clicky_site_ids || [];
+  var clicky_custom = { pageview_disable : 1, history_disable : 1 };
+  if (clickySiteId) {
+    clicky_site_ids.push(clickySiteId);
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+    })();
+  }
+
+  var googleTagId = ((globalConfig || {}).data || {}).GoogleTagId;
+  if (googleTagId) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer',googleTagId);
+  }
 }
 </script>
-  <div data-bs-display-mode="bsDisplayMode"></div>
-  <script>var googleTagId = ((globalConfig || {}).data || {}).GoogleTagId;
-if (googleTagId) {
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-     })(window,document,'script','dataLayer',googleTagId);
-}
-</script>
-  <!--end:analytics-->
   <script>
     <!-- mobile collapse issue: https://github.com/twbs/bootstrap/issues/12852 -->
     $(document).ready(function () {
@@ -149,5 +153,6 @@ if (googleTagId) {
       });
     });
   </script>
+  <!--end:analytics-->
 </body>
 </html>

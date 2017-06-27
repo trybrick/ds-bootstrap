@@ -1,7 +1,5 @@
-  <div class="hidden-meta" data-gsn-title="{{ChainName}} | circulars"></div>
-  <div class="hidden-meta" data-gsn-og-title="{{ChainName}} | circulars"></div>
-  <div class="hidden-meta" data-gsn-og-type="website"></div>
-  <div class="hidden-meta" data-gsn-og-image="{{vm.page.ImageUrl}}"></div>
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | Weekly Specials"></div>
+  <div class="hidden-meta" data-gsn-meta-image="{{vm.page.ImageUrl}}"></div>
 
   <h1>Weekly Ads</h1>
   <div data-ng-show="vm.noCircular">
@@ -25,7 +23,7 @@
             <img class="dcircular-image" alt="" data-ng-src="{{(item.Pages[0] || {}).SmallImageUrl || item.SmallImageUrl}}">
             <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
 
-            <div class="hidden" data-gsn-add-head="meta" data-attributes="{'property':'og:image', 'content': (item.Pages[0] || {}).SmallImageUrl || item.SmallImageUrl }"></div>
+            <div class="hidden" data-gsn-meta-image="{{ (item.Pages[0] || {}).SmallImageUrl || item.SmallImageUrl }}"></div>
          </a>
        </div>
      </div>
