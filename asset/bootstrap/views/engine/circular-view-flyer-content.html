@@ -1,4 +1,4 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | Weekly Specials"></div>
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | {{(vm.circularType || {CircularTypeName: 'Weekly Ads'}).CircularTypeName}}"></div>
 <div class="hidden-meta" data-gsn-meta-image="{{vm.page.ImageUrl}}"></div>
 
   <h1>Weekly Ads</h1>
@@ -22,8 +22,6 @@
          <a class="thumbnail dcircular-thumbnail" data-ng-click="goUrl('/circular?c=' + ($index + 1) + '&p=1'); vm.pageIdx = 1; vm.circIdx = ($index + 1)" href="javascript:void(0)">
             <img class="dcircular-image" alt="" data-ng-src="{{(item.Pages[0] || {}).SmallImageUrl || item.SmallImageUrl}}">
             <div class="caption dcircular-caption"><h3 style="width: 100%; text-align: center;">{{item.CircularTypeName}}</h3></div>
-
-            <div class="hidden" data-gsn-meta-image="{{ (item.Pages[0] || {}).SmallImageUrl || item.SmallImageUrl }}"></div>
          </a>
        </div>
      </div>
