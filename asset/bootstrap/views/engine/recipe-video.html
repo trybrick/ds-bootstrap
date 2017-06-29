@@ -16,7 +16,7 @@
       <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
         <div class="list-group list-groupPns">
           <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
-            <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)" href="javascript:void(0)" title="{{video.Title}}">
+            <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)" href="javascript:void(0);" title="{{video.Title}}">
               {{video.Title}}
             </a>
           </div>

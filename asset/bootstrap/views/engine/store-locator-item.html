@@ -1,5 +1,5 @@
 <div class="store-info-item">
-  <a data-ng-click="openMarkerInfo(marker, 14)" href="javascript:void(0)" scroll-to="map_canvas">
+  <a data-ng-click="openMarkerInfo(marker, 14)" href="javascript:void(0);" scroll-to="map_canvas">
     <h4 itemprop="name">
       {{marker.location.StoreName}}
     </h4>
@@ -35,14 +35,14 @@
     </address>
   </div>
   <div>
-    <a class="btn btn-default" data-ng-click="selectStore(marker, true)" href="javascript:void(0)">
+    <a class="btn btn-default" data-ng-click="selectStore(marker, true)" href="javascript:void(0);">
       <i class="fa fa-square-o" data-ng-hide="isCurrentStore(marker)">
       </i>
       <i class="fa fa-check-square-o" data-ng-show="isCurrentStore(marker)">
       </i>
       My Store
     </a>
-    <a class="btn btn-default btn-current-ads" data-ng-click="viewSpecials(marker)" href="javascript:void()">
+    <a class="btn btn-default btn-current-ads" data-ng-click="viewSpecials(marker)" href="javascript:void(0);">
       Current Ads
     </a>
   </div>
@@ -57,14 +57,14 @@
   <div class="generic-content" data-ng-bind-html="marker.location.OpenHoursDisplay" itemprop="openingHours">
   </div>
   <div class="generic-content hidden-info" data-ng-show="marker.location.Redirect">
-    <a data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))" href="javascript:void(0)">
+    <a data-ng-click="goUrl(decodeServerUrl(marker.location.Redirect))" href="javascript:void(0);">
       <h5>
         Store Details
       </h5>
     </a>
   </div>
   <div class="generic-content hidden-info" data-ng-hide="marker.location.Redirect">
-    <a data-ng-click="goUrl('/store/' + marker.location.StoreNumber)" href="javascript:void(0)">
+    <a data-ng-click="goUrl('/store/' + marker.location.StoreNumber)" href="javascript:void(0);">
       <h5>
         Store Details
       </h5>
