@@ -13,7 +13,7 @@
         </span>
       </button>
       <div class="pull-right" data-ng-class="{ 'open': gvm.shoppingListActive }" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) > 0">
-        <a class="btn btn-default navbar-btn" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0)">
+        <a class="btn btn-default navbar-btn" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0);">
           My List
           <span class="badge badgeCount">
             {{getShoppingListCount()}}
@@ -40,7 +40,7 @@
             <span data-ng-bind-html="menu.Name | trustedHtml">
             </span>
           </a>
-          <a class="dropdown-toggle" data-ng-if="menu.Path == '#' || menu.Path == ''" data-toggle="dropdown" href="javascript:void(0)" itemprop="name">
+          <a class="dropdown-toggle" data-ng-if="menu.Path == '#' || menu.Path == ''" data-toggle="dropdown" href="javascript:void(0);" itemprop="name">
             <span data-ng-bind-html="menu.Name | trustedHtml">
             </span>
             <i class="fa fa-caret-down">
@@ -58,7 +58,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) <= 0">
         <li data-ng-class="{ 'open': gvm.shoppingListActive }">
-          <a class="btn btn-default list" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0)">
+          <a class="btn btn-default list" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0);">
             My List
             <span class="badge badgeCount">
               {{getShoppingListCount()}}

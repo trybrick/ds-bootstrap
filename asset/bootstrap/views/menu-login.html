@@ -1,5 +1,5 @@
 <div class="dropdown pull-right" data-ng-class="{ 'open': gvm.loginMenuActive }" data-ng-cloak="" data-ng-show="isLoggedIn" style="background-color: none !important">
-  <a data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive" href="javascript:void(0)">
+  <a data-ng-click="gvm.loginMenuActive = !gvm.loginMenuActive" href="javascript:void(0);">
     <i class="fa fa-user">
     </i>
     {{ gvm.profile.FirstName + ' ' + gvm.profile.LastName}}
@@ -7,25 +7,25 @@
     </i>
   </a>
   <div class="dropdown-menu dropdown-menu-touch generic-content" style="padding:17px;">
-    <a data-ng-click="goUrl('/profile')" href="javascript:void(0)">
+    <a data-ng-click="goUrl('/profile')" href="javascript:void(0);">
       <i class="fa fa-user">
       </i>
       Profile
     </a>
     <br/>
     <br/>
-    <a data-ng-click="logout()" href="javascript:void(0)">
+    <a data-ng-click="logout()" href="javascript:void(0);">
       Sign-out
     </a>
     <br/>
   </div>
 </div>
 <div class="pull-right" data-ng-class="{ 'open': gvm.loginMenuActive }" data-ng-cloak="" data-ng-if="!isLoggedIn" style="background-color: none !important">
-  <a data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-ng-click="showModal()" data-show-if="gvm.loginCounter" href="javascript:void(0)">
+  <a data-gsn-modal="getThemeUrl('/views/engine/modal-login.html')" data-ng-click="showModal()" data-show-if="gvm.loginCounter" href="javascript:void(0);">
     Sign in
   </a>
   |
-  <a data-ng-click="goUrl('/registration')" href="javascript:void(0)">
+  <a data-ng-click="goUrl('/registration')" href="javascript:void(0);">
     Register
   </a>
 </div>

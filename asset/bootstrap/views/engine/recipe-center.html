@@ -10,7 +10,7 @@
   </h1>
   <div class="col-md-6 col-sm-6">
     <div class="row">
-      <a data-analytics-category="Recipe" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{vm.featuredRecipe.RecipeTitle}}" data-analytics-on="click" data-ng-click="goUrl('/recipe/' + vm.featuredRecipe.RecipeId)" href="javascript:void(0)">
+      <a data-analytics-category="Recipe" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{vm.featuredRecipe.RecipeTitle}}" data-analytics-on="click" data-ng-click="goUrl('/recipe/' + vm.featuredRecipe.RecipeId)" href="javascript:void(0);">
         <h3>
           Recipe of the Day
         </h3>
@@ -48,7 +48,7 @@
       </button>
     </div>
     <div class="recipeArticle">
-      <a data-analytics-category="Recipe" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.cookingTip.ArticleId)" href="javascript:void(0)">
+      <a data-analytics-category="Recipe" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.cookingTip.ArticleId)" href="javascript:void(0);">
         <h3>
           {{vm.cookingTip.Title}}
         </h3>
@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="col-md-6 col-sm-6">
-    <a data-ng-click="goUrl('/mealplannerfull')" href="javascript:void(0)">
+    <a data-ng-click="goUrl('/mealplannerfull')" href="javascript:void(0);">
       <h3>
         Meal Planner
       </h3>
@@ -70,13 +70,13 @@
         {{group.DisplayDate}}
       </h3>
       <div class="mealByDay" data-ng-repeat="item in group.items">
-        <a data-ng-click="goUrl('/recipe/' + item.RecipeId)" href="javascript:void(0)">
+        <a data-ng-click="goUrl('/recipe/' + item.RecipeId)" href="javascript:void(0);">
           {{item.RecipeTitle}}
         </a>
       </div>
     </div>
     <div class="recipeArticle">
-      <a data-analytics-category="Recipe" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" href="javascript:void(0)">
+      <a data-analytics-category="Recipe" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" href="javascript:void(0);">
         <h3>
           {{vm.featuredArticle.Title}}
         </h3>
