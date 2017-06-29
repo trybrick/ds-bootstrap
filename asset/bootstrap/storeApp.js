@@ -30,8 +30,7 @@ var storeApp = angular
         store: 0,
         layout: le[ 3 ],
         path: '/article/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/article.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
+        tpl: gsn.getThemeUrl( '/views/engine/article.html' )
       }, {
         login: 0,
         store: 1,
@@ -168,15 +167,13 @@ var storeApp = angular
         store: 0,
         layout: le[ 2 ],
         path: '/recipe/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/recipe-details.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
+        tpl: gsn.getThemeUrl( '/views/engine/recipe-details.html' )
       }, {
         login: 0,
         store: 0,
         layout: le[ 2 ],
         path: '/recipecenter/recipe/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/recipe-details.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
+        tpl: gsn.getThemeUrl( '/views/engine/recipe-details.html' )
       }, {
         login: 0,
         store: 0,
@@ -203,8 +200,7 @@ var storeApp = angular
         store: 0,
         layout: le[ 3 ],
         path: '/recipevideo/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/recipe-video.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
+        tpl: gsn.getThemeUrl( '/views/engine/recipe-video.html' )
       }, {
         login: 0,
         store: 1,
@@ -236,8 +232,7 @@ var storeApp = angular
         store: 0,
         layout: le[ 1 ],
         path: '/store/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/store-info.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
+        tpl: gsn.getThemeUrl( '/views/engine/store-info.html' )
       }, {
         login: 0,
         store: 0,
