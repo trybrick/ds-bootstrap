@@ -1,7 +1,3 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | {{(vm.circularType || {CircularTypeName: 'Weekly Ads'}).CircularTypeName}}">
-</div>
-<div class="hidden-meta" data-gsn-meta-image="{{vm.page.ImageUrl}}">
-</div>
 <h1>
   Weekly Ads
 </h1>
@@ -79,6 +75,9 @@
       <div class="text-center" style="width: 100%;">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
         </ul>
+        <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{currentCircular().CircularTypeName}} Page{{vm.pageIdx}}"></div>
+        <div class="hidden-meta" data-gsn-meta-image="{{vm.page.ImageUrl}}">
+        </div>
       </div>
     </div>
     <div class="myFakeFlyer" data-gsn-svg-image=".circImage" data-src="{{vm.page.ImageUrl}}" data-sync-height="#myFlyer" data-watch="vm.page">

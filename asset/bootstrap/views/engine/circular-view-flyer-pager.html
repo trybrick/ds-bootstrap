@@ -9,8 +9,6 @@
   <a data-ng-href="?c={{vm.circIdx}}&p={{$index + 1}}" href="javascript:void(0)">
     {{$index + 1}}
   </a>
-  <div class="hidden" data-gsn-meta-image="{{vm.digitalCirc.Circulars[vm.circIdx - 1].Pages[$index].ImageUrl}}">
-  </div>
 </li>
 <li>
   <a aria-label="Next" data-ng-click="vm.pageIdx = (vm.pageIdx >= vm.digitalCirc.Circulars[vm.circIdx - 1].Pages.length) ? 1 : vm.pageIdx + 1" href="javascript:void(0)">
