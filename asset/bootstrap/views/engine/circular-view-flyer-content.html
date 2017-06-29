@@ -1,5 +1,5 @@
 <h1>
-  Weekly Ads
+  {{vm.circular.CircularTypeName}}
 </h1>
 <div data-ng-show="vm.noCircular">
   <h3>
@@ -75,7 +75,7 @@
       <div class="text-center" style="width: 100%;">
         <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
         </ul>
-        <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{currentCircular().CircularTypeName}} Page{{vm.pageIdx}}">
+        <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{vm.circular.CircularTypeName}} Page{{vm.pageIdx}}">
         </div>
         <div class="hidden-meta" data-gsn-meta-image="{{vm.page.ImageUrl}}">
         </div>
