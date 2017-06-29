@@ -1,71 +1,95 @@
-<div class="hidden" data-gsn-title="{{ChainName}} | Recipes Center"></div>
-
-<div data-ctrl-recipe-center="" class="col-md-12 text-center">
-  <div class="hidden-meta" data-gsn-description="Recipe of the Day - {{vm.featuredRecipe.RecipeTitle}}"></div>
-  <div class="hidden-meta" data-gsn-meta-image="{{vm.featuredRecipe.Images[0].RecipeImageUrl}}"></div>
-
-  <h1>Recipe Center</h1>
+<div class="hidden" data-gsn-title="{{ChainName}} | Recipes Center">
+</div>
+<div class="col-md-12 text-center" data-ctrl-recipe-center="">
+  <div class="hidden-meta" data-gsn-description="Recipe of the Day - {{vm.featuredRecipe.RecipeTitle}}">
+  </div>
+  <div class="hidden-meta" data-gsn-meta-image="{{vm.featuredRecipe.Images[0].RecipeImageUrl}}">
+  </div>
+  <h1>
+    Recipe Center
+  </h1>
   <div class="col-md-6 col-sm-6">
     <div class="row">
-      <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + vm.featuredRecipe.RecipeId)" data-analytics-on="click" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{vm.featuredRecipe.RecipeTitle}}" data-analytics-category="Recipe">
-        <h3>Recipe of the Day</h3>
-        <p>New recipe every day!</p>
+      <a data-analytics-category="Recipe" data-analytics-event="ClickRecipeOfTheday" data-analytics-label="{{vm.featuredRecipe.RecipeTitle}}" data-analytics-on="click" data-ng-click="goUrl('/recipe/' + vm.featuredRecipe.RecipeId)" href="javascript:void(0)">
+        <h3>
+          Recipe of the Day
+        </h3>
+        <p>
+          New recipe every day!
+        </p>
         <img data-ng-src="{{vm.featuredRecipe.Images[0].RecipeImageUrl}}" style=" max-width: 400px;">
-        <div>{{vm.featuredRecipe.RecipeTitle}}</div>
-        <br />
+          <div>
+            {{vm.featuredRecipe.RecipeTitle}}
+          </div>
+          <br/>
+        </img>
       </a>
     </div>
     <div class="row recipeMenu">
-      <button class="btn col-xs-12 text-left" id="myRecipeBoxMenu" data-ng-click="goUrl('/myrecipes')">
+      <button class="btn col-xs-12 text-left" data-ng-click="goUrl('/myrecipes')" id="myRecipeBoxMenu">
         <div class="pull-left">
           My Recipe Box (Saved Recipes)
         </div>
         <div class="pull-right">
-          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="glyphicon glyphicon-chevron-right">
+          </span>
         </div>
       </button>
     </div>
     <div class="row dropdown recipeMenu">
-      <button class="btn col-xs-12 text-left" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()" data-analytics-on="click" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-category="Recipe">
+      <button class="btn col-xs-12 text-left" data-analytics-category="Recipe" data-analytics-event="ClickRecipeAdvanceSearch" data-analytics-on="click" data-gsn-modal="getThemeUrl('/views/engine/modal-recipe-advanced-search.html')" data-ng-click="showModal()">
         <div class="pull-left">
           Advanced Recipe Search
         </div>
         <div class="pull-right">
-          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="glyphicon glyphicon-chevron-right">
+          </span>
         </div>
       </button>
     </div>
     <div class="recipeArticle">
-      <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + vm.cookingTip.ArticleId)" data-analytics-on="click" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-category="Recipe">
-        <h3>{{vm.cookingTip.Title}}</h3>
+      <a data-analytics-category="Recipe" data-analytics-event="ClickCookingTip" data-analytics-label="{{vm.cookingTip.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.cookingTip.ArticleId)" href="javascript:void(0)">
+        <h3>
+          {{vm.cookingTip.Title}}
+        </h3>
         <img data-ng-src="{{vm.cookingTip.ImageUrl}}">
-        <p data-ng-bind="vm.cookingTip.Teaser"></p>
+          <p data-ng-bind="vm.cookingTip.Teaser">
+          </p>
+        </img>
       </a>
     </div>
   </div>
   <div class="col-md-6 col-sm-6">
-    <a href="javascript:void(0)" data-ng-click="goUrl('/mealplannerfull')">
-      <h3>Meal Planner</h3>
+    <a data-ng-click="goUrl('/mealplannerfull')" href="javascript:void(0)">
+      <h3>
+        Meal Planner
+      </h3>
     </a>
     <div class="mealPlanner" data-ng-repeat="group in vm.mealPlannerTeasers">
-      <h3>{{group.DisplayDate}}</h3>
+      <h3>
+        {{group.DisplayDate}}
+      </h3>
       <div class="mealByDay" data-ng-repeat="item in group.items">
-        <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
+        <a data-ng-click="goUrl('/recipe/' + item.RecipeId)" href="javascript:void(0)">
+          {{item.RecipeTitle}}
+        </a>
       </div>
     </div>
-
-     <div class="recipeArticle">
-      <a href="javascript:void(0)" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" data-analytics-on="click" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-category="Recipe">
-        <h3>{{vm.featuredArticle.Title}}</h3>
+    <div class="recipeArticle">
+      <a data-analytics-category="Recipe" data-analytics-event="ClickFeaturedArticle" data-analytics-label="{{vm.featuredArticle.Title}}" data-analytics-on="click" data-ng-click="goUrl('/article/' + vm.featuredArticle.ArticleId)" href="javascript:void(0)">
+        <h3>
+          {{vm.featuredArticle.Title}}
+        </h3>
         <img data-ng-src="{{vm.featuredArticle.ImageUrl}}">
-        <p data-ng-bind="vm.featuredArticle.Teaser"></p>
+          <p data-ng-bind="vm.featuredArticle.Teaser">
+          </p>
+        </img>
       </a>
     </div>
   </div>
 </div>
-
 <style>
-.recipeContent
+  .recipeContent
 {
   margin-top: 10px;
 }

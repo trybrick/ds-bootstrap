@@ -1,9 +1,12 @@
-<div class="hidden-meta" data-ng-if="seo.Title" data-gsn-title="{{ ChainName + ' | ' + seo.title}}"></div>
-<div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.description}}"></div>
-
+<div class="hidden-meta" data-gsn-title="{{ ChainName + ' | ' + seo.title}}" data-ng-if="seo.Title">
+</div>
+<div class="hidden-meta" data-gsn-meta-description="{{seo.description}}" data-ng-if="seo.Description">
+</div>
 <div class="row">
-  <div class="col-md-8 col-lg-9" data-ng-view=""></div>
+  <div class="col-md-8 col-lg-9" data-ng-view="">
+  </div>
   <div class="col-md-4 col-lg-3 text-center">
-     <div data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')"></div>
+    <div data-ng-include="getThemeUrl('/views/engine/shopping-list-plugin.html')">
+    </div>
   </div>
 </div>

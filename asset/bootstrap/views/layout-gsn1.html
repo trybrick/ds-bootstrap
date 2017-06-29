@@ -1,7 +1,10 @@
-<div class="hidden-meta" data-ng-if="seo.Title" data-gsn-title="{{ ChainName + ' | ' + seo.title}}"></div>
-<div class="hidden-meta" data-ng-if="seo.Description" data-gsn-meta-description="{{seo.description}}"></div>
-
+<div class="hidden-meta" data-gsn-title="{{ ChainName + ' | ' + seo.title}}" data-ng-if="seo.Title">
+</div>
+<div class="hidden-meta" data-gsn-meta-description="{{seo.description}}" data-ng-if="seo.Description">
+</div>
 <div class="row">
-  <div class="col-lg-1 hidden-print" style="margin-left: -180px" data-gsn-ad-unit="6" data-ng-if="',visible-lg'.indexOf(bsDisplayMode) > 0" data-gsn-sticky="" data-top="60"></div>
-  <div class="col-md-12" data-ng-view=""></div>
+  <div class="col-lg-1 hidden-print" data-gsn-ad-unit="6" data-gsn-sticky="" data-ng-if="',visible-lg'.indexOf(bsDisplayMode) > 0" data-top="60" style="margin-left: -180px">
+  </div>
+  <div class="col-md-12" data-ng-view="">
+  </div>
 </div>

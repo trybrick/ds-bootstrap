@@ -1,14 +1,22 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | Meals Planner"></div>
-
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | Meals Planner">
+</div>
 <div class="col-md-12">
-	<div data-ctrl-meal-planner="" class="col-md-12">
-	  <h1>Meals Planner</h1>
-	  <div data-ng-repeat="group in vm.mealPlanners | orderBy:'key'">
-	  <h3>{{group.items[0].DisplayDate}}</h3>
-	  <div class="row" data-ng-repeat="item in group.items">
-	    <a href="javascript:void(0)" data-ng-click="goUrl('/recipe/' + item.RecipeId)">{{item.RecipeTitle}}</a>
-	  </div>
-	  </div>
-	  <button class="btn btn-default" data-ng-click="goBack()">Back</button>
-	</div>
+  <div class="col-md-12" data-ctrl-meal-planner="">
+    <h1>
+      Meals Planner
+    </h1>
+    <div data-ng-repeat="group in vm.mealPlanners | orderBy:'key'">
+      <h3>
+        {{group.items[0].DisplayDate}}
+      </h3>
+      <div class="row" data-ng-repeat="item in group.items">
+        <a data-ng-click="goUrl('/recipe/' + item.RecipeId)" href="javascript:void(0)">
+          {{item.RecipeTitle}}
+        </a>
+      </div>
+    </div>
+    <button class="btn btn-default" data-ng-click="goBack()">
+      Back
+    </button>
+  </div>
 </div>
