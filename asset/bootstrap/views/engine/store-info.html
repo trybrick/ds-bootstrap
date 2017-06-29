@@ -1,29 +1,41 @@
-<div data-ctrl-store-locator="" class="col-md-12">
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{myMarkers[0].location.StoreName}}"></div>
-
-  <h1>{{myMarkers[0].location.StoreName}}</h1>
-  <div class="staticContent" data-ng-if="myMarkers[0].location.Misc1" data-gsn-dynamic="" dynamic="myMarkers[0].location.Misc1"></div>
+<div class="col-md-12" data-ctrl-store-locator="">
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{myMarkers[0].location.StoreName}}">
+  </div>
+  <h1>
+    {{myMarkers[0].location.StoreName}}
+  </h1>
+  <div class="staticContent" data-gsn-dynamic="" data-ng-if="myMarkers[0].location.Misc1" dynamic="myMarkers[0].location.Misc1">
+  </div>
   <div class="row" style="padding-top: 10px">
     <div class="col-md-6 col-sm-6 staticBlock">
       <!-- the map -->
-      <div id="map_canvas" data-ui-map="myMap" class="map-container gMap" data-ui-options="mapOptions" style="height: 280px;"></div>
+      <div class="map-container gMap" data-ui-map="myMap" data-ui-options="mapOptions" id="map_canvas" style="height: 280px;">
+      </div>
       <!-- the map popup view definition -->
       <div class="infoMarker" data-ui-map-info-window="myInfoWindow">
         <div data-ng-show="currentMarker.location">
-          <strong>{{myMarkers[0].location.StoreName}}</strong><br />
+          <strong>
+            {{myMarkers[0].location.StoreName}}
+          </strong>
+          <br/>
           <address>
-            {{currentMarker.location.PrimaryAddress}}<br />
+            {{currentMarker.location.PrimaryAddress}}
+            <br/>
             {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}
           </address>
           <div>
-            <a href="javascript:void(0)" class="btn btn-default btn-xs" data-ng-click="selectStore(currentMarker)">Select Store</a>
+            <a class="btn btn-default btn-xs" data-ng-click="selectStore(currentMarker)" href="javascript:void(0)">
+              Select Store
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div data-ng-repeat="marker in myMarkers" class="col-md-6 col-sm-6 staticBlock" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" itemscope itemtype="http://schema.org/Store"></div>
+    <div class="col-md-6 col-sm-6 staticBlock" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" data-ng-repeat="marker in myMarkers" itemscope="" itemtype="http://schema.org/Store">
+    </div>
   </div>
-  <div class="staticContent" data-ng-if="myMarkers[0].location.Misc3" data-gsn-dynamic="" dynamic="myMarkers[0].location.Misc3"></div>
+  <div class="staticContent" data-gsn-dynamic="" data-ng-if="myMarkers[0].location.Misc3" dynamic="myMarkers[0].location.Misc3">
+  </div>
 </div>
 <style>
   .staticContent img {
@@ -39,5 +51,4 @@
   .hidden-info {
     display: none;
   }
-
 </style>

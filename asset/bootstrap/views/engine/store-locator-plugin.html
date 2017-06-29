@@ -1,22 +1,32 @@
-<div style="background: #fff; padding: 5px" data-ctrl-store-selector="">
+<div data-ctrl-store-selector="" style="background: #fff; padding: 5px">
   <table class="table table-hover">
-    <tr data-ng-repeat="item in vm.stores.slice(0,3)" data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }">
-       <td><a href="javascript:void(0)" class="col-xs-12"
-              style="color: #000 !important;"
-              data-ng-click="selectStore(item.point.StoreId)">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> {{item.point.StoreName}} <br /> <small>{{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}</small></a>
+    <tr data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }" data-ng-repeat="item in vm.stores.slice(0,3)">
+      <td>
+        <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId)" href="javascript:void(0)" style="color: #000 !important;">
+          <i aria-hidden="true" class="fa fa-map-marker">
+          </i>
+          {{item.point.StoreName}}
+          <br/>
+          <small>
+            {{item.point.PrimaryAddress}} {{item.point.City}}, {{item.point.StateName}} {{item.point.PostalCode}}
+          </small>
+        </a>
       </td>
     </tr>
   </table>
-  <div class="generic-content" style="padding-top: 10px;" data-ng-if="vm.stores.length > 3">
-    Locate more stores: <br />
-    <form  action="/storelocator" method="get">
-    <div class="input-group">
-      <input type="text" class="form-control" name="search" placeholder="City, State or Zip">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="submit">Go</button>
-      </span>
-    </div>
+  <div class="generic-content" data-ng-if="vm.stores.length > 3" style="padding-top: 10px;">
+    Locate more stores:
+    <br/>
+    <form action="/storelocator" method="get">
+      <div class="input-group">
+        <input class="form-control" name="search" placeholder="City, State or Zip" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">
+              Go
+            </button>
+          </span>
+        </input>
+      </div>
     </form>
   </div>
 </div>

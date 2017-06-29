@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>   
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script> 
+    <title>
+    </title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js">
+    </script>
     <script>
       (function (window) {
         var last = +new Date();
@@ -41,7 +44,7 @@
 
             // if the length is different
             // it's fairly obvious
-            if (len != lastlen) {
+            if (len !== lastlen) {
               // just make sure the loop finishes early
               last = [];
             }
@@ -74,7 +77,7 @@
         // callback for the tests
         function decide() {
           if (support.DOMNodeInserted) {
-            window.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener('DOMContentLoaded', function () {
               if (support.DOMSubtreeModified) { // for FF 3+, Chrome
                 el.addEventListener('DOMSubtreeModified', callback, false);
               } else { // for FF 2, Safari, Opera 9.6+
@@ -108,7 +111,7 @@
         }
 
         // do the dummy test
-        var dummy = document.createElement("div");
+        var dummy = document.createElement('div');
         el.appendChild(dummy);
         el.removeChild(dummy);
 
@@ -118,7 +121,7 @@
     </script>
     <script>
       var gsnCustomHeight;
-      
+
       function doParentResizeInternal() {
         setTimeout(doParentResize, 10);
       }
@@ -143,15 +146,18 @@
           doParentResizeInternal();
         } else if (parent) {
           jQuery(window).resize(doParentResizeInternal);
-          jQuery('#calendar').bind("DOMSubtreeModified DOMNodeInserted DOMNodeRemoved", doParentResizeInternal);
+          jQuery('#calendar').bind('DOMSubtreeModified DOMNodeInserted DOMNodeRemoved', doParentResizeInternal);
           window.onDomChange(doParentResizeInternal);
-         
+
           // do initial resize
           doParentResizeInternal();
         }
       });
     </script>
-    <style type="text/css"> body img { width: 100%; }</style>
+    <style type="text/css">
+      body img { width: 100%; }
+    </style>
   </head>
-  <body></body>
+  <body>
+  </body>
 </html>

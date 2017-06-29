@@ -1,25 +1,38 @@
-<div data-ctrl-recipe-video="" class="col-md-12">
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | {{video ? 'Cooking Video' : video.Title}}"></div>
-<div class="hidden-meta" data-gsn-meta-type="video.other"></div>
-<div class="hidden-meta" data-gsn-meta-image="{{video.Thumbnail}}"></div>
-
-  <h1>Cooking Videos</h1>
+<div class="col-md-12" data-ctrl-recipe-video="">
+  <div class="hidden-meta" data-gsn-title="{{ChainName}} | {{video ? 'Cooking Video' : video.Title}}">
+  </div>
+  <div class="hidden-meta" data-gsn-meta-type="video.other">
+  </div>
+  <div class="hidden-meta" data-gsn-meta-image="{{video.Thumbnail}}">
+  </div>
+  <h1>
+    Cooking Videos
+  </h1>
   <div class="row">
     <div class="col-md-4">
-      <h3>Videos</h3>
+      <h3>
+        Videos
+      </h3>
       <div style="display: block; height: 300px; width: 100%; overflow-y: scroll;">
         <div class="list-group list-groupPns">
           <div data-ng-repeat="video in vm.videos | orderBy : 'Title'" style="cursor: pointer">
-            <a href="javascript:void(0)" class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" title="{{video.Title}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)">{{video.Title}}</a>
+            <a class="list-group-item list-group-itemPns" data-ng-class="{ active: vm.video.VideoId == {{video.VideoId}}}" data-ng-click="goUrl('/recipevideo/' + video.VideoId)" href="javascript:void(0)" title="{{video.Title}}">
+              {{video.Title}}
+            </a>
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-4 noPadLeft">
-      <h1>5 Minute Cooking Classes</h1>
+      <h1>
+        5 Minute Cooking Classes
+      </h1>
       <div class="videoColumn" id="VideoPlayer">
-        <h3>{{videoTitle}}</h3>
-        <a id="RecipeVideoPlayer" class="RecipeVideoPlayer"></a>
+        <h3>
+          {{videoTitle}}
+        </h3>
+        <a class="RecipeVideoPlayer" id="RecipeVideoPlayer">
+        </a>
       </div>
     </div>
   </div>
@@ -34,7 +47,7 @@
   });
 </script>
 <style>
-a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus
+  a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus
 {
   background-color: rgba(245,130,32,.9);
   border: none;

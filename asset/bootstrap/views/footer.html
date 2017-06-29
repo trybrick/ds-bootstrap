@@ -1,21 +1,40 @@
-<div class="col-md-4 col-sm-12 footer-left" data-gsn-ft-content="" data-content-position="12">
-  {{gvm.currentStore.StoreName}} (<a href="javascript:void(0)" data-ng-click="goUrl('/storelocator')">Locate your Store</a>)
+<div class="col-md-4 col-sm-12 footer-left" data-content-position="12" data-gsn-ft-content="">
+  {{gvm.currentStore.StoreName}} (
+  <a data-ng-click="goUrl('/storelocator')" href="javascript:void(0)">
+    Locate your Store
+  </a>
+  )
   <div data-ng-if="gvm.currentStore.StoreId">
-    {{gvm.currentStore.PrimaryAddress}} <br />
-    {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}} <br />
-    {{gvm.currentStore.Phone}} <br />
+    {{gvm.currentStore.PrimaryAddress}}
+    <br/>
+    {{gvm.currentStore.City}}, {{gvm.currentStore.StateName}} {{gvm.currentStore.PostalCode}}
+    <br/>
+    {{gvm.currentStore.Phone}}
+    <br/>
     {{gvm.currentStore.OpenHoursDisplay}}
   </div>
 </div>
-<div class="col-md-4 col-sm-12 footer-center" data-gsn-ft-content="" data-content-position="13" data-gsn-dynamic="">
-  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/privacy'}"><a href="javascript:void(0)" data-ng-click="goUrl('/privacy')">Privacy Policy</a></div>
-  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}"><a href="javascript:void(0)" data-ng-click="goUrl('/contactus')">Contact Us</a></div>
-  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/employment'}"><a href="javascript:void(0)" data-ng-click="goUrl('/employment')">Employment</a></div>
+<div class="col-md-4 col-sm-12 footer-center" data-content-position="13" data-gsn-dynamic="" data-gsn-ft-content="">
+  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/privacy'}">
+    <a data-ng-click="goUrl('/privacy')" href="javascript:void(0)">
+      Privacy Policy
+    </a>
+  </div>
+  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/contactus'}">
+    <a data-ng-click="goUrl('/contactus')" href="javascript:void(0)">
+      Contact Us
+    </a>
+  </div>
+  <div class="col-md-12" data-ng-class="{'underlined': currentPath == '/employment'}">
+    <a data-ng-click="goUrl('/employment')" href="javascript:void(0)">
+      Employment
+    </a>
+  </div>
 </div>
-<div class="col-md-4 col-sm-12 footer-right" data-gsn-ft-content="" data-content-position="14">
+<div class="col-md-4 col-sm-12 footer-right" data-content-position="14" data-gsn-ft-content="">
   <div data-ng-if="!item.Description">
     <style>
-    @media (min-width: 780px) {
+      @media (min-width: 780px) {
       .footer-left, .footer-center {
         width: 50%;
       }
@@ -26,9 +45,13 @@
     </style>
   </div>
 </div>
-
 <!-- bottom bar that you canot remove -->
 <div class="col-md-12 col-sm-12" style="margin-top: 15px;">
-  <span>&copy; {{ currentYear }} Brick, Inc.</span> | <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=7734514.PN.&amp;OS=PN/7734514&amp;RS=PN/7734514" target="_blank">
-  Patent No US 7,734,514 B2.</a>
+  <span>
+    © {{ currentYear }} Brick, Inc.
+  </span>
+  |
+  <a href="http://patft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=7734514.PN.&OS=PN/7734514&RS=PN/7734514" target="_blank">
+    Patent No US 7,734,514 B2.
+  </a>
 </div>

@@ -1,10 +1,13 @@
-<div data-gsn-partial-content="" class="col-md-12">
-  <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="pcvm.isLoading"></div>
-  <div data-ng-if="pcvm.notFound" data-ng-include="notFoundLayout"></div>
-  <div data-ng-if="!pcvm.notFound" data-ng-include="getThemeUrl('/views/static-content/' + pcvm.layout + '.html')"></div>
+<div class="col-md-12" data-gsn-partial-content="">
+  <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="pcvm.isLoading">
+  </div>
+  <div data-ng-if="pcvm.notFound" data-ng-include="notFoundLayout">
+  </div>
+  <div data-ng-if="!pcvm.notFound" data-ng-include="getThemeUrl('/views/static-content/' + pcvm.layout + '.html')">
+  </div>
 </div>
 <style>
-.staticContent img {
+  .staticContent img {
     max-width: 100%;
 }
 </style>

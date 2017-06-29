@@ -1,14 +1,21 @@
-<div class="hidden-meta" data-ng-if="partialContents[0]" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline || contentDetail.name)}}"></div>
+<div class="hidden-meta" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline || contentDetail.name)}}" data-ng-if="partialContents[0]">
+</div>
 <div class="hidden-meta" data-ng-if="getConfig('description').Description">
-  <div class="hidden-meta" data-gsn-meta-description="getConfig('description').Description"></div>
+  <div class="hidden-meta" data-gsn-meta-description="getConfig('description').Description">
+  </div>
 </div>
 <div class="hidden-meta" data-ng-if="getConfig('image').Description">
-  <div class="hidden-meta" data-gsn-meta-image="getConfig('image').Description"></div>
+  <div class="hidden-meta" data-gsn-meta-image="getConfig('image').Description">
+  </div>
 </div>
-
 <div class="col-md-12" style="padding-top: 5px">
   <ul class="nav nav-tabs">
-  	<li data-ng-class="{'active' : $index == pcvm.tab}" data-ng-repeat="item in partialContents"><a class="btn-default" href="javascript:void(0)" data-ng-click="goUrl('?tab=' + $index)">{{item.Headline}}</a></li>
+    <li data-ng-class="{'active' : $index == pcvm.tab}" data-ng-repeat="item in partialContents">
+      <a class="btn-default" data-ng-click="goUrl('?tab=' + $index)" href="javascript:void(0)">
+        {{item.Headline}}
+      </a>
+    </li>
   </ul>
-  <div class="staticContent" data-gsn-dynamic="" dynamic="item.Description" data-ng-repeat="item in partialContents" data-ng-if="$index == pcvm.tab"></div>
+  <div class="staticContent" data-gsn-dynamic="" data-ng-if="$index == pcvm.tab" data-ng-repeat="item in partialContents" dynamic="item.Description">
+  </div>
 </div>

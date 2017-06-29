@@ -1,26 +1,35 @@
 <div style="position: relative">
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular')" title="flyer view" data-ng-class="{ 'active': !isListView && currentPath.indexOf('grid') < 0 }">
-  <i class="fa fa-picture-o"></i>
-  <br />ads
-</a>
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/grid')" title="grid view" data-ng-class="{ 'active': currentPath.indexOf('grid') > 0 }">
-  <i class="fa fa-th"></i>
-  <br />grid
-</a>
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/list')" title="list view" data-ng-class="{ 'active': currentPath.indexOf('list') > 0 }">
-  <i class="fa fa-list"></i>
-  <br />list
-</a>
-<a class="btn btn-default" href="javascript:void(0)" data-ng-click="goUrl('/circular/text')" title="text only view" data-ng-class="{ 'active': currentPath.indexOf('text') > 0 }">
-  <i class="fa fa-font"></i>
-  <br />text
-</a>
-<a class="btn btn-default" href="javascript:void(0)" title="help" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-help.html')" data-ng-click="showModal()">
-  <i class="fa fa-question-circle"></i>
-</a>
+  <a class="btn btn-default" data-ng-class="{ 'active': !isListView && currentPath.indexOf('grid') < 0 }" data-ng-click="goUrl('/circular')" href="javascript:void(0)" title="flyer view">
+    <i class="fa fa-picture-o">
+    </i>
+    <br/>
+    ads
+  </a>
+  <a class="btn btn-default" data-ng-class="{ 'active': currentPath.indexOf('grid') > 0 }" data-ng-click="goUrl('/circular/grid')" href="javascript:void(0)" title="grid view">
+    <i class="fa fa-th">
+    </i>
+    <br/>
+    grid
+  </a>
+  <a class="btn btn-default" data-ng-class="{ 'active': currentPath.indexOf('list') > 0 }" data-ng-click="goUrl('/circular/list')" href="javascript:void(0)" title="list view">
+    <i class="fa fa-list">
+    </i>
+    <br/>
+    list
+  </a>
+  <a class="btn btn-default" data-ng-class="{ 'active': currentPath.indexOf('text') > 0 }" data-ng-click="goUrl('/circular/text')" href="javascript:void(0)" title="text only view">
+    <i class="fa fa-font">
+    </i>
+    <br/>
+    text
+  </a>
+  <a class="btn btn-default" data-gsn-modal="getThemeUrl('/views/engine/modal-circular-help.html')" data-ng-click="showModal()" href="javascript:void(0)" title="help">
+    <i class="fa fa-question-circle">
+    </i>
+  </a>
 </div>
 <style>
-  .availableVarieties 
+  .availableVarieties
   {
     padding: 5px;
     max-height: 472px;
@@ -32,23 +41,23 @@
     margin-left: 5px;
   }
 
-  .varietiesHeader 
+  .varietiesHeader
   {
     margin: -5px -5px 5px;
     padding: 0 0 1px;
   }
 
-  .varietiesHeader h4 
+  .varietiesHeader h4
   {
     text-align: center;
   }
 /*
-  .availableVarietiesImage 
+  .availableVarietiesImage
   {
     margin-left: 46px;
   }*/
 
-  .availableDescription 
+  .availableDescription
   {
     overflow: hidden;
   }
@@ -57,23 +66,23 @@
     height: 90px;
   }
 
-  .availableVarietiesList 
+  .availableVarietiesList
   {
     height: 118px;
     overflow: scroll;
   }
 
-  .availableVarieties ul 
+  .availableVarieties ul
   {
     padding: 0;
   }
 
-  .availableVarieties ul li 
+  .availableVarieties ul li
   {
     list-style-type: none;
   }
 
-  .varieties li 
+  .varieties li
   {
     padding-bottom: 4px;
   }
