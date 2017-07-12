@@ -85,14 +85,14 @@
 <div class="sharing-menu" data-gsn-ft-config="sharinglinks-disable" data-ng-if="!item.Description">
   <ul>
     <li>
-      <a data-ng-href="https://clientapi.gsn2.com/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank">
+      <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank">
         <i class="fa fa-facebook">
         </i>
       </a>
-      <span style="background-color: #555; padding: 5px">
+      <a class="btn btn-info btn-large" title="Social Sharing Menu">
         <i class="fa fa-share-alt">
         </i>
-      </span>
+      </a>
     </li>
     <li>
       <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank">
