@@ -13,7 +13,7 @@
         </span>
       </button>
       <div class="pull-right" data-ng-class="{ 'open': gvm.shoppingListActive }" data-ng-if="',visible-xs'.indexOf(bsDisplayMode) > 0">
-        <a class="btn btn-default navbar-btn" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0);">
+        <a class="btn btn-default navbar-btn" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0);" title="toggle shopping list">
           My List
           <span class="badge badgeCount">
             {{getShoppingListCount()}}
@@ -60,7 +60,7 @@
         <li data-ng-class="{ 'open': gvm.shoppingListActive }">
           <a class="btn btn-default list" data-ng-click="gvm.shoppingListActive = !gvm.shoppingListActive" href="javascript:void(0);">
             My List
-            <span class="badge badgeCount">
+            <span class="badge badgeCount" title="item count">
               {{getShoppingListCount()}}
             </span>
             <span class="glyphicon glyphicon-chevron-down">
@@ -85,29 +85,29 @@
 <div class="sharing-menu" data-gsn-ft-config="sharinglinks-disable" data-ng-if="!item.Description">
   <ul>
     <li>
-      <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank">
+      <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="facebook share button">
         <i class="fa fa-facebook">
         </i>
       </a>
-      <a class="btn btn-info btn-large" title="Social Sharing Menu">
-        <i class="fa fa-share-alt">
+      <a title="Social Sharing Menu">
+        <i class="fa fa-share-alt" style="background-color: #808080">
         </i>
       </a>
     </li>
     <li>
-      <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank">
+      <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank" title="twitter share button">
         <i class="fa fa-twitter">
         </i>
       </a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url={{encodeURIComponent(getSharePath())}}" tabindex="0" target="_blank">
+      <a href="https://plus.google.com/share?url={{encodeURIComponent(getSharePath())}}" tabindex="0" target="_blank" title="google plus share button">
         <i class="fa fa-google-plus">
         </i>
       </a>
     </li>
     <li>
-      <a href="https://pinterest.com/pin/create/button/?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank">
+      <a href="https://pinterest.com/pin/create/button/?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="pinterest share button">
         <i class="fa fa-pinterest">
         </i>
       </a>
