@@ -44,7 +44,7 @@
   <br/>
   <div class="thumbnail">
     <img class="pull-right" data-ng-src="{{article.ImageUrl}}" itemprop="image"/>
-    <div data-ng-bind-html="article.Body | removeAspx | trustedHtml" itemprop="description">
-    </div>
+    <article data-ng-bind-html="article.Body | removeAspx | trustedHtml" itemprop="description">
+    </article>
   </div>
 </div>

@@ -75,16 +75,6 @@
         </button>
       </div>
     </div>
-    <div data-ng-if="vm.recipe.RecipeTitle">
-      <div class="pull-left">
-        <a data-gsn-twitter-share="{ text: vm.recipe.RecipeTitle + ' at ' + ChainName, count: 'horizontal' }" data-url="{{getFullPath('/recipe') + '?id=' + vm.recipe.RecipeId}}">
-        </a>
-      </div>
-      <div class="pull-left">
-        <div class="fb-like fb_iframe_widget" data-action="like" data-fb-like="" data-fb-xfbml-state="rendered" data-href="{{getFullPath('/recipe') + '?id=' + vm.recipe.RecipeId}}" data-layout="standard" data-share="false" data-show-faces="false">
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div itemprop="recipeInstructions">
