@@ -7,7 +7,7 @@ var storeApp = angular
 
     var le = [ gsn.getThemeUrl( '/views/layout.html' ) ];
     for ( var i = 1; i < 5; i++ ) {
-      le.push( gsn.getThemeUrl( '/views/layout-gsn' + i + '.html' ) );
+      le.push( gsn.getThemeUrl( '/views/layout' + i + '.html' ) );
     }
 
     var lec = gsn.getThemeUrl( '/views/layout-circular.html' );
@@ -77,13 +77,6 @@ var storeApp = angular
         login: 0,
         store: 1,
         layout: le[ 3 ],
-        path: '/coupons/digital',
-        tpl: gsn.getThemeUrl( '/views/engine/coupons-digital.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
-      }, {
-        login: 0,
-        store: 1,
-        layout: le[ 3 ],
         path: '/coupons/store',
         tpl: gsn.getThemeUrl( '/views/engine/coupons-store.html' ),
         tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
@@ -129,20 +122,6 @@ var storeApp = angular
         tpl: gsn.getThemeUrl( '/views/engine/my-recipes.html' ),
         tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
       }, {
-        login: 0,
-        store: 1,
-        layout: le[ 4 ],
-        path: '/product',
-        tpl: gsn.getThemeUrl( '/views/engine/product.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
-      }, {
-        login: 0,
-        store: 1,
-        layout: le[ 4 ],
-        path: '/product/search',
-        tpl: gsn.getThemeUrl( '/views/engine/product-search.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
-      }, {
         login: 1,
         store: 0,
         path: '/profile',
@@ -172,12 +151,6 @@ var storeApp = angular
         login: 0,
         store: 0,
         layout: le[ 2 ],
-        path: '/recipecenter/recipe/:id',
-        tpl: gsn.getThemeUrl( '/views/engine/recipe-details.html' )
-      }, {
-        login: 0,
-        store: 0,
-        layout: le[ 2 ],
         path: '/recipecenter',
         tpl: gsn.getThemeUrl( '/views/engine/recipe-center.html' ),
         tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
@@ -192,22 +165,8 @@ var storeApp = angular
         login: 0,
         store: 0,
         layout: le[ 3 ],
-        path: '/recipecenter/recipevideo',
-        tpl: gsn.getThemeUrl( '/views/engine/recipe-video.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
-      }, {
-        login: 0,
-        store: 0,
-        layout: le[ 3 ],
         path: '/recipevideo/:id',
         tpl: gsn.getThemeUrl( '/views/engine/recipe-video.html' )
-      }, {
-        login: 0,
-        store: 1,
-        layout: le[ 4 ],
-        path: '/specials',
-        tpl: gsn.getThemeUrl( '/views/engine/specials.html' ),
-        tplMain: gsn.getThemeUrl( '/views/engine/static-content.html' )
       }, {
         login: 0,
         store: 0,
@@ -288,6 +247,10 @@ var storeApp = angular
     } );
     $routeProvider.when( '/account/manage', {
       redirectTo: '/profile',
+      caseInsensitiveMatch: true
+    } );
+    $routeProvider.when( '/recipecenter/recipevideo', {
+      redirectTo: '/recipevideo',
       caseInsensitiveMatch: true
     } );
 
