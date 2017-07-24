@@ -4,11 +4,6 @@
       Printable Coupons
     </a>
   </li>
-  <li data-ng-class="{'active' : couponType == 'digital' }" data-ng-if="coupons.digital.items.length > 0">
-    <a class="btn-default" data-ng-click="goUrl('/coupons/digital')" href="javascript:void(0);">
-      Digital Coupons
-    </a>
-  </li>
   <li data-ng-class="{'active' : couponType == 'store' }" data-ng-if="coupons.store.items.length > 0">
     <a class="btn-default" data-ng-click="goUrl('/coupons/store')" href="javascript:void(0);">
       Store Coupons
