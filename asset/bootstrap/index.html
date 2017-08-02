@@ -47,7 +47,9 @@
     <link href="//cdn2.brickinc.net/rx/192/api/v1/content/favpng/[chainid]" rel="icon" sizes="192x192"/>
     <link href="//cdn2.brickinc.net/rx/194/api/v1/content/favpng/[chainid]" rel="icon" sizes="194x194"/>
     <script>
-if (window.location.search.indexOf('siteid=') < 0) {
+window.isPrerender = /Prerender/.test( window.navigator.userAgent );
+
+if (!window.isPrerender) {
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -106,7 +108,7 @@ if (window.location.search.indexOf('siteid=') < 0) {
     </script>
     <!-- bootstrap -->
     <script>
-if (window.location.search.indexOf('siteid=') < 0) {
+if (!window.isPrerender) {
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments);
