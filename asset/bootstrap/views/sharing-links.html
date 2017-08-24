@@ -1,0 +1,63 @@
+<ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline">
+  <li data-ng-if="item.Description" data-gsn-ft-config="android" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Android"><i class="fa fa-android"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="apple" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Apple"><i class="fa fa-apple"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="facebook" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Facebook"><i class="fa fa-facebook"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="twitter" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Twitter"><i class="fa fa-twitter"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="pinterest" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Pinterest"><i class="fa fa-pinterest"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="youtube" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Youtube"><i class="fa fa-youtube"></i></a>
+  </li>
+  <li data-ng-if="item.Description" data-gsn-ft-config="instagram" data-ng-cloak="">
+    <a data-ng-href="{{item.Description}}" target="_blank" title="Visit us on Instragram"><i class="fa fa-instagram"></i></a>
+  </li>
+
+  <!-- this should always be the last item -->
+  <li data-ng-class="{ 'open': gvm.sharingLinks }">
+    <a class="btn btn-default sharing-links" data-ng-click="gvm.sharingLinks = !gvm.sharingLinks" href="javascript:void(0);">
+      <i class="fa fa-share"></i>
+      <span class="sr-only">
+        Toggle Sharing Links
+      </span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff" data-ng-if="gvm.sharingLinks">
+     <li>
+      <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="facebook share button">
+        <i class="fa fa-facebook">
+        </i>
+      </a>
+      <a title="Social Sharing Menu">
+        <i class="fa fa-share-alt" style="background-color: #808080">
+        </i>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank" title="twitter share button">
+        <i class="fa fa-twitter">
+        </i>
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url={{encodeURIComponent(getSharePath())}}" tabindex="0" target="_blank" title="google plus share button">
+        <i class="fa fa-google-plus">
+        </i>
+      </a>
+    </li>
+    <li>
+      <a href="https://pinterest.com/pin/create/button/?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="pinterest share button">
+        <i class="fa fa-pinterest">
+        </i>
+      </a>
+    </li>
+  </ul>
+</li>
+</ul>
