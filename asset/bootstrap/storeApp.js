@@ -12,7 +12,7 @@ var storeApp = angular
     }
 
     var lec = gsn.getThemeUrl('/views/layout-circular.html');
-    var homeFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=home&type=text/html&nocache=' + gsn.config.Version;
+    var homeFile = '/proxy/content/homemeta/' + gsn.config.ChainId + '/?meta=home&nocache=' + gsn.config.Version;
     var urls = [{
       login: 0,
       store: 0,
