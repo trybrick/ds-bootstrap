@@ -71,7 +71,7 @@ if (!window.isPrerender) {
       <div class="hidden-meta" data-gsn-meta-description="{{ item.Description }}" data-ng-if="item.Description">
       </div>
     </div>
-    <div class="layout-container" data-ng-include="'//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'">
+    <div class="layout-container" data-ng-include="'/proxy/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'">
     </div>
     <!-- site content -->
     <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
