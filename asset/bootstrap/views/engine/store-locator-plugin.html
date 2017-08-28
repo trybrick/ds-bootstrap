@@ -1,7 +1,8 @@
 <div data-ctrl-store-selector="" style="background: #fff; padding: 5px">
   <table class="table table-hover">
-    <tr data-ng-class="{ 'success': item.point.StoreId == vm.currentStore.StoreId }" data-ng-repeat="item in vm.stores.slice(0,3)">
+    <tr data-ng-repeat="item in vm.stores.slice(0,3)">
       <td>
+        <i class="fa fa-star" style="color: #ffff00; position: relative; top: 0; right: 0;" data-ng-if="item.point.StoreId == vm.currentStore.StoreId"></i>
         <a class="col-xs-12" data-ng-click="selectStore(item.point.StoreId)" href="javascript:void(0);" style="color: #000 !important;">
           <i aria-hidden="true" class="fa fa-map-marker">
           </i>
