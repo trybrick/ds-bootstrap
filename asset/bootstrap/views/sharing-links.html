@@ -22,38 +22,34 @@
   </li>
 
   <!-- this should always be the last item -->
-  <li data-ng-class="{ 'open': gvm.sharingLinks }">
+  <li class="dropdown pull-right" data-ng-class="{ 'open': gvm.sharingLinks }">
     <a data-ng-click="gvm.sharingLinks = !gvm.sharingLinks" href="javascript:void(0);">
       <i class="fa fa-share"></i>
       <span class="sr-only">
         Toggle Sharing Links
       </span>
     </a>
-    <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline dropdown-menu dropdown-menu-touch" role="menu" style="width: 300px; background: #fff" data-ng-if="gvm.sharingLinks">
-      <li>
-        <a href="https://pinterest.com/pin/create/button/?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="pinterest share button">
-          <i class="fa fa-pinterest">
-          </i>
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank" title="twitter share button">
-          <i class="fa fa-twitter">
-          </i>
-        </a>
-      </li>
-       <li>
-        <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="facebook share button">
-          <i class="fa fa-facebook">
-          </i>
-        </a>
-      </li>
-      <li>
-        <a href="https://plus.google.com/share?url={{encodeURIComponent(getSharePath())}}" tabindex="0" target="_blank" title="google plus share button">
-          <i class="fa fa-google-plus">
-          </i>
-        </a>
-      </li>
-    </ul>
+    <div class="shoppinglist dropdown-menu dropdown-menu-touch" data-ng-if="gvm.sharingLinks">
+      <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline" role="menu">
+        <li>
+          <a href="https://pinterest.com/pin/create/button/?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="pinterest share button">
+            <i class="fa fa-pinterest">
+            </i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/share?url={{encodeURIComponent(getSharePath())}}&text={{encodeURIComponent(getTitle())}}" rel="nofollow" tabindex="0" target="_blank" title="twitter share button">
+            <i class="fa fa-twitter">
+            </i>
+          </a>
+        </li>
+         <li>
+          <a data-ng-href="https://clientapi.brickinc.net/api/v1/content/sharefacebook/{{gsnApi.getChainId()}}?url={{encodeURIComponent(getSharePath())}}" rel="nofollow" tabindex="0" target="_blank" title="facebook share button">
+            <i class="fa fa-facebook">
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </li>
 </ul>
