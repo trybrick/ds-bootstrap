@@ -170,12 +170,6 @@ var storeApp = angular
       layout: le[3],
       path: '/unsubscribe',
       tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html')
-    }, {
-      login: 0,
-      store: 0,
-      layout: le[2],
-      path: '/applyJob',
-      tpl: gsn.getThemeUrl('/views/engine/employment-apply.html')
     }];
 
     angular.forEach(urls, function(v, k) {
