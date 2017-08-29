@@ -73,41 +73,30 @@ if (!window.isPrerender) {
       <div class="hidden-meta" data-gsn-meta-description="{{ item.Description }}" data-ng-if="item.Description">
       </div>
     </div>
-    <div class="layout-container" data-ng-include="'/proxy/content/homemeta/[chainid]/?meta=template&nocache=1'"></div>
-    <!-- site content -->
-    <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
     <!-- required scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?nocache=1">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js?nocache=1">
-    </script>
-    <script src="https://cdn2.brickinc.net/script/wu.min.js?nocache=1">
-    </script>
-    <script data-brickid="[chainid]" src="//cdn2.brickinc.net/script/bricktag/bricktag.min.js?nocache=1">
-    </script>
-    <script src="//cdn-stg.brickinc.net/script/gsncore/latest/gsncore.min.js?nocache=1">
-    </script>
-    <script src="//clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?nocache=1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+
+    <!-- site content -->
+    <div class="layout-container" data-ng-include="'/proxy/content/homemeta/[chainid]/?meta=template&nocache=1'"></div>
+
+    <!-- angular -->
+    <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js?nocache=1"></script>
+    <script src="https://cdn2.brickinc.net/script/wu.min.js?nocache=1"></script>
+    <script data-brickid="[chainid]" src="//cdn2.brickinc.net/script/bricktag/bricktag.min.js?nocache=1"></script>
+    <script src="//cdn-stg.brickinc.net/script/gsncore/latest/gsncore.min.js?nocache=1"></script>
+    <script src="//clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1"></script>
     <!-- angular depencencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-sanitize.min.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-animate.min.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-touch.min.js">
-    </script>
-    <div data-bs-display-mode="bsDisplayMode">
-    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular-touch.min.js"></script>
+    <div data-bs-display-mode="bsDisplayMode"></div>
 
     <!--begin:seoxclude-body-->
     <!--begin:analytics-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
 if (!window.isPrerender) {
     (function (i, s, o, g, r, a, m) {
