@@ -46,27 +46,6 @@
       </div>
     </div>
   </div>
-  <!-- Ad Pods -->
-  <div class="row">
-    <div class="col-md-10 printCouponCategory">
-      <h4>
-        Manufacturer Coupon Print Status (must submit all coupons to redeem savings)
-      </h4>
-    </div>
-  </div>
-  <div data-ng-if="true">
-    <div class="circular-item" data-ng-repeat="item in manufacturerCoupons">
-      <div data-ng-if="item.IsCoupon">
-        <img data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-          <span data-ng-bind-html="item.Description">
-          </span>
-          -
-          <span class="coupon-message coupon-message-{{item.ProductCode}}" data-ng-bindonce="">
-          </span>
-        </img>
-      </div>
-    </div>
-  </div>
   <div class="row" data-ng-hide="instoreCoupons.length == 0">
     <div class="col-md-10 printCouponCategory">
       <h4>
