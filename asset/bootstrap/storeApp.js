@@ -42,13 +42,6 @@ var storeApp = angular
       login: 0,
       store: 1,
       layout: le[4],
-      path: '/circular/list',
-      tpl: gsn.getThemeUrl('/views/engine/circular-view-list.html'),
-      tplMain: gsn.getThemeUrl('/views/engine/static-content.html')
-    }, {
-      login: 0,
-      store: 1,
-      layout: le[4],
       path: '/circular/grid',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-grid.html'),
       tplMain: gsn.getThemeUrl('/views/engine/static-content.html')
@@ -235,6 +228,10 @@ var storeApp = angular
     });
     $routeProvider.when('/circulars', {
       redirectTo: '/circular',
+      caseInsensitiveMatch: true
+    });
+    $routeProvider.when('/circular/list', {
+      redirectTo: '/circular/text',
       caseInsensitiveMatch: true
     });
     $routeProvider.when('/circulars/:id/:page', {
