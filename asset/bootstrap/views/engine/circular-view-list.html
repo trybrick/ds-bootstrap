@@ -1,9 +1,4 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | Weekly Ads">
-</div>
-<div class="col-md-12" data-ctrl-circular="" data-ng-init="isListView = (currentPath.indexOf('list') > 0 || currentPath.indexOf('text') > 0)">
-  <h1>
-    Weekly Ads
-  </h1>
+<div class="col-md-12" data-ctrl-circular="" data-ng-init="isGridView = true">
   <div id="brxLeaderboard">
   </div>
   <div data-ng-show="vm.noCircular">
@@ -12,7 +7,7 @@
     </h3>
   </div>
   <div class="productImagePopOver hidden" data-ng-non-bindable="">
-    <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
+    <img data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}">
   </div>
   <div data-gsn-spinner="{radius:30, width:8, length: 16}" data-show-if="vm.digitalCirc == null || vm.noCircular">
   </div>
@@ -82,11 +77,11 @@
             <div class="dropdown-menu dropdown-menu-right" style="padding: 10px">
               <span class="pull-right">
                 Department:
-                <input class="text-center" data-ng-model="vm.filter.CategoryName" list="departments" placeholder="--All Departments--" type="text"/>
+                <input class="text-center" data-ng-model="vm.filter.CategoryName" list="departments" placeholder="--All Departments--" type="text">
               </span>
               <span class="pull-right">
                 Brand:
-                <input class="text-center" data-ng-model="vm.filter.BrandName" list="brands" placeholder="--All Brands--" type="text"/>
+                <input class="text-center" data-ng-model="vm.filter.BrandName" list="brands" placeholder="--All Brands--" type="text">
               </span>
               <span class="pull-right">
                 <button type="reset">
@@ -95,73 +90,59 @@
               </span>
             </div>
           </div>
-        </input>
+
       </form>
     </div>
   </div>
   <div class="col-md-12">
     <div data-infinite-scroll="loadMore()">
-      <div data-ng-class="{ '': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }" data-ng-repeat-start="item in allItems">
+      <div data-ng-class="{ 'col-md-12 col-sm-12': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }" data-ng-repeat-start="item in allItems">
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <h4>
             {{item[sortBy]}}
           </h4>
-          <h5>
-            Description
-          </h5>
         </div>
       </div>
-      <div class="row item-content" itemscope="" itemtype="http://schema.org/Product">
-        <div class="dropdown" data-ng-class="{'open': item.zoom}">
-          <a class="btn" data-ng-click="item.zoom = !item.zoom" href="javascript:void(0);" style="margin-top: 5px; background-color: #555; color: #fff">
-            <i class="fa fa-search-minus" data-ng-show="item.zoom">
-            </i>
-            <i class="fa fa-search-plus" data-ng-show="!item.zoom">
-            </i>
-          </a>
-          <div class="dropdown-menu" data-ng-if="item.zoom" style="margin-left: 10px;">
-            <img class="myimage-zoom" data-ng-src="{{item.ImageUrl || getThemeUrl('/images/no_image.jpg')}}"/>
-          </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 item-wrapper" data-body="" itemscope="" itemtype="http://schema.org/Product" style="margin-top: 15px">
+
+<div class="item">
+  <div class="hidden meta">
+    <div class="product-id">
+      {{item.CircularItemId}}
+    </div>
+    <div class="product-brand">
+      {{item.BrandName}}
+    </div>
+    <div class="product-category">
+      {{item.CategoryName}}
+    </div>
+  </div>
+  <div class="item-content" style="text-align: left">
+      <strong>
+          {{item.Description}}
+        </strong>
+      <div class="pull-right">
+        <div class="price-num">
+          {{item.PriceString}}
         </div>
-        <div class="col-md-10 col-sm-10 col-xs-12 itemdata-container">
-          <div class="hidden meta">
-            <div class="product-id">
-              {{item.CircularItemId}}
-            </div>
-            <div class="product-brand">
-              {{item.BrandName}}
-            </div>
-            <div class="product-category">
-              {{item.CategoryName}}
-            </div>
-          </div>
-          <div class=" myimage-container col-md-4 col-sm-4 col-xs-12" data-ng-if="currentPath.indexOf('text') < 0">
-            <img class="myimage" data-ng-src="{{item.SmallImageUrl || getThemeUrl('/images/no_image.jpg')}}" itemprop="image"/>
-          </div>
-          <div class="item-top-title" itemprop="description">
-            <h2 itemprop="name">
-              {{item.Description}}
-            </h2>
-            <div class="subdescription">
-              {{item.ItemDescription}}
-            </div>
-          </div>
-          <button class="btn btn-default btn-xs item-add-button" data-ng-click="doToggleCircularItem($event, item)">
-            {{ isOnList(item) && "REMOVE" || "ADD ITEM"}}
-          </button>
+        <div class="subdescription" data-ng-show="item.Savings">
+          SAVINGS - {{item.SavingsString}}
         </div>
-        <div class="additem-container">
-          <div class="item-product-price" content="{{item.SalePrice}}" data-ng-show="item.PriceString" itemprop="price">
-            {{item.PriceString}}
-            <div class="subdescription" data-ng-show="item.Savings">
-              SAVINGS - {{item.SavingsString}}
-            </div>
-          </div>
-        </div>
+        <button class="btn btn-default btn-sm pull-right" data-ng-click="doToggleCircularItem($event, item)">
+          {{ isOnList(item) &amp;&amp; "REMOVE" || "ADD ITEM"}}
+        </button>
       </div>
-      <div class="row" data-ng-repeat-end="">
+      <div class="subdescription">
+        {{item.ItemDescription}}
       </div>
-      <div>
+  </div>
+</div>
+
+
+      </div>
+      <div data-ng-repeat-end="" data-ng-class="{'row': $index % 2 == 1}">
+      </div>
+      <div class="col-md-12">
         <div class="pull-right">
           {{allItems.length}} of {{vm.cacheItems.length}}
         </div>
@@ -175,99 +156,3 @@
     </div>
   </div>
 </div>
-<style>
-  .myimage-container {
-  padding-right: 5px;
-  text-align: center;
-}
-
-.itemdata-container {
-  min-height: 100px;
-  overflow: hidden;
-}
-
-.item-content {
-  overflow: visible;
-  padding: 5px;
-  text-align: center;
-  position: relative;
-}
-
-.item-content:hover .item-add-button {
-  margin-right: 0;
-  -webkit-transform: translate(0, 100%);
-  -moz-transform: translate(0, 100%);
-  -ms-transform: translate(0, 100%);
-  -o-transform: translate(0, 100%);
-  transform: translate(0, 100%);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.myimage {
-  max-width: 200px;
-  max-height: 200px;
-}
-
-.item-add-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-right: -100px;
-  -webkit-transform: translate(0, 100%);
-  -moz-transform: translate(0, 100%);
-  -ms-transform: translate(0, 100%);
-  -o-transform: translate(0, 100%);
-  transform: translate(0, 100%);
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.item-top-title h2 {
-    font-size: 1em;
-    font-weight: 700;
-    color: #222;
-}
-
-.subdescription {
-    font-family: 'helvetica neue';
-    font-size: 0.8em;
-    font-weight: 400;
-    color: #7d7d7d;
-}
-
-.item-product-price {
-    color: #40c781;
-    font-size: 1.5em;
-    font-weight: 700;
-    font-family: 'helvetica neue'
-}
-
-.item-product-price .subdescription {
-    color: #ec1c24;
-}
-
-.item-tools {
-    color: #40c781;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    z-index: 9;
-    display: none;
-}
-
-.item-content:hover .item-tools {
-    display: inline;
-}
-
-.myimage-zoom {
-    max-height: 300px;
-    max-width: 300px;
-}
-</style>
