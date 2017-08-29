@@ -23,6 +23,8 @@
     <link href="//cdn-stg.brickinc.net/asset/common/styles/global.css?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
     <link href="//clientapi-stg.brickinc.net/api/v1/content/getcss/[chainid]?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
+    <!--head-content-->
+    <!--head-content2-->
 
     <!--begin:seoxclude-head-->
     <meta content="yes" name="apple-mobile-web-app-capable"/>
@@ -71,16 +73,15 @@ if (!window.isPrerender) {
       <div class="hidden-meta" data-gsn-meta-description="{{ item.Description }}" data-ng-if="item.Description">
       </div>
     </div>
-    <div class="layout-container" data-ng-include="'//clientapi-stg.brickinc.net/api/v1/content/meta/[chainid]/?name=home page&meta=template&type=text/html&nocache=1'">
-    </div>
+    <div class="layout-container" data-ng-include="'/proxy/content/homemeta/[chainid]/?meta=template&nocache=1'"></div>
     <!-- site content -->
     <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
     <!-- required scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?nocache=1">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js?nocache=1">
     </script>
     <script src="https://cdn2.brickinc.net/script/wu.min.js?nocache=1">
     </script>

@@ -4,7 +4,6 @@ var storeApp = angular
     // disable theme
     gsn.config.SiteTheme = 'bootstrap';
     gsn.config.defaultMobileListView = true;
-    gsn.config.ShoppingListServiceUrl = '/proxy/shoppinglisttwo';
 
     var le = [gsn.getThemeUrl('/views/layout.html')];
     for (var i = 1; i < 5; i++) {
@@ -12,12 +11,13 @@ var storeApp = angular
     }
 
     var lec = gsn.getThemeUrl('/views/layout-circular.html');
-    var homeFile = '/proxy/Content/meta/' + gsn.config.ChainId + '/?name=home page&meta=home&type=text/html&nocache=' + gsn.config.Version;
+    var homeFile = '/proxy/content/homemeta/' + gsn.config.ChainId + '/?meta=home&nocache=' + gsn.config.Version;
     var urls = [{
       login: 0,
       store: 0,
       path: '/',
-      tpl: homeFile
+      tpl: homeFile,
+      tplString: gsn.config.Home
     }, {
       login: 0,
       store: 0,
@@ -220,6 +220,7 @@ var storeApp = angular
       $routeProvider.when(v.path, {
         templateUrl: v.tplMain ? v.tplMain : v.tpl,
         notFoundLayout: v.tplMain ? v.tpl : v.tplMain,
+        template: v.tplString,
         caseInsensitiveMatch: true,
         storeRequired: v.store,
         requireLogin: v.login,
