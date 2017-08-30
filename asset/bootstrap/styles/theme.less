@@ -11,7 +11,17 @@
 
 @bgFooter       : @bgHeader;
 @colFooter      : @colHeader;
-@dropDown : true;
+@dropDown       : true;
+
+.primary-color {
+  background: @bgDefault;
+  color: @colDefault;
+}
+
+.secondary-color {
+  background: @bgHighlight;
+  color: @colHighlight;
+}
 
 .ripple {
   border-color: @bgDefault;
@@ -165,6 +175,7 @@
         color: @colHighlight;
         background: @bgHighlight; }}}
 }
+
 .grid.row {
     margin-right: -15px;
     margin-left: -15px;
@@ -172,6 +183,7 @@
     margin: 0;
     padding-top: 5px;
 }
+
 .grid>.SalePrice {
     color: #FF0000;
     font-weight: bold;
@@ -185,11 +197,7 @@
   bottom: 0px;
 }
 
-.header-bar {
-  position: relative;
-}
-
-.header-top {
+header, .header-bar, .header-top {
   position: relative;
 }
 
