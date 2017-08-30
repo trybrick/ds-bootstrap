@@ -9,14 +9,14 @@
     <div class="col-md-3 col-sm-3">
       <form class="myStoreLocatorForm" name="myStoreLocatorForm">
         Zip, City or State:
-        <br/>
+        <br>
         <input class="search" data-ng-model="search.storeLocator" name="search" type="text">
-          <br/>
+          <br>
           Find stores within:
-          <br/>
+          <br>
           <input class="radius" data-ng-model="searchRadius" name="searchRadius" type="text">
             miles
-            <br/>
+            <br>
             <div class="form-group search-btn">
               <button class="btn btn-default btn-xs pull-right hidden" data-ng-click="doSearchGeo()">
                 <i aria-hidden="true" class="fa fa-location-arrow">
@@ -30,11 +30,11 @@
                 Reset
               </button>
             </div>
-            <br/>
-          </input>
-        </input>
+            <br>
+
+
       </form>
-      <br/>
+      <br>
       <div data-ng-if="searchFailed">
         Unable to locate a store within the specified search radius.  Displaying first closest store below.
       </div>
@@ -49,10 +49,10 @@
           <strong>
             {{currentMarker.location.StoreName}}
           </strong>
-          <br/>
+          <br>
           <address>
             {{currentMarker.location.PrimaryAddress}}
-            <br/>
+            <br>
             {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}
           </address>
           <div>
@@ -62,9 +62,9 @@
           </div>
         </div>
         <div data-ng-show="!currentMarker.location">
-          <br/>
+          <br>
           search result for: {{search.storeLocator}}
-          <br/>
+          <br>
         </div>
       </div>
     </div>
@@ -72,17 +72,19 @@
   <!-- stores -->
   <div class="row col-md-12">
     <div class="row" data-ng-repeat="group in vmsl.myMarkerGrouping">
-      <br/>
+      <br>
       <div>
         <h2>
           {{group.key}}
         </h2>
       </div>
-      <div class="col-md-4 col-sm-4 col-xs-12 singleStoreInfo" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" data-ng-repeat="marker in group.items" itemscope="" itemtype="http://schema.org/Store">
+      <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 singleStoreInfo" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" data-ng-repeat="marker in group.items" itemscope="" itemtype="http://schema.org/Store">
       </div>
     </div>
   </div>
 </div>
+
+
 <style>
   .singleStoreInfo div
   {
