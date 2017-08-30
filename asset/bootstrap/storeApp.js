@@ -50,13 +50,13 @@ var storeApp = angular
     }, {
       login: 0,
       store: 0,
-      layout: le[4],
+      layout: le,
       path: '/contactus',
       tpl: gsn.getThemeUrl('/views/engine/contact-us.html')
     }, {
       login: 0,
       store: 1,
-      layout: le[4],
+      layout: le,
       path: '/coupons',
       tpl: gsn.getThemeUrl('/views/engine/coupons-printable.html')
     }, {
