@@ -5,6 +5,7 @@ var storeApp = angular
     gsn.config.SiteTheme = 'bootstrap';
 
     var le = [gsn.getThemeUrl('/views/layout.html')];
+    var le21 = [gsn.getThemeUrl('/views/layout2-1.html')];
     for (var i = 1; i < 5; i++) {
       le.push(gsn.getThemeUrl('/views/layout' + i + '.html'));
     }
@@ -19,31 +20,29 @@ var storeApp = angular
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/article',
       tpl: gsn.getThemeUrl('/views/engine/article.html')
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/article/:id',
       tpl: gsn.getThemeUrl('/views/engine/article.html')
     }, {
       login: 0,
       store: 1,
-      layout2: 'column2-1',
+      layout: le21,
       path: '/circular',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-flyer.html')
     }, {
       login: 0,
       store: 1,
-      layout2: 'column2-1',
+      layout: le21,
       path: '/circular/grid',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-grid.html')
     }, {
       login: 0,
       store: 1,
-      layout2: 'column2-1',
+      layout: le21,
       path: '/circular/text',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-list.html')
     }, {
@@ -59,25 +58,21 @@ var storeApp = angular
     }, {
       login: 0,
       store: 1,
-      layout2: 'column2-1',
       path: '/coupons/store',
       tpl: gsn.getThemeUrl('/views/engine/coupons-store.html')
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/mealplannerfull',
       tpl: gsn.getThemeUrl('/views/engine/meal-planner.html')
     }, {
       login: 1,
       store: 0,
-      layout2: 'column2-1',
       path: '/savedlists',
       tpl: gsn.getThemeUrl('/views/engine/saved-lists.html')
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/mylist',
       tpl: gsn.getThemeUrl('/views/engine/shopping-list.html')
     }, {
@@ -93,7 +88,6 @@ var storeApp = angular
     }, {
       login: 1,
       store: 0,
-      layout2: 'column2-1',
       path: '/myrecipes',
       tpl: gsn.getThemeUrl('/views/engine/my-recipes.html')
     }, {
@@ -104,7 +98,6 @@ var storeApp = angular
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/recipe/search',
       tpl: gsn.getThemeUrl('/views/engine/recipe-search.html')
     }, {
@@ -145,7 +138,6 @@ var storeApp = angular
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/signin',
       tpl: gsn.getThemeUrl('/views/engine/signin.html')
     }, {
@@ -161,7 +153,6 @@ var storeApp = angular
     }, {
       login: 0,
       store: 0,
-      layout2: 'column2-1',
       path: '/unsubscribe',
       tpl: gsn.getThemeUrl('/views/engine/unsubscribe.html')
     }];
@@ -175,8 +166,7 @@ var storeApp = angular
         storeRequired: v.store,
         requireLogin: v.login,
         controller: v.controller,
-        layout: v.layout,
-        layout2: v.layout2
+        layout: v.layout
       });
     });
 
