@@ -23,11 +23,9 @@
 
   <!-- this should always be the last item -->
   <li data-ng-show="item.Description" data-gsn-ft-config="sharing" data-ng-cloak="" class="dropdown pull-right" data-ng-class="{ 'open': gvm.sharingLinks }">
-    <a data-ng-if="item.Description" data-ng-click="gvm.sharingLinks = !gvm.sharingLinks" href="javascript:void(0);" title="Toggle Sharing Links">
-      <i class="fa fa-share" style="color: #ffffff; background-color: #ccc;"></i>
-      <span class="sr-only">
-        Toggle Sharing Links
-      </span>
+    <a data-ng-if="item.Description" data-ng-click="gvm.sharingLinks = !gvm.sharingLinks" href="javascript:void(0);" title="{{item.Description}}">
+      <i class="fa fa-share-alt" style="color: #ffffff; background-color: #ccc;"></i>
+      <span class="sr-only">{{item.Description}}</span>
     </a>
     <div data-ng-if="item.Description" class="shoppinglist dropdown-menu dropdown-menu-touch" data-ng-if="gvm.sharingLinks">
       <ul class="social-icons icon-rounded icon-zoom list-unstyled list-inline" role="menu" style="padding-left: 10px;">
