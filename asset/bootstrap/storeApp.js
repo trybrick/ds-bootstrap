@@ -3,7 +3,6 @@ var storeApp = angular
   .config(['$routeProvider', function($routeProvider) {
     // disable theme
     gsn.config.SiteTheme = 'bootstrap';
-    gsn.config.defaultMobileListView = true;
 
     var le = [gsn.getThemeUrl('/views/layout.html')];
     for (var i = 1; i < 5; i++) {
@@ -192,6 +191,10 @@ var storeApp = angular
 
     $routeProvider.when('/coupons/printable', {
       redirectTo: '/coupons',
+      caseInsensitiveMatch: true
+    });
+    $routeProvider.when('/circular/list', {
+      redirectTo: '/circular/text',
       caseInsensitiveMatch: true
     });
     $routeProvider.when('/circulars', {
