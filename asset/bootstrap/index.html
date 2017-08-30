@@ -73,13 +73,13 @@ if (!window.isPrerender) {
       <div class="hidden-meta" data-gsn-meta-description="{{ item.Description }}" data-ng-if="item.Description">
       </div>
     </div>
-    <!-- required scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?nocache=1"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
 
     <!-- site content -->
     <div class="layout-container" data-ng-include="'/proxy/content/homemeta/[chainid]/?meta=template&nocache=1'"></div>
 
+    <!-- required scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js?nocache=1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
     <!-- angular -->
     <script src="/proxy/store/sitecontentscript/[chainid]?nocache=1"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js?nocache=1"></script>
