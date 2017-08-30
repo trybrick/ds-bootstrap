@@ -175,7 +175,8 @@ var storeApp = angular
         storeRequired: v.store,
         requireLogin: v.login,
         controller: v.controller,
-        layout: v.layout
+        layout: v.layout,
+        layout2: v.layout2
       });
     });
 
