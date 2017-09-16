@@ -4,12 +4,7 @@ var storeApp = angular
     // disable theme
     gsn.config.SiteTheme = 'bootstrap';
 
-    var le = [gsn.getThemeUrl('/views/layout.html')];
-    var le21 = [gsn.getThemeUrl('/views/layout2-1.html')];
-    for (var i = 1; i < 5; i++) {
-      le.push(gsn.getThemeUrl('/views/layout' + i + '.html'));
-    }
-
+    var layout = gsn.getThemeUrl('/views/layout.html');
     var homeFile = '/proxy/content/homemeta/' + gsn.config.ChainId + '/?meta=home&nocache=' + gsn.config.Version;
     var urls = [{
       login: 0,
@@ -30,19 +25,19 @@ var storeApp = angular
     }, {
       login: 0,
       store: 1,
-      layout: le21,
+      layout: layout,
       path: '/circular',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-flyer.html')
     }, {
       login: 0,
       store: 1,
-      layout: le21,
+      layout: layout,
       path: '/circular/grid',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-grid.html')
     }, {
       login: 0,
       store: 1,
-      layout: le21,
+      layout: layout,
       path: '/circular/text',
       tpl: gsn.getThemeUrl('/views/engine/circular-view-list.html')
     }, {
