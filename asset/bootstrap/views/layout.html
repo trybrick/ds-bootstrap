@@ -3,22 +3,6 @@
 <div class="hidden-meta" data-gsn-meta-description="{{seo.description}}" data-ng-if="seo.Description">
 </div>
 <div class="row">
-  <div class="col-lg-9 col-md-8" data-ng-view="">
-  </div>
-  <div class="col-lg-3 col-md-4 text-center">
-    <div class="right-pods" data-gsn-sticky="" style="margin-top: 60px">
-      <div class="availableVarieties generic-content" data-ng-if="gvm.selectedItem" data-ng-include="getThemeUrl('/views/engine/available-varieties.html')" style="padding: 5px">
-      </div>
-      <div data-gsn-ad-unit="4" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0" style="padding: 5px">
-      </div>
-    </div>
-  </div>
-</div>
-<div data-bottom="0" data-gsn-sticky="" data-ng-class="{ 'stuck-collapsed': gvm.adsCollapsed }" data-ng-if="',visible-lg,visible-md'.indexOf(bsDisplayMode) > 0">
-  <div class="stuck-collapser" data-ng-click="gvm.adsCollapsed = !gvm.adsCollapsed">
-    <i class="fa fa-times">
-    </i>
-  </div>
-  <div class="brickunit" data-dimensions="728x90" data-targeting='{"tile": "1"}' style="padding: 5px">
+  <div class="col-md-12" data-ng-view="">
   </div>
 </div>

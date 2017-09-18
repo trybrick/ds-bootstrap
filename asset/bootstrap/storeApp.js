@@ -4,7 +4,7 @@ var storeApp = angular
     // disable theme
     gsn.config.SiteTheme = 'bootstrap';
 
-    var layout = gsn.getThemeUrl('/views/layout.html');
+    var layout = gsn.getThemeUrl('/views/layout2-1.html');
     var homeFile = '/proxy/content/homemeta/' + gsn.config.ChainId + '/?meta=home&nocache=' + gsn.config.Version;
     var urls = [{
       login: 0,
