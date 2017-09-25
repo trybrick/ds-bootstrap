@@ -37,11 +37,11 @@
       <ul class="nav navbar-nav nav-hover" itemscope="" itemtype="http://schema.org/SiteNavigationElement" role="navigation" style="margin-left: -15px">
         <li class="dropdown" data-ng-repeat="menu in siteMenu | orderBy:'Position'" dropdown="" itemprop="name">
           <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">
-            <span data-ng-bind-html="menu.Name | trustedHtml">
+            <span data-ng-bind-html="menu.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
             </span>
           </a>
           <a class="dropdown-toggle" data-ng-if="menu.Path == '#' || menu.Path == ''" data-toggle="dropdown" href="javascript:void(0);" itemprop="name">
-            <span data-ng-bind-html="menu.Name | trustedHtml">
+            <span data-ng-bind-html="menu.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
             </span>
             <i class="fa fa-caret-down">
             </i>
@@ -49,7 +49,7 @@
           <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'">
             <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
               <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}">
-                <span data-ng-bind-html="sm.Name | trustedHtml">
+                <span data-ng-bind-html="sm.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
                 </span>
               </a>
             </li>
