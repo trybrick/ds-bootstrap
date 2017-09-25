@@ -36,20 +36,20 @@
     <div class="collapse navbar-collapse" id="main-nav-bar" style="width: 100%; padding-left: 5px; padding-right: 5px">
       <ul class="nav navbar-nav nav-hover" itemscope="" itemtype="http://schema.org/SiteNavigationElement" role="navigation" style="margin-left: -15px">
         <li class="dropdown" data-ng-repeat="menu in siteMenu | orderBy:'Position'" dropdown="" itemprop="name">
-          <a data-ng-href="{{menu.Path}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">
-            <span data-ng-bind-html="menu.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
+          <a data-ng-href="{{menu.Path.replace(/\s+/gi, '-')}}" data-ng-if="menu.Path != '#'" itemprop="url" target="{{menu.OpenWindow ? '_blank' : ''}}">
+            <span data-ng-bind-html="menu.Name | trustedHtml">
             </span>
           </a>
           <a class="dropdown-toggle" data-ng-if="menu.Path == '#' || menu.Path == ''" data-toggle="dropdown" href="javascript:void(0);" itemprop="name">
-            <span data-ng-bind-html="menu.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
+            <span data-ng-bind-html="menu.Name | trustedHtml">
             </span>
             <i class="fa fa-caret-down">
             </i>
           </a>
           <ul class="dropdown-menu dropdown-menu-touch" data-ng-if="menu.Path == '#'">
             <li data-ng-repeat="sm in menu.SubMenu | orderBy:'Position'" itemprop="name">
-              <a data-ng-href="{{sm.Path}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}">
-                <span data-ng-bind-html="sm.Name.toLowerCase().replace(/\s+/, '-') | trustedHtml">
+              <a data-ng-href="{{sm.Path.replace(/\s+/gi, '-')}}" itemprop="url" target="{{sm.OpenWindow ? '_blank' : ''}}">
+                <span data-ng-bind-html="sm.Name | trustedHtml">
                 </span>
               </a>
             </li>
