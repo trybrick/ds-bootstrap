@@ -46,8 +46,7 @@
       <br/>
     </div>
     <div class="text-center" style="width: 100%;">
-        <h2>{{vm.circular.CircularTypeName}}</h2>
-        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
+        <ul class="pagination" style="margin: 10px 0;" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
         </ul>
       </div>
       <div class="myImageMap" data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.circular.Pages.length) ? 1 : vm.pageIdx + 1" data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.circular.Pages.length : vm.pageIdx - 1" data-stop-event="click">
