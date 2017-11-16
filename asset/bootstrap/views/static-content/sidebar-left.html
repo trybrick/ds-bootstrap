@@ -1,11 +1,11 @@
 <div class="hidden-meta" data-gsn-title="{{ ChainName + ' | ' + (getConfig('title').Description || partialContents[0].Headline || contentDetail.name)}}" data-ng-if="partialContents[0]">
 </div>
 <div class="hidden-meta" data-ng-if="getConfig('description').Description">
-  <div class="hidden-meta" data-gsn-meta-description="getConfig('description').Description">
+  <div class="hidden-meta" data-gsn-meta-description="{{getConfig('description').Description}}">
   </div>
 </div>
 <div class="hidden-meta" data-ng-if="getConfig('image').Description">
-  <div class="hidden-meta" data-gsn-meta-image="getConfig('image').Description">
+  <div class="hidden-meta" data-gsn-meta-image="{{getConfig('image').Description}}">
   </div>
 </div>
 <style>
