@@ -1,7 +1,7 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | Weekly Ads">
 </div>
 <div class="row" style="padding-left: 5px" data-ctrl-circular="" data-ng-init="isListView = (currentPath == '/circular/list' || currentPath == '/circular/text')">
- <h1>Weekly Ads</h1>
+ <h3>Weekly Ads</h3>
  <div data-ng-show="vm.noCircular">
   <h3>
     No circular for this store.
@@ -16,8 +16,7 @@
   <div class="col-md-12" data-ng-include="getThemeUrl('/views/engine/circular-view-type.html')">
   </div>
 </div>
-<br/>
-<div class="row" style="width: 95%">
+<div class="row" style="width: 100%">
   <div class="dcircular-list" data-ng-if="!(vm.circIdx > 0 && vm.pageIdx > 0)">
     <div class="dcircular-list-content">
       <div class="col-md-4 col-sm-6 dcircular-list-single" data-ng-repeat="item in vm.digitalCirc.Circulars">
@@ -47,8 +46,7 @@
       <br/>
     </div>
     <div class="text-center" style="width: 100%;">
-        <h2>{{vm.circular.CircularTypeName}}</h2>
-        <ul class="pagination" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
+        <ul class="pagination" style="margin: 10px 0;" data-ng-include="getThemeUrl('/views/engine/circular-view-flyer-pager.html')">
         </ul>
       </div>
       <div class="myImageMap" data-ng-swipe-left="vm.pageIdx = (vm.pageIdx >= vm.circular.Pages.length) ? 1 : vm.pageIdx + 1" data-ng-swipe-right="vm.pageIdx = (vm.pageIdx <= 1) ? vm.pageIdx = vm.circular.Pages.length : vm.pageIdx - 1" data-stop-event="click">
