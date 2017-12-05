@@ -39,7 +39,7 @@
       Ingredients
     </h4>
     <ul class="ingredients">
-      <li data-ng-repeat="item in vm.recipe.Ingredients" style="cursor: pointer">
+      <li data-ng-repeat="item in vm.recipe.Ingredients | orderBy:'DisplayOrder'" style="cursor: pointer">
         <label>
           <input data-ng-model="item.selected" type="checkbox">
             <span itemprop="ingredients">
