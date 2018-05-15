@@ -95,7 +95,13 @@ var storeApp = angular
       store: 0,
       path: '/recipe/search',
       tpl: gsn.getThemeUrl('/views/engine/recipe-search.html')
-    }, {
+    }, 
+	{ 
+		login: 0, 
+		store: 0, 
+		path: '/recipesearch', 
+		tpl: gsn.getMetaUrl('')
+	},{
       login: 0,
       store: 0,
       path: '/recipe',
