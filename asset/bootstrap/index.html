@@ -52,8 +52,11 @@
 window.isPrerender = /Prerender/.test( window.navigator.userAgent );
 
 if (!window.isPrerender) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
   var script = document.createElement('script');
-  script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PD8GN6";
+  script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PD8GN6';
   document.getElementsByTagName('head')[0].appendChild(script);
 }
     </script>
@@ -96,6 +99,12 @@ if (!window.isPrerender) {
     <!--include:script-->
     <!--begin:seoxclude-body-->
     <!--begin:analytics-->
+<!-- since gtag is being loaded above and handled by core, simply log the start date here -->
+<script>
+if (!window.isPrerender) {
+  gtag('js', new Date());
+}
+</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
       jQuery(document).ready(function () {
