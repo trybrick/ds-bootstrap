@@ -29,9 +29,11 @@
         {{marker.location.PostalCode}}
       </span>
       <br/>
-      <span itemprop="telephone">
-        {{marker.location.Phone}}
-      </span>
+      <a href="tel:{{marker.location.Phone}}">
+		<span itemprop="telephone">
+			{{marker.location.Phone}}
+		</span>
+	  </a>	
     </address>
   </div>
   <div>
