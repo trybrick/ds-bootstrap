@@ -99,9 +99,14 @@ if (!window.isPrerender) {
     <!--include:script-->
     <!--begin:seoxclude-body-->
     <!--begin:analytics-->
-<!-- since gtag is being loaded above and handled by core, simply log the start date here -->
+<!-- gtag load and log the start date here -->
 <script>
 if (!window.isPrerender) {
+  var gtagid = ((globalConfig || {}).data || {}).GoogleAnalyticAccountId1;
+  if (gtagid && typeof(window.Wu) !== 'undefined') {
+    var wu = new window.Wu();
+    wu.loadScript('https://www.googletagmanager.com/gtag/js?id=' + gtagid);
+  }
   gtag('js', new Date());
 }
 </script>
