@@ -103,8 +103,8 @@ if (!window.isPrerender) {
 <script>
 if (!window.isPrerender) {
   var gtagid = ((globalConfig || {}).data || {}).GoogleAnalyticAccountId1;
-  if (gtagid && typeof(window.win.Wu) !== 'undefined') {
-    var wu = new window.win.Wu();
+  if (gtagid && typeof(window.Wu) !== 'undefined') {
+    var wu = new window.Wu();
     wu.loadScript('https://www.googletagmanager.com/gtag/js?id=' + gtagid);
   }
   gtag('js', new Date());
