@@ -1,17 +1,13 @@
-<div class="hidden-meta" data-gsn-title="{{ChainName}} | Store Locator">
-</div>
+<div class="hidden-meta" data-gsn-title="{{ChainName}} | Store Locator"></div>
+
 <h1>
   Locate Your Favorite Store
 </h1>
+
 <div data-content-position="27" data-gsn-ft-content="" data-inview="true"></div>
 <div data-ctrl-store-locations="" data-ng-init="singleStoreRedirect = '/store'" style="padding: 15px;">
-  <div class="row">
-    <div class="col-md-12 col-sm-12">
-      <!-- the map -->
-      <div class="map-container gMap" id="map_canvas" style="height: 280px;"></div>
-    </div>
-  </div>
-  <div data-content-position="28" data-gsn-ft-content="" data-inview="true" style="text-align: center;padding-top: 10px;" ></div>
+  <div id="map_canvas" style="width: 100%; height: 300px; border: 1px solid #AAA;"></div>
+  <div data-content-position="28" data-gsn-ft-content="" data-inview="true" style="text-align: center;padding-top: 10px;"></div>
   <!-- stores -->
   <div class="row col-md-12">
     <div class="row" data-ng-repeat="group in vmsl.myMarkerGrouping">
@@ -26,6 +22,7 @@
     </div>
   </div>
 </div>
+
 <style>
   .singleStoreInfo div
   {
