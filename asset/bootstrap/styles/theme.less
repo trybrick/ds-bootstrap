@@ -54,17 +54,18 @@
       color: @colBody; }}
 
   .btn-default, .theme-default {
-    background: @bgDefault;
-    color: @colDefault;
+    background: @bgDefault !important;
+    color: @colDefault !important;
     a {
-      color: @colDefault;
+      color: @colDefault !important;
       &:hover, &:focus {
-        color: @colHighlight; }}
+        color: @colHighlight !important; }}
   }
 
   header {
     background: @bgHeader;
     color: @colHeader;
+    z-index: 1001;
     a {
       color: @colHeader;
       &:hover, &:focus {
