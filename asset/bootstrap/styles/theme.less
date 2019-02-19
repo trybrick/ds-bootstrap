@@ -65,7 +65,8 @@
   header {
     background: @bgHeader;
     color: @colHeader;
-    z-index: 1001;
+    z-index: 900;
+    position: relative;
     a {
       color: @colHeader;
       &:hover, &:focus {
@@ -198,8 +199,9 @@
   bottom: 0px;
 }
 
-header, .header-bar, .header-top {
+.header-bar, .header-top {
   position: relative;
+  z-index: 901;
 }
 
 .carousel-inner > .item > a > img {
