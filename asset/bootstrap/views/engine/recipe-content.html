@@ -42,7 +42,7 @@
       <li data-ng-repeat="item in vm.recipe.Ingredients | orderBy:'DisplayOrder'" style="cursor: pointer">
         <label>
           <input data-ng-model="item.selected" type="checkbox">
-            <span itemprop="ingredients">
+            <span itemprop="recipeingredient">
               {{item.StandardText}}
             </span>
           </input>
