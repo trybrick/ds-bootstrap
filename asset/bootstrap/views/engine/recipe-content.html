@@ -3,9 +3,12 @@
 </h1>
 <div class="col-md-12">
   <div class="col-md-6 col-sm-6">
-    <div class="hidden" style="display: none" itemprop="recipeCategory">{{vm.recipe.Categories}}</div>
-    <div class="hidden" style="display: none" itemprop="keywords">{{vm.recipe.Keywords}}</div>
-    <div class="hidden" style="display: none" itemprop="aggregateRating">{{vm.recipe.Rating}}</div>
+    <meta itemprop="keywords" content="{{vm.recipe.Keywords}}">
+    <meta data-ng-repeat="item in vm.recipe.Categories" class="hidden" style="display: none" itemprop="recipeCategory" content="{{item}}">
+    <span class="hidden" style="display: none"  itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="aggregate-rating">
+      <meta itemprop="ratingValue" content="{{vm.recipe.Rating}}">
+      <meta itemprop="reviewCount" content="{{vm.recipe.RatingCount}}">
+    </span>
     <div>
       <strong>
         Prep Time:
