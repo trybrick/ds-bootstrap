@@ -1,4 +1,4 @@
-<div class="col-md-12" data-ctrl-store-locator="">
+<div class="col-md-12" data-ctrl-store-locations="">
   <div class="hidden-meta" data-gsn-title="{{ChainName}} | Store - {{myMarkers[0].location.StoreName}}">
   </div>
   <h1>
@@ -9,27 +9,8 @@
   </div>
   <div class="row" style="padding-top: 10px">
     <div class="col-md-6 col-sm-6 staticBlock">
-      <!-- the map -->
-      <div class="map-container gMap" data-ui-map="myMap" data-ui-options="mapOptions" id="map_canvas" style="height: 280px;">
-      </div>
-      <!-- the map popup view definition -->
-      <div class="infoMarker" data-ui-map-info-window="myInfoWindow">
-        <div data-ng-show="currentMarker.location">
-          <strong>
-            {{myMarkers[0].location.StoreName}}
-          </strong>
-          <br/>
-          <address>
-            {{currentMarker.location.PrimaryAddress}}
-            <br/>
-            {{currentMarker.location.City}}, {{currentMarker.location.StateName}} {{currentMarker.location.PostalCode}}
-          </address>
-          <div>
-            <a class="btn btn-default btn-xs" data-ng-click="selectStore(currentMarker)" href="javascript:void(0);">
-              Select Store
-            </a>
-          </div>
-        </div>
+      <div style="width: 100%">
+         <div id="map_canvas" style="width: 100%; height: 280px; border: 1px solid #AAA;"></div>
       </div>
     </div>
     <div class="col-md-6 col-sm-6 staticBlock" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" data-ng-repeat="marker in myMarkers" itemscope="" itemtype="http://schema.org/Store">
