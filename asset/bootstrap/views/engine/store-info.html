@@ -9,9 +9,6 @@
   </div>
   <div class="row" style="padding-top: 10px">
     <div class="col-md-6 col-sm-6 staticBlock">
-      <!-- the map -->
-      <div class="map-container gMap" data-ui-map="myMap" data-ui-options="mapOptions" id="map_canvas" style="height: 280px;">
-      </div>
       <div style="width: 100%"><iframe width="100%" height="600" data-src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord={{myMarkers[0].location.Latitude}}%2C{{myMarkers[0].location.Longitude}}&amp;q={{myMarkers[0].location.PrimaryAddress}}%2C%20{{myMarkers[0].location.City}}%2C%20{{myMarkers[0].location.StateName}}%20{{myMarkers[0].location.PostalCode}}%20+({{myMarkers[0].location.StoreName}})&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />
     </div>
     <div class="col-md-6 col-sm-6 staticBlock" data-ng-include="getThemeUrl('/views/engine/store-locator-item.html')" data-ng-repeat="marker in myMarkers" itemscope="" itemtype="http://schema.org/Store">
