@@ -11,7 +11,7 @@
   </div>
   <div class="modal-body" data-gsn-login="">
     <form class="generic-content" data-ng-submit="login()" data-stop-event="click" name="myLoginForm" role="form">
-      <input class="form-control" data-ng-model="profile.UserName" id="usernameField" name="usernameField" placeholder="Email or username" required="required" type="text"/>
+      <input class="form-control" data-ng-model="profile.UserName" id="usernameField" name="usernameField" placeholder="Email or username" required="required" type="text" autofocus/>
       <input class="form-control" data-ng-model="profile.Password" id="passwordField" name="passwordField" placeholder="Password" required="required" type="password"/>
       <div class="form-group" data-ng-show="hasSubmitted && !isValidSubmit">
         <div class="alert alert-danger">
