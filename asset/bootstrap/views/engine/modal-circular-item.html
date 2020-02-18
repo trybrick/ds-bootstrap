@@ -24,11 +24,11 @@
       <p itemprop="description">
         {{item.ItemDescription}}
       </p>
-      <div class="SalePrice" content="{{item.SalePrice}}" data-ng-show="item.PriceString" itemprop="price">
-        {{item.PriceString}}
-      </div>
       <div class="savings" data-ng-show="item.Savings">
         SAVE - {{item.SavingsString}}
+      </div>
+      <div class="SalePrice" content="{{item.SalePrice}}" data-ng-show="item.PriceString" itemprop="price">
+        {{item.PriceString}}
       </div>
     </div>
     <div class="col-md-7" style="position: relative; overflow: auto; display: block;">
