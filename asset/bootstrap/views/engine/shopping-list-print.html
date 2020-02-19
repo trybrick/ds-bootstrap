@@ -24,9 +24,8 @@
           </div>
           <div>
             <img data-ng-show="item.IsCoupon" data-ng-src="{{getThemeUrl('/images/manufacturercouponicon.gif')}}">
-              <span data-ng-bind-html="item.Description">
-              </span>
-            </img>
+            <span data-ng-bind-html="item.Description"></span>
+            <span data-ng-bind-html="item.ItemDescription"></span>
           </div>
           <div data-ng-show="item.Comment">
             (
