@@ -136,4 +136,5 @@ asset/unsupported-browser.html
 asset/config.json
 asset/index.cshtml
 asset/README.md
-
+asset/[0-9]*/**
+package-lock.json

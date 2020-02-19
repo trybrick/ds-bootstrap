@@ -33,7 +33,7 @@
           <br/>
           Email
         </button>
-        <button class="btn btn-default btn-sm" data-ng-click="goUrl('/savedlists')" type="button">
+        <!-- <button class="btn btn-default btn-sm" data-ng-click="goUrl('/savedlists')" type="button">
           <i class="fa fa-folder-open">
           </i>
           <br/>
@@ -50,7 +50,7 @@
           </i>
           <br/>
           Delete
-        </button>
+        </button> -->
         <button class="btn btn-default btn-sm" data-ng-click="startNewList()" type="button">
           <i class="fa fa-plus-circle">
           </i>
@@ -84,6 +84,8 @@
           {{item.PriceString}}
         </span>
         <div data-ng-bind-html="item.Description">
+        </div>
+        <div data-ng-bind-html="item.ItemDescription">
         </div>
         <div class="price" data-ng-hide="item.IsCoupon">
           {{item.PriceString}}

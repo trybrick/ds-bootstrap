@@ -39,11 +39,6 @@
             </a>
           </li>
           <li>
-            <a data-ng-click="toggleSort('BrandName');sortByName='Brand'" href="javascript:void(0);">
-              Brand
-            </a>
-          </li>
-          <li>
             <a data-ng-click="toggleSort('Description');sortByName='Alphabetic'" href="javascript:void(0);">
               Alphabetic
             </a>
@@ -51,14 +46,6 @@
         </ul>
       </div>
     </div>
-    <datalist id="departments">
-      <option data-bindonce="" data-ng-repeat="item in vm.categories" value="{{item.key}}">
-      </option>
-    </datalist>
-    <datalist id="brands">
-      <option data-bindonce="" data-ng-repeat="item in vm.brands" value="{{item.key}}">
-      </option>
-    </datalist>
     <div class="col-lg-11 col-md-12">
       <form class="input-group pull-right" data-ng-submit="gvm.searchActive = false" name="circularSearch" style="width: 300px; padding-top: 5px">
         <input class="form-control" data-ng-model="vm.filterBy" placeholder="Search for..." type="text">
@@ -67,31 +54,7 @@
               <i class="glyphicon glyphicon-search">
               </i>
             </button>
-            <button class="btn btn-default" data-ng-click="gvm.searchActive = !gvm.searchActive" type="button">
-              More
-              <span class="caret">
-              </span>
-              <span class="sr-only">
-                Toggle Dropdown
-              </span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" style="padding: 10px">
-              <span class="pull-right">
-                Department:
-                <input class="text-center" data-ng-model="vm.filter.CategoryName" list="departments" placeholder="--All Departments--" type="text">
-              </span>
-              <span class="pull-right">
-                Brand:
-                <input class="text-center" data-ng-model="vm.filter.BrandName" list="brands" placeholder="--All Brands--" type="text">
-              </span>
-              <span class="pull-right">
-                <button type="reset">
-                  Reset
-                </button>
-              </span>
-            </div>
           </div>
-
       </form>
     </div>
   </div>

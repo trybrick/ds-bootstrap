@@ -39,11 +39,6 @@
             </a>
           </li>
           <li>
-            <a data-ng-click="toggleSort('BrandName');sortByName='Brand'" href="javascript:void(0);">
-              Brand
-            </a>
-          </li>
-          <li>
             <a data-ng-click="toggleSort('Description');sortByName='Alphabetic'" href="javascript:void(0);">
               Alphabetic
             </a>
@@ -51,14 +46,6 @@
         </ul>
       </div>
     </div>
-    <datalist id="departments">
-      <option data-bindonce="" data-ng-repeat="item in vm.categories" value="{{item.key}}">
-      </option>
-    </datalist>
-    <datalist id="brands">
-      <option data-bindonce="" data-ng-repeat="item in vm.brands" value="{{item.key}}">
-      </option>
-    </datalist>
     <div class="col-lg-11 col-md-12">
       <form class="input-group pull-right" data-ng-submit="gvm.searchActive = false" name="circularSearch" style="width: 300px; padding-top: 5px">
         <input class="form-control" data-ng-model="vm.filterBy" placeholder="Search for..." type="text">
@@ -67,36 +54,13 @@
               <i class="glyphicon glyphicon-search">
               </i>
             </button>
-            <button class="btn btn-default" data-ng-click="gvm.searchActive = !gvm.searchActive" type="button">
-              More
-              <span class="caret">
-              </span>
-              <span class="sr-only">
-                Toggle Dropdown
-              </span>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" style="padding: 10px">
-              <span class="pull-right">
-                Department:
-                <input class="text-center" data-ng-model="vm.filter.CategoryName" list="departments" placeholder="--All Departments--" type="text"/>
-              </span>
-              <span class="pull-right">
-                Brand:
-                <input class="text-center" data-ng-model="vm.filter.BrandName" list="brands" placeholder="--All Brands--" type="text"/>
-              </span>
-              <span class="pull-right">
-                <button type="reset">
-                  Reset
-                </button>
-              </span>
-            </div>
           </div>
         </input>
       </form>
     </div>
   </div>
   <div class="col-md-12">
-    <div data-infinite-scroll="loadMore()">
+    <div>
       <div data-ng-class="{ 'col-md-12 col-sm-12': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }" data-ng-repeat-start="item in allItems">
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <h4>
@@ -106,9 +70,7 @@
       </div>
       <div class="col-lg-3 col-md-4 col-sm-4 item-wrapper" data-body="" data-ng-include="getThemeUrl('/views/engine/circular-view-grid-item.html')" itemscope="" itemtype="http://schema.org/Product" style="margin-top: 15px">
       </div>
-      <div data-ng-repeat-end="">
-          <!--<div data-content-position="26" data-gsn-ft-content="" data-inview="true"></div>-->
-      </div>
+      <div data-ng-repeat-end=""></div>
       <div class="col-md-12">
         <div class="pull-right">
           {{allItems.length}} of {{vm.cacheItems.length}}

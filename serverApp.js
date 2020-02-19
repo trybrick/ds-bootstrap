@@ -4,25 +4,11 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     fs = require('fs'),
-    gulp = require('gulp'),
     http = require('http'),
     url = require('url');
 
 var servicePath = __dirname;
 var apps = {};
-
-var download = function(url, dest, cb) {
-  var file = fs.createWriteStream(dest);
-  var request = http.get(url, function(response) {
-    response.pipe(file);
-    file.on('finish', function() {
-      file.close(cb);  // close() is async, call cb after close completes.
-    });
-  }).on('error', function(err) { // Handle errors
-    fs.unlink(dest); // Delete the file async. (But we don't check the result)
-    if (cb) cb(err.message);
-  });
-};
 
 function startServer(chainId) {
   var app = express();
@@ -41,8 +27,9 @@ function startServer(chainId) {
   // handle the rest as html
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
-    if (myPath.length <= 2 || myPath.indexOf('.') < 0)
-      myPath = path.join('asset/' + chainId + '/index.html');
+    if (myPath.length <= 2 || myPath.indexOf('.') < 0){
+      myPath = path.join('asset/bootstrap/index.html');
+    }
 
     console.log(myPath);
     if (myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) {
@@ -54,10 +41,10 @@ function startServer(chainId) {
       }
 
       var k = fs.readFileSync(fullPath, 'utf8');
-      k = k.replace('https://clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/[chainid]/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
+      k = k.replace('//clientapi-stg.brickinc.net/api/v1/content/storeapp/[chainid]/?cdnUrl=/asset/bootstrap/storeApp.js?nocache=1', '/asset/[chainid]/storeApp.js');
       k = k.replace(/\[chainname\]/gi, 'localhost:' + port).replace(/\[chainid\]/gi, chainId);
-      k = k.replace('cdn-stg.brickinc.net/asset/' + chainId, 'localhost:' + port + '/asset/' + chainId);
-      k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=2");
+      k = k.replace('cdn-stg.brickinc.net/asset/' + chainId, 'localhost:' + port + '/asset/bootstrap');
+      k = k.replace(/.min.js\?nocache=[^'"]+/gi, ".js?nocache=" + (new Date()).toISOString().substr(0, 10));
       response.send(k);
     }
   });
