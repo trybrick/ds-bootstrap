@@ -6,7 +6,7 @@
   </a>
 </li>
 <li data-ng-class="{'active': vm.loadCount > 0 && item == (vm.pageIdx - 1)}" data-ng-click="vm.pageIdx = item + 1" data-ng-repeat="item in [] | range:0:vm.circular.Pages.length">
-  <a data-ng-href="?c={{vm.circIdx}}&p={{$index + 1}}" href="javascript:void(0);" accesskey="{{ $index + 1 }}" title="{{ vm.loadCount > 0 && $index == (vm.pageIdx - 1) ? 'currently on' : 'go to'}} Page {{ $index + 1 }}" >
+  <a data-ng-href="?c={{vm.circIdx}}&p={{$index + 1}}" href="javascript:void(0);" accesskey="{{ $index + 1 }}" title="{{ vm.loadCount > 0 && $index == (vm.pageIdx - 1) ? 'currently on' : 'go to'}} Page {{ $index + 1 }}">
     {{$index + 1}}
   </a>
 </li>

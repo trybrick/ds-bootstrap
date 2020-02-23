@@ -1,6 +1,6 @@
 <div class="hidden-meta" data-gsn-title="{{ChainName}} | Weekly Ads">
 </div>
-<div class="row" style="padding-left: 5px" data-ctrl-circular="" data-ng-init="isGridView = true">
+<div class="row" style="padding-left: 5px" data-ctrl-circular-new="" data-ng-init="isGridView = true">
   <h3>Weekly Ads</h3>
   <div data-ng-show="vm.noCircular">
     <h3>
@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="col-md-12">
-    <div>
+    <div data-infinite-scroll="loadMore()">
       <div data-ng-class="{ 'col-md-12 col-sm-12': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }" data-ng-repeat-start="item in allItems">
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <h4>
