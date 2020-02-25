@@ -60,7 +60,7 @@
     </div>
   </div>
   <div class="col-md-12">
-    <div>
+    <div data-infinite-scroll="loadMore()">
       <div data-ng-class="{ 'col-md-12 col-sm-12': $index == 0 || allItems[$index-1][sortBy] != item[sortBy] }" data-ng-repeat-start="item in allItems">
         <div data-ng-if="$index == 0 || allItems[$index-1][sortBy] != item[sortBy]">
           <h4>
