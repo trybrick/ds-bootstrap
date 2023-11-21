@@ -22,7 +22,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css">
     <link href="//cdn.brickinc.net/script/lib/twitter-bootstrap/3.4.1/css/bootstrap.min.css?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
     <link href="//cdn-stg.brickinc.net/asset/common/styles/global.css?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" integrity="sha512-W/zrbCncQnky/EzL+/AYwTtosvrM+YG/V6piQLSe2HuKS6cmbw89kjYkp3tWFn1dkWV7L1ruvJyKbLz73Vlgfg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<style>
+    .fa-brands, .fab.fa-twitter, .mec-fa-twitter {
+        font-family: 'Font Awesome 6 Brands';
+        font-style: normal;
+        font-weight: 400;
+    }
+    .fa-twitter::before, .mec-fa-twitter::before {
+        content: "\e61b" !important;
+    }
+</style>
     <link href="//clientapi-stg.brickinc.net/api/v1/content/getcss/[chainid]?nocache=1" itemprop="stylesheet" rel="stylesheet" type="text/css"/>
     <!--include:head-content-->
     <!--include:head-content2-->
@@ -111,7 +122,7 @@ if (!window.isPrerender) {
   gtag('js', new Date());
 }
 </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//cdn.brickinc.net/script/lib/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
       jQuery(document).ready(function () {
         jQuery(document.body).on('click','.navbar-collapse',function(e) {
