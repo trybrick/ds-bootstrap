@@ -1,7 +1,7 @@
 {
   "name": "ds-bootstrap",
   "description": "digital store repository",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "homepage": "https://github.com/trybrick/ds-bootstrap",
   "author": {
     "name": "Brick, Inc.",
